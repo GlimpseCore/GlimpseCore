@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Description>The infrastructure and extensibility points required to enable GlimpseCore to serve data and content.</Description>
+    <AssemblyTitle>GlimpseCore Server</AssemblyTitle>
+    <VersionPrefix>2.0.0</VersionPrefix>
+    <Authors>nmolnar;avanderhoorn;jbogard</Authors>
+    <TargetFrameworks>netstandard2.0</TargetFrameworks>
+    <PreserveCompilationContext>true</PreserveCompilationContext>
+    <AssemblyName>GlimpseCore.Server</AssemblyName>
+    <PackageTags>ASP.NET;Web;Debugging;Diagnostics;Server</PackageTags>
+    <PackageLicenseUrl>https://github.com/GlimpseCore/GlimpseCore/blob/dev/LICENSE.txt</PackageLicenseUrl>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/GlimpseCore/GlimpseCore</RepositoryUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="**\*.resx" />
+    <EmbeddedResource Include="Internal\Resources\Embedded\**\*.*" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GlimpseCore.Common\GlimpseCore.Common.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.FileProviders.Embedded" Version="2.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.0.1" />
+    <PackageReference Include="Tavis.UriTemplates" Version="1.1.1" />
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DefineConstants>$(DefineConstants);RELEASE</DefineConstants>
+  </PropertyGroup>
+</Project>

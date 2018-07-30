@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <Description>Music store application on ASP.NET Core</Description>
+    <TargetFrameworks>netcoreapp2.0</TargetFrameworks>
+    <MvcRazorCompileOnPublish>true</MvcRazorCompileOnPublish>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\GlimpseCore.Agent.AspNet.Mvc\GlimpseCore.Agent.AspNet.Mvc.csproj" />
+    <ProjectReference Include="..\..\src\GlimpseCore.Server\GlimpseCore.Server.csproj" />
+    <ProjectReference Include="..\..\src\GlimpseCore.Agent.AspNet\GlimpseCore.Agent.AspNet.csproj">
+      <FromP2P>true</FromP2P>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\GlimpseCore.Common\GlimpseCore.Common.csproj">
+      <FromP2P>true</FromP2P>
+    </ProjectReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="config.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>
