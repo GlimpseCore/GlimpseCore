@@ -1,4 +1,4 @@
-import { createSimpleActionCreator } from 'common/actions/ActionCreator';
+import { createSimpleActionCreator } from '@common/actions/ActionCreator';
 
 export const incrementSessionNumber = createSimpleActionCreator('session.increment.sessionNumber');
 

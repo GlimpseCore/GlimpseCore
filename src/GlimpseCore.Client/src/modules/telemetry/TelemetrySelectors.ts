@@ -3,43 +3,43 @@ import uniq from 'lodash/uniq';
 import maxBy from 'lodash/maxBy';
 import forEach from 'lodash/forEach';
 
-import { getValueAtKeyCaseInsensitive } from 'common/util/ObjectUtilities';
+import { getValueAtKeyCaseInsensitive } from '@common/util/ObjectUtilities';
 import {
     getLoggingMessages,
     getUnfilteredByLevelCounts as getLoggingUnfilteredByLevelCounts,
     getUnfilteredByAgentCounts as getLoggingUnfilteredByAgentCounts
-} from 'routes/requests/details/logging/LoggingSelectors';
+} from '@routes/requests/details/logging/LoggingSelectors';
 import {
     getRequestHeadersSelector,
     getResponseHeadersSelector
-} from 'routes/requests/details/request/RequestSelectors';
+} from '@routes/requests/details/request/RequestSelectors';
 import {
     getMiddlewareStartAndEndMessages,
     getMiddleware
-} from 'routes/requests/details/request/RequestMiddlewareSelectors';
+} from '@routes/requests/details/request/RequestMiddlewareSelectors';
 import {
     getTimelineEvents,
     getUnfilteredByCategoryCounts as getTimelineUnfilteredByCategoryCounts,
     getUnfilteredByAgentCounts as getTimelineUnfilteredByAgentCounts
-} from 'routes/requests/details/timeline/TimelineSelectors';
+} from '@routes/requests/details/timeline/TimelineSelectors';
 import {
     AgentType,
     TimelineEventCategory
-} from 'routes/requests/details/timeline/TimelineInterfaces';
+} from '@routes/requests/details/timeline/TimelineInterfaces';
 import {
     getWebServiceExchanges,
     getUnfilteredByAgentCounts as getServiceUnfilteredByAgentCounts,
     getUnfilteredByStatusCodeClassCounts as getServiceUnfilteredByStatusCodeClassCounts
-} from 'routes/requests/details/service/ServiceSelectors';
-import { StatusCodeClass } from 'routes/requests/details/service/ServiceInterfaces';
-import { getOperations } from 'routes/requests/details/data/DataSelectors';
+} from '@routes/requests/details/service/ServiceSelectors';
+import { StatusCodeClass } from '@routes/requests/details/service/ServiceInterfaces';
+import { getOperations } from '@routes/requests/details/data/DataSelectors';
 import {
     IDataOperation,
     DataDatabaseType,
     DataOperationType
-} from 'routes/requests/details/data/DataInterfaces';
+} from '@routes/requests/details/data/DataInterfaces';
 import { IMeasurements, IProperties } from './TelemetryInterfaces';
-import { getNamesForEnum } from 'common/util/CommonUtilities';
+import { getNamesForEnum } from '@common/util/CommonUtilities';
 
 /**
  * request header telemetry properties

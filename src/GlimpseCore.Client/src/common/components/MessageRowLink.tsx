@@ -1,5 +1,5 @@
 import React from 'react';
-import { messageTargetId } from 'client/common/util/CommonUtilities';
+import { messageTargetId } from '@client/common/util/CommonUtilities';
 
 export interface IMessageRowLinkProps {
     ordinal: number;

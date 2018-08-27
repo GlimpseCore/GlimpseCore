@@ -2,11 +2,11 @@ import { selectExchangeAction } from './DataActions';
 import Data from './Data';
 import DataDetails from './DataDetails';
 import { tabSelected } from '../components/request-response-tab-strip/RequestResponseTabStripActions';
-import { getSelectedContextId } from 'routes/requests/RequestsSelector';
+import { getSelectedContextId } from '@routes/requests/RequestsSelector';
 
 import { normalizePath } from '../components/request-response-tab-strip/RequestResponseTabStripConfig';
-import { getSelectedExchangeId } from 'routes/requests/details/data/DataSelectors';
-import { ISelectedTabState } from 'routes/requests/details/data/DataInterfaces';
+import { getSelectedExchangeId } from '@routes/requests/details/data/DataSelectors';
+import { ISelectedTabState } from '@routes/requests/details/data/DataInterfaces';
 
 export const DATA_TAB_NAME = 'data';
 

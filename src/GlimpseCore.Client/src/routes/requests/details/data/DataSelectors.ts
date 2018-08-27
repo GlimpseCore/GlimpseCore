@@ -1,13 +1,13 @@
 import * as Glimpse from '@glimpse/glimpse-definitions';
 import { createSelector } from 'reselect';
-import { getNamesForEnum } from 'common/util/CommonUtilities';
+import { getNamesForEnum } from '@common/util/CommonUtilities';
 
-import { IMessage } from 'modules/messages/schemas/IMessage';
-import { IStoreState } from 'client/IStoreState';
+import { IMessage } from '@modules/messages/schemas/IMessage';
+import { IStoreState } from '@client/IStoreState';
 import { getServerOffsetFactor } from '../request/RequestSelectors';
 import { getSelectedContext } from '../RequestsDetailsSelector';
-import { IContext } from 'routes/requests/RequestsInterfaces';
-import { getMessageByType } from 'routes/requests/RequestsSelector';
+import { IContext } from '@routes/requests/RequestsInterfaces';
+import { getMessageByType } from '@routes/requests/RequestsSelector';
 import {
     IDataOperation,
     IDataFiltersState,
@@ -21,7 +21,7 @@ import {
     getMongoDbReadOperations
 } from './DataMongoDbSelectors';
 import { createRedisOperations } from './DataRedisSelectors';
-import { getSelectedRequestPersistedState } from 'routes/requests/RequestsSelector';
+import { getSelectedRequestPersistedState } from '@routes/requests/RequestsSelector';
 
 function getDataOperations<T>(
     request: IContext,

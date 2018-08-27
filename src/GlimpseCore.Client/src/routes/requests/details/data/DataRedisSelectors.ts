@@ -2,11 +2,11 @@ import * as Glimpse from '@glimpse/glimpse-definitions';
 import URL from 'url-parse';
 
 import { DataStoreRedisStartType, DataStoreRedisEndType } from './DataRedisTypes';
-import { getMessageByType } from 'routes/requests/RequestsSelector';
+import { getMessageByType } from '@routes/requests/RequestsSelector';
 import { mapCommandToCrud, mapCommandToDataOperationType } from './RedisCommandToCrudMap';
-import { IContext } from 'client/routes/requests/RequestsInterfaces';
-import { isArray, isObject } from 'common/util/CommonUtilities';
-import { IMessage } from 'modules/messages/schemas/IMessage';
+import { IContext } from '@client/routes/requests/RequestsInterfaces';
+import { isArray, isObject } from '@common/util/CommonUtilities';
+import { IMessage } from '@modules/messages/schemas/IMessage';
 import {
     IDataOperation,
     DataDatabaseType,

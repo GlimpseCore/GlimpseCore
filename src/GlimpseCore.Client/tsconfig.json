@@ -18,11 +18,11 @@
     "suppressImplicitAnyIndexErrors": true,
     "noUnusedLocals": true,
     "paths": {
-      "common": ["src/common"],
-      "shell": ["src/shell"],
-      "modules": ["src/modules"],
-      "routes": ["src/routes"],
-      "client": ["src"],
+      "@common/*": ["src/common/*"],
+      "@shell/*": ["src/shell/*"],
+      "@modules/*": ["src/modules/*"],
+      "@routes/*": ["src/routes/*"],
+      "@client/*": ["src/*"],
     }
   },
   "exclude": [

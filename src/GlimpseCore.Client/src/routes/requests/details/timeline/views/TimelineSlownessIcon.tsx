@@ -1,7 +1,7 @@
 import React from 'react'; // tslint:disable-line:no-unused-variable
 import classNames from 'classnames';
 
-import Icon from 'common/components/Icon';
+import Icon from '@common/components/Icon';
 
 import styles from './TimelineSlownessIcon.scss';
 

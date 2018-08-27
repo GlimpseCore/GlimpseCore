@@ -17,14 +17,14 @@ import {
     ITimelineCategorySummary,
     ITimelineCategoryCount
 } from './TimelineInterfaces';
-import { IMessage } from 'modules/messages/schemas/IMessage';
-import { IStoreState } from 'client/IStoreState';
-import { IContext } from 'routes/requests/RequestsInterfaces';
+import { IMessage } from '@modules/messages/schemas/IMessage';
+import { IStoreState } from '@client/IStoreState';
+import { IContext } from '@routes/requests/RequestsInterfaces';
 
 import { convertStringToAgentType } from './TimelineUtils';
 import { getCorrelatedMiddlewareMessages } from '../request/RequestMiddlewareSelectors';
 import { getLoggingMessages } from '../logging/LoggingSelectors';
-import { getNamesForEnum, getIntegersForEnum } from 'common/util/CommonUtilities';
+import { getNamesForEnum, getIntegersForEnum } from '@common/util/CommonUtilities';
 import {
     getWebRequest,
     getWebResponse,
@@ -38,12 +38,12 @@ import { IDataOperation, DataDatabaseType, DataOperationType } from '../data/Dat
 import {
     getSelectedRequestPersistedState,
     getMessageByType
-} from 'routes/requests/RequestsSelector';
+} from '@routes/requests/RequestsSelector';
 import { getSelectedContext } from '../RequestsDetailsSelector';
 import { initialTimelineSelectedOffsetsState } from './TimelineReducers';
 
 // tslint:disable-next-line:no-var-requires
-import sprintfjs from 'common/util/printf';
+import sprintfjs from '@common/util/printf';
 
 interface ICorrelatedMessage<T> {
     message: IMessage<T>;

@@ -1,22 +1,22 @@
 import React from 'react';
-import { IRequestFilterDetails } from 'client/routes/requests/RequestsFilterInterfaces';
-import { IRequestsFilterState } from 'client/routes/requests/RequestsFilterInterfaces';
-import { methodNames, isFilterReset } from 'client/routes/requests/RequestsFilterSelectors';
-import Icon from 'common/components/Icon';
+import { IRequestFilterDetails } from '@client/routes/requests/RequestsFilterInterfaces';
+import { IRequestsFilterState } from '@client/routes/requests/RequestsFilterInterfaces';
+import { methodNames, isFilterReset } from '@client/routes/requests/RequestsFilterSelectors';
+import Icon from '@common/components/Icon';
 import classNames from 'classnames';
-import { FilterButton } from 'common/components/FilterButton';
+import { FilterButton } from '@common/components/FilterButton';
 import {
     getColorStyleForStatusCode,
     getIconForStatusCode
-} from 'routes/requests/details/service/views/ServiceCommon';
-import { StatusCodeClass } from 'routes/requests/details/service/ServiceInterfaces';
-import serviceCommonStyles from 'routes/requests/details/service/views/ServiceCommon.scss';
+} from '@routes/requests/details/service/views/ServiceCommon';
+import { StatusCodeClass } from '@routes/requests/details/service/ServiceInterfaces';
+import serviceCommonStyles from '@routes/requests/details/service/views/ServiceCommon.scss';
 import {
     getStatusCodeShortNames,
     getStatusCodeRange
-} from 'routes/requests/details/service/ServiceUtils';
-import { getNamesForEnum } from 'common/util/CommonUtilities';
-import { ContentTypeClass } from 'common/util/ContentTypes';
+} from '@routes/requests/details/service/ServiceUtils';
+import { getNamesForEnum } from '@common/util/CommonUtilities';
+import { ContentTypeClass } from '@common/util/ContentTypes';
 import Hammer from 'hammerjs';
 
 import styles from './SideBarFilter.scss';

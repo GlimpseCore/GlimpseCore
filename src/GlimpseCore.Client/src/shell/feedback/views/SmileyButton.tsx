@@ -2,13 +2,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { Icon } from 'common/components/Icon';
-import { IStoreState } from 'client/IStoreState';
-import { ISmileyFeedbackState } from 'shell/feedback/ISmileyFeedbackState';
-import { getSmileyFeedbackState } from 'shell/feedback/SmileyFeedbackSelectors';
-import { toggleSmileyFeedbackDialog } from 'shell/feedback/SmileyFeedbackActions';
+import { Icon } from '@common/components/Icon';
+import { IStoreState } from '@client/IStoreState';
+import { ISmileyFeedbackState } from '@shell/feedback/ISmileyFeedbackState';
+import { getSmileyFeedbackState } from '@shell/feedback/SmileyFeedbackSelectors';
+import { toggleSmileyFeedbackDialog } from '@shell/feedback/SmileyFeedbackActions';
 
-import shellStatusBarStyles from 'shell/views/ShellStatusBarView.scss';
+import shellStatusBarStyles from '@shell/views/ShellStatusBarView.scss';
 
 interface ISmileyFeedbackCallbacks {
     openFeedbackDialog: (boolean) => () => void;

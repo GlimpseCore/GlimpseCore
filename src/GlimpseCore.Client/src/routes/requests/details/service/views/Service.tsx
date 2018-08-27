@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import { IExchangeModel } from '../ServiceInterfaces';
-import { IStoreState } from 'client/IStoreState';
+import { IStoreState } from '@client/IStoreState';
 import {
     getWebServiceExchanges,
     getStatusCodeFilteredWebServiceExchanges,
@@ -10,11 +10,11 @@ import {
 } from '../ServiceSelectors';
 
 import styles from './Service.scss';
-import commonStyles from 'common/components/Common.scss';
+import commonStyles from '@common/components/Common.scss';
 
 import ServiceFilterBar from './ServiceFilterBar';
 import ServiceTable from './ServiceTable';
-import { FilterHeader } from 'common/components/FilterHeader';
+import { FilterHeader } from '@common/components/FilterHeader';
 
 interface IServiceProps {
     children;

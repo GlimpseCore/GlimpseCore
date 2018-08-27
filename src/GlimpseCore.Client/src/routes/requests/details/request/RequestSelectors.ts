@@ -1,7 +1,7 @@
 import * as Glimpse from '@glimpse/glimpse-definitions';
 import { createSelector } from 'reselect';
 
-import { getSingleMessageByType } from 'routes/requests/RequestsSelector';
+import { getSingleMessageByType } from '@routes/requests/RequestsSelector';
 import { getSelectedContext } from '../RequestsDetailsSelector';
 import {
     createGetRequestHeadersSelector,
@@ -9,11 +9,11 @@ import {
     createGetFilteredRequestHeadersSelector,
     createGetFilteredResponseHeadersSelector,
     createGetFilteredResponseCookiesSelector
-} from 'routes/requests/details/components/request-response-tab-strip/headers/HeadersSelectors';
-import { createGetBodySelector } from 'routes/requests/details/components/request-response-tab-strip/body/BodySelectors';
-import { createGetQuerySelector } from 'routes/requests/details/components/request-response-tab-strip/query/QuerySelectors';
+} from '@routes/requests/details/components/request-response-tab-strip/headers/HeadersSelectors';
+import { createGetBodySelector } from '@routes/requests/details/components/request-response-tab-strip/body/BodySelectors';
+import { createGetQuerySelector } from '@routes/requests/details/components/request-response-tab-strip/query/QuerySelectors';
 
-import { IContext } from 'routes/requests/RequestsInterfaces';
+import { IContext } from '@routes/requests/RequestsInterfaces';
 
 function createSingleMessageSelector<T>(type: string) {
     return createSelector(getSelectedContext, selectedContext => {

@@ -2,7 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import { connect } from 'react-redux';
 
-import { OctopusConnection } from 'common/components/Octopus';
+import { OctopusConnection } from '@common/components/Octopus';
 import styles from './NotificationPanel.scss';
 
 interface INotificationPanelProps {

@@ -1,4 +1,4 @@
-import IMultipartSummary from 'client/modules/messages/schemas/IMultipartSummary';
+import IMultipartSummary from '@client/modules/messages/schemas/IMultipartSummary';
 
 export interface IRequestResponseBody {
     body?: {

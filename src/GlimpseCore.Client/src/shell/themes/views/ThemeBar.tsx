@@ -1,14 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { getSelectedThemeName } from 'shell/themes/ThemesSelectors';
-import { selectTheme } from 'shell/themes/ThemesActions';
-import { isExperimentalMode } from 'common/util/ConfigurationUtilities';
+import { getSelectedThemeName } from '@shell/themes/ThemesSelectors';
+import { selectTheme } from '@shell/themes/ThemesActions';
+import { isExperimentalMode } from '@common/util/ConfigurationUtilities';
 
-import shellStatusBarStyles from 'shell/views/ShellStatusBarView.scss';
-import { Icon } from 'common/components/Icon';
-import { IStoreState } from 'client/IStoreState';
-import { ThemeType } from 'shell/themes/IThemesState';
+import shellStatusBarStyles from '@shell/views/ShellStatusBarView.scss';
+import { Icon } from '@common/components/Icon';
+import { IStoreState } from '@client/IStoreState';
+import { ThemeType } from '@shell/themes/IThemesState';
 
 interface IThemeBarComponentState {
     isTheming: boolean;

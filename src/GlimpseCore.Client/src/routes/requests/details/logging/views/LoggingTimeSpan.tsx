@@ -2,8 +2,8 @@ import * as Glimpse from '@glimpse/glimpse-definitions';
 import React from 'react';
 
 import LoggingLabel from './LoggingLabel';
-import { TimeDuration } from 'common/components/TimeDuration';
-import MessageRowLink from 'common/components/MessageRowLink';
+import { TimeDuration } from '@common/components/TimeDuration';
+import MessageRowLink from '@common/components/MessageRowLink';
 
 import styles from './LoggingTimeSpan.scss';
 

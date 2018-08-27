@@ -4,8 +4,8 @@
 // import ReactDefaultBatchingStrategy from 'react-dom/lib/ReactDefaultBatchingStrategy';
 
 // import { reportReactException } from './Errors';
-// import { ErrorScreen } from 'common/components/ErrorScreen';
-// import { rootElement } from 'common/init/getRootElement';
+// import { ErrorScreen } from '@common/components/ErrorScreen';
+// import { rootElement } from '@common/init/getRootElement';
 
 // export const initBatchingStrategyErrorHandling = () => {
 //     const reactTryCatchBatchingStrategy = {

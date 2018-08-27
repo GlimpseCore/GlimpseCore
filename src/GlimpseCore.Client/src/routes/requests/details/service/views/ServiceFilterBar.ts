@@ -1,11 +1,11 @@
 import { connect } from 'react-redux';
 
 import { getAgentFilterSummaries, getStatusCodeFilterSummaries } from '../ServiceSelectors';
-import { IFilterBarProps, IFilterBarCallbacks, FilterBar } from 'common/components/FilterBar';
-import { IStoreState } from 'client/IStoreState';
-import loggingFilterBarStyles from 'routes/requests/details/logging/views/LoggingFilterBar.scss';
+import { IFilterBarProps, IFilterBarCallbacks, FilterBar } from '@common/components/FilterBar';
+import { IStoreState } from '@client/IStoreState';
+import loggingFilterBarStyles from '@routes/requests/details/logging/views/LoggingFilterBar.scss';
 import { toggleStatusCodeClassAction, toggleAgentAction, resetAllAction } from '../ServiceActions';
-import { AgentType } from 'routes/requests/details/timeline/TimelineInterfaces';
+import { AgentType } from '@routes/requests/details/timeline/TimelineInterfaces';
 import { StatusCodeClass } from '../ServiceInterfaces';
 import { getColorStyleForStatusCode, getIconForStatusCode } from './ServiceCommon';
 import { getStatusCodeShortNames } from '../ServiceUtils';

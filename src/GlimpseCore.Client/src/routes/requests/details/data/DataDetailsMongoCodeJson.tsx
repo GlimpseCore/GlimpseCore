@@ -2,15 +2,15 @@ import React from 'react'; // tslint:disable-line:no-unused-variable
 import { connect } from 'react-redux';
 
 import { getSelectedOperationSelector } from './DataSelectors';
-import { IStoreState } from 'client/IStoreState';
-import { getSelectedContextId } from 'routes/requests/RequestsSelector';
+import { IStoreState } from '@client/IStoreState';
+import { getSelectedContextId } from '@routes/requests/RequestsSelector';
 import {
     DataDetailsCodeJsonTree,
     IDataDetailsCodeJsonTree
-} from 'client/routes/requests/details/data/DataDetailsCodeJsonTree';
-import { isObjectEmpty } from 'common/util/CommonUtilities';
+} from '@client/routes/requests/details/data/DataDetailsCodeJsonTree';
+import { isObjectEmpty } from '@common/util/CommonUtilities';
 
-import { IDataOperation, DataOperationType } from 'routes/requests/details/data/DataInterfaces';
+import { IDataOperation, DataOperationType } from '@routes/requests/details/data/DataInterfaces';
 
 export const documentsTabName = 'documents';
 

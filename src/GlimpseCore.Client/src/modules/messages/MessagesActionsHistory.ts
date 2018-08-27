@@ -6,7 +6,7 @@ import {
     messageSummaryTypes
 } from './MessagesConstants';
 
-import { current as currentMetadata } from 'modules/metadata/MetadataActions';
+import { current as currentMetadata } from '@modules/metadata/MetadataActions';
 
 // TODO: need to deal with error cases
 

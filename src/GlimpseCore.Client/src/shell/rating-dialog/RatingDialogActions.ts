@@ -1,4 +1,4 @@
-import { createSimpleActionCreator, createActionCreator } from 'common/actions/ActionCreator';
+import { createSimpleActionCreator, createActionCreator } from '@common/actions/ActionCreator';
 
 export const closeDialog = createSimpleActionCreator('dialog.close.dialog');
 export const showRatingFeedbackDialog = createSimpleActionCreator('dialog.open.dialog');

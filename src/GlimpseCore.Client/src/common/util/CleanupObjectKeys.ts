@@ -1,7 +1,7 @@
-import { isObject } from 'common/util/CommonUtilities';
+import { isObject } from '@common/util/CommonUtilities';
 
-import { INITIAL_STATE as requestsRecordStructure } from 'client/routes/requests/RequestsReducers';
-import { INITIAL_STATE as resizePanelsStructure } from 'client/common/components/resize/ResizeReducers';
+import { INITIAL_STATE as requestsRecordStructure } from '@client/routes/requests/RequestsReducers';
+import { INITIAL_STATE as resizePanelsStructure } from '@client/common/components/resize/ResizeReducers';
 
 export const cleanupObjectKeys = (desired, current, genericKeysMap = {}, parent?) => {
     // is there is no `current` key, return the `default`

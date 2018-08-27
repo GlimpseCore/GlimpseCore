@@ -1,15 +1,15 @@
 import * as Glimpse from '@glimpse/glimpse-definitions';
 
 import keyBy from 'lodash/keyBy';
-import { IContext } from 'routes/requests/RequestsInterfaces';
+import { IContext } from '@routes/requests/RequestsInterfaces';
 import {
     IDataOperation,
     DataDatabaseType,
     DataOperationType,
     DataOperationStatus
 } from './DataInterfaces';
-import { getMessageByType } from 'routes/requests/RequestsSelector';
-import { IMessage } from 'modules/messages/schemas/IMessage';
+import { getMessageByType } from '@routes/requests/RequestsSelector';
+import { IMessage } from '@modules/messages/schemas/IMessage';
 
 interface ICorrelatedMongoDBReadMessages {
     startMessage: IMessage<Glimpse.Messages.Payloads.Data.Store.Mongodb.IReadStart>;

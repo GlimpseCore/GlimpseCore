@@ -3,17 +3,17 @@ import classNames from 'classnames';
 import { connect } from 'react-redux';
 
 import styles from './SideBarSection.scss';
-import Icon from 'common/components/Icon';
-import { toggleFollowModeAction, toggleFilterModeAction } from 'routes/requests/RequestsActions';
-import { getFollowMode } from 'routes/requests/RequestsSelector';
+import Icon from '@common/components/Icon';
+import { toggleFollowModeAction, toggleFilterModeAction } from '@routes/requests/RequestsActions';
+import { getFollowMode } from '@routes/requests/RequestsSelector';
 import SideBarFilter from './SideBarFilter';
-import { IRequestFilterDetails } from 'client/routes/requests/RequestsFilterInterfaces';
+import { IRequestFilterDetails } from '@client/routes/requests/RequestsFilterInterfaces';
 import {
     applyFilterStateAction,
     resetFilterStateAction
-} from 'client/routes/requests/RequestsFilterActions';
-import { IRequestsFilterState } from 'client/routes/requests/RequestsFilterInterfaces';
-import { getFilters, isFilterReset } from 'client/routes/requests/RequestsFilterSelectors';
+} from '@client/routes/requests/RequestsFilterActions';
+import { IRequestsFilterState } from '@client/routes/requests/RequestsFilterInterfaces';
+import { getFilters, isFilterReset } from '@client/routes/requests/RequestsFilterSelectors';
 
 export interface IShellSideBarContainerProps {
     title: string;

@@ -1,4 +1,4 @@
-import { ITimelineComponentSpan } from 'common/components/timeline/TimelineCommonInterfaces';
+import { ITimelineComponentSpan } from '@common/components/timeline/TimelineCommonInterfaces';
 
 /**
  * Represents the persisted, request-specific data for the data tab

@@ -1,7 +1,7 @@
 // tslint:disable-next-line:no-unused-variable
 import React from 'react';
 
-import commonStyles from 'common/components/Common.scss';
+import commonStyles from '@common/components/Common.scss';
 
 interface IFilterHeaderProps {
     count: number;

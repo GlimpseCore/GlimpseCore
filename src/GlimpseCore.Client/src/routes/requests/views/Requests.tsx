@@ -7,10 +7,10 @@ import {
     REQUESTS_SIDEBAR_RESIZER_ID
 } from '../RequestsResizeConstants';
 import { IRequestFilterDetails } from '../RequestsFilterInterfaces';
-import { IStoreState } from 'client/IStoreState';
+import { IStoreState } from '@client/IStoreState';
 import { getFollowMode, getFilterMode } from '../RequestsSelector';
 import { getFilteredRequests } from '../RequestsFilterSelectors';
-import { Resize } from 'common/components/resize/Resize';
+import { Resize } from '@common/components/resize/Resize';
 
 import styles from './Requests.scss';
 import RequestsSideBar from './RequestsSideBar';

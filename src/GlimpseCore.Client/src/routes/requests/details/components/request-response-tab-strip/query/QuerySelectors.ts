@@ -2,8 +2,8 @@ import Reselect, { createSelector } from 'reselect';
 import parseUrl from 'url-parse';
 import queryString from 'querystring-browser';
 
-import { IStoreState } from 'client/IStoreState';
-import { IMessage } from 'modules/messages/schemas/IMessage';
+import { IStoreState } from '@client/IStoreState';
+import { IMessage } from '@modules/messages/schemas/IMessage';
 
 export interface IRequestResponseQuery {
     url: string;

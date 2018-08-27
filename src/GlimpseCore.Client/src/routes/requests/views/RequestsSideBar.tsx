@@ -2,15 +2,15 @@ import * as Glimpse from '@glimpse/glimpse-definitions';
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { getSingleMessageByType } from 'routes/requests/RequestsSelector';
+import { getSingleMessageByType } from '@routes/requests/RequestsSelector';
 import { IRequest } from '../RequestsInterfaces';
 import { IRequestFilterDetails } from '../RequestsFilterInterfaces';
 import { clearAllAction, selectRequestPreserveFollowAction } from '../RequestsActions';
 
 import styles from './RequestsSideBar.scss';
-import SideBar from 'common/components/SideBar';
-import SideBarSection from 'common/components/SideBarSection';
-import DataLoadingTimer from 'common/components/DataLoadingTimer';
+import SideBar from '@common/components/SideBar';
+import SideBarSection from '@common/components/SideBarSection';
+import DataLoadingTimer from '@common/components/DataLoadingTimer';
 import RequestsSideBarRequest from './RequestsSideBarRequest';
 
 // TODO: this state should not be stored here. Need to find a better

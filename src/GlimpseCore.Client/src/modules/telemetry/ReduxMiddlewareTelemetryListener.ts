@@ -1,4 +1,4 @@
-import { IStoreState } from 'client/IStoreState';
+import { IStoreState } from '@client/IStoreState';
 import {
     getDataTabMeasurements,
     getDataTabProperties,
@@ -13,12 +13,12 @@ import {
     getTimelineTabMeasurements,
     getServicesTabMeasurements
 } from './TelemetrySelectors';
-import { DATA_TAB_NAME } from 'routes/requests/details/data/DataConfig';
-import { SERVICE_TAB_NAME } from 'routes/requests/details/service/ServiceConstants';
+import { DATA_TAB_NAME } from '@routes/requests/details/data/DataConfig';
+import { SERVICE_TAB_NAME } from '@routes/requests/details/service/ServiceConstants';
 import telemetryClient from './TelemetryClient';
-import { IMeasurements, IProperties } from 'modules/telemetry/TelemetryInterfaces';
-import { applyFilterStateAction } from 'client/routes/requests/RequestsFilterActions';
-import { getExcludedContentTypeClassNames } from 'common/util/ContentTypes';
+import { IMeasurements, IProperties } from '@modules/telemetry/TelemetryInterfaces';
+import { applyFilterStateAction } from '@client/routes/requests/RequestsFilterActions';
+import { getExcludedContentTypeClassNames } from '@common/util/ContentTypes';
 
 /**
  *  Properties sent when a request detail is selected

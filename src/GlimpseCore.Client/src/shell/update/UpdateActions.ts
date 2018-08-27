@@ -1,16 +1,16 @@
 import { Store, Dispatch } from 'redux';
 import utpl from 'uri-templates';
 
-import { current as currentMetadata } from 'modules/metadata/MetadataActions';
+import { current as currentMetadata } from '@modules/metadata/MetadataActions';
 
-import { IUpdatePersistedState } from 'client/shell/update/UpdateInterfaces';
-import { IStoreState } from 'client/IStoreState';
+import { IUpdatePersistedState } from '@client/shell/update/UpdateInterfaces';
+import { IStoreState } from '@client/IStoreState';
 import {
     createActionCreator,
     createSimpleActionCreator
-} from 'client/common/actions/ActionCreator';
-import { getUpdateInfo } from 'client/shell/update/UpdateSelectors';
-import { isSameDateAs } from 'client/common/util/DateTimeUtilities';
+} from '@client/common/actions/ActionCreator';
+import { getUpdateInfo } from '@client/shell/update/UpdateSelectors';
+import { isSameDateAs } from '@client/common/util/DateTimeUtilities';
 
 export const showLatestVersionAction = createActionCreator<IUpdatePersistedState>(
     'shell.update.latestversion.show'

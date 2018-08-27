@@ -1,8 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { IStoreState } from 'client/IStoreState';
-import { getVersions, getClientVersion } from 'modules/metadata/MetadataSelectors';
+import { IStoreState } from '@client/IStoreState';
+import { getVersions, getClientVersion } from '@modules/metadata/MetadataSelectors';
 
 import styles from '../../views/ShellStatusBarView.scss';
 

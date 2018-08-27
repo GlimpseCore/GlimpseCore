@@ -13,7 +13,7 @@ import {
     highlightOffsetsAction,
     resetHighlightedOffsetsAction
 } from './TimelineActions';
-import { getIntegersForEnum } from 'common/util/CommonUtilities';
+import { getIntegersForEnum } from '@common/util/CommonUtilities';
 import { Action, combineReducers } from 'redux';
 
 function toggleFilter(

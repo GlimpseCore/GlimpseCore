@@ -1,14 +1,14 @@
 import { connect } from 'react-redux';
 
 import { getDatabaseFiltersSummaries, getOperationFiltersSummaries } from './DataSelectors';
-import { IFilterBarProps, IFilterBarCallbacks, FilterBar } from 'common/components/FilterBar';
-import { IStoreState } from 'client/IStoreState';
+import { IFilterBarProps, IFilterBarCallbacks, FilterBar } from '@common/components/FilterBar';
+import { IStoreState } from '@client/IStoreState';
 import {
     toggleDatabaseFilterAction,
     toggleOperationFilterAction,
     showAllAction
 } from './DataActions';
-import { logError } from 'common/util/Log';
+import { logError } from '@common/util/Log';
 
 function mapStateToProps(state: IStoreState): IFilterBarProps {
     return {

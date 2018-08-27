@@ -1,5 +1,5 @@
-import { showRatingFeedbackDialog } from 'client/shell/rating-dialog/RatingDialogActions';
-import { getSessionNumber } from 'client/shell/sessionNumber/SessionNumberSelectors';
+import { showRatingFeedbackDialog } from '@client/shell/rating-dialog/RatingDialogActions';
+import { getSessionNumber } from '@client/shell/sessionNumber/SessionNumberSelectors';
 
 export const triggerRatingDialog = (store) => {
     // get current session number

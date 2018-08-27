@@ -9,7 +9,7 @@ import {
 
 import { IFilterValue, IServicePersistedRequestState, StatusCodeClass } from './ServiceInterfaces';
 import { AgentType } from '../timeline/TimelineInterfaces';
-import { getIntegersForEnum } from 'common/util/CommonUtilities';
+import { getIntegersForEnum } from '@common/util/CommonUtilities';
 
 const defaultAgentFiltersState = (() => {
     const state: IFilterValue = {};

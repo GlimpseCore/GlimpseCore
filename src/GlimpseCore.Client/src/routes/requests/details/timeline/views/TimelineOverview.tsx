@@ -4,10 +4,10 @@ import classNames from 'classnames';
 import React from 'react';
 import { connect } from 'react-redux';
 
-import Icon from 'common/components/Icon';
-import { IStoreState } from 'client/IStoreState';
-import { TimeDuration, TimeDurationFormat } from 'common/components/TimeDuration';
-import TimelineActivity from 'common/components/timeline/TimelineActivity';
+import Icon from '@common/components/Icon';
+import { IStoreState } from '@client/IStoreState';
+import { TimeDuration, TimeDurationFormat } from '@common/components/TimeDuration';
+import TimelineActivity from '@common/components/timeline/TimelineActivity';
 import { getBackgroundStyleForCategory, getBorderStyleForCategory } from './TimelineCommon';
 import { selectOffsetsAction, resetOffsetsAction } from '../TimelineActions';
 import { ITimelineEvent, ITimelineSpan } from '../TimelineInterfaces';
@@ -16,15 +16,15 @@ import {
     getOverviewTimelineEvents,
     getSelectedOffsetsForSelectedContext
 } from '../TimelineSelectors';
-import { getSelectedContextId, getSingleMessageByType } from 'routes/requests/RequestsSelector';
+import { getSelectedContextId, getSingleMessageByType } from '@routes/requests/RequestsSelector';
 import {
     getBrowserNavigationTimingOffsets,
     IBrowserNavigationTimingOffsets,
     BrowserNavigationTimingSegments
-} from 'routes/requests/RequestsOverviewSelector';
-import { getSelectedRequest } from 'routes/requests/details/RequestsDetailsSelector';
-import { getNamesForEnum } from 'common/util/CommonUtilities';
-import { IDropdownOption, Dropdown } from 'common/components/Dropdown';
+} from '@routes/requests/RequestsOverviewSelector';
+import { getSelectedRequest } from '@routes/requests/details/RequestsDetailsSelector';
+import { getNamesForEnum } from '@common/util/CommonUtilities';
+import { IDropdownOption, Dropdown } from '@common/components/Dropdown';
 
 import styles from './TimelineOverview.scss';
 

@@ -2,37 +2,37 @@ import React from 'react'; // tslint:disable-line:no-unused-variable
 import classNames from 'classnames';
 import { connect } from 'react-redux';
 
-import AgentTypeIcon from 'common/components/AgentTypeIcon';
-import { IStoreState } from 'client/IStoreState';
-import { formatMilliseconds, TimeDuration } from 'common/components/TimeDuration';
-import TimelineActivity from 'common/components/timeline/TimelineActivity';
-import TimelineSlownessIcon from 'routes/requests/details/timeline/views/TimelineSlownessIcon';
+import AgentTypeIcon from '@common/components/AgentTypeIcon';
+import { IStoreState } from '@client/IStoreState';
+import { formatMilliseconds, TimeDuration } from '@common/components/TimeDuration';
+import TimelineActivity from '@common/components/timeline/TimelineActivity';
+import TimelineSlownessIcon from '@routes/requests/details/timeline/views/TimelineSlownessIcon';
 import {
     TimelineTable,
     ITimelineTableProps,
     ITimelineTableCallbacks,
     getActivityColumnPlaceholder
-} from 'common/components/timeline/TimelineTable';
+} from '@common/components/timeline/TimelineTable';
 import {
     TimelineEventCategory,
     ITimelineSpan,
     ITimelineEvent,
     AgentType
-} from 'routes/requests/details/timeline/TimelineInterfaces';
+} from '@routes/requests/details/timeline/TimelineInterfaces';
 import {
     getSelectedTimelineEvents,
     getTotalTimelineDuration
-} from 'routes/requests/details/timeline/TimelineSelectors';
-import { toStringWithFixedPoints } from 'common/util/StringUtilities';
+} from '@routes/requests/details/timeline/TimelineSelectors';
+import { toStringWithFixedPoints } from '@common/util/StringUtilities';
 import { getBackgroundStyleForCategory, getBorderStyleForCategory } from './TimelineCommon';
 import {
     routeActivityAction,
     highlightOffsetsAction,
     resetHighlightedOffsetsAction
-} from 'routes/requests/details/timeline/TimelineActions';
+} from '@routes/requests/details/timeline/TimelineActions';
 
 import styles from './TimelineDetails.scss';
-import commonStyles from 'common/components/Common.scss';
+import commonStyles from '@common/components/Common.scss';
 
 // tslint:disable-next-line:variable-name
 const TimelineActivityBar = (props: { activity: ITimelineSpan; metadata }) => {
@@ -187,7 +187,7 @@ const eventColumn = {
     },
     width: 28
 };
-import StackFrame from 'common/components/StackFrame';
+import StackFrame from '@common/components/StackFrame';
 
 const locationColumn = {
     headerFunc: () => 'Location',

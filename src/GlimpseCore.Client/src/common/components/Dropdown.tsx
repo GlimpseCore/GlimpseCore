@@ -1,6 +1,6 @@
 import React from 'react'; // tslint:disable-line:no-unused-variable
 import classNames from 'classnames';
-import { IFilterButtonProps } from 'common/components/FilterButton';
+import { IFilterButtonProps } from '@common/components/FilterButton';
 
 import styles from './Dropdown.scss';
 

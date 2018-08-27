@@ -1,7 +1,7 @@
 import React from 'react'; // tslint:disable-line:no-unused-variable
 import classNames from 'classnames';
 
-import { stateKey } from 'client/Reducers';
+import { stateKey } from '@client/Reducers';
 
 import styles from './ErrorScreen.scss';
 

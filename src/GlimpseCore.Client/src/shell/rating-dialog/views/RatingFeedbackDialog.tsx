@@ -3,7 +3,7 @@ import React from 'react';
 import classNames from 'classnames';
 
 import { DialogsType } from '../RatingDialogInterfaces';
-import { getCurrentRatingColor } from 'shell/rating-dialog/views/rating-buttons/RatingButtons.tsx';
+import { getCurrentRatingColor } from '@shell/rating-dialog/views/rating-buttons/RatingButtons.tsx';
 
 import styles from './RatingDialog.scss';
 

@@ -1,4 +1,4 @@
-import { incrementSessionNumber as incrementSessionNumberAction } from 'client/shell/sessionNumber/SessionNumberActions';
+import { incrementSessionNumber as incrementSessionNumberAction } from '@client/shell/sessionNumber/SessionNumberActions';
 
 export const incrementSessionNumber = (store) => {
     store.dispatch(incrementSessionNumberAction());

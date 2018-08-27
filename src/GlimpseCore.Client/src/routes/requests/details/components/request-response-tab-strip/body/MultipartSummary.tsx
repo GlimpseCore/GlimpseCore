@@ -6,8 +6,8 @@ import classNames from 'classnames';
 import {
     FixedWidthLeftColumnTable,
     IColumnInfo
-} from 'common/components/FixedWidthLeftColumnTable';
-import Icon from 'common/components/Icon';
+} from '@common/components/FixedWidthLeftColumnTable';
+import Icon from '@common/components/Icon';
 import {
     IMultipartPart,
     IMultipartFilePart,

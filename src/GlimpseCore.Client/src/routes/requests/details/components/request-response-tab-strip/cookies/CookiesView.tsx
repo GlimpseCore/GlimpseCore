@@ -7,13 +7,13 @@ import { IRequestCookie, IResponseCookie } from './CookieUtils';
 
 import styles from '../headers/HeadersView.scss';
 import cookieStyles from './CookiesView.scss';
-import commonStyles from 'common/components/Common.scss';
-import { Icon } from 'common/components/Icon';
+import commonStyles from '@common/components/Common.scss';
+import { Icon } from '@common/components/Icon';
 import {
     FixedWidthLeftColumnTable,
     IColumnInfo
-} from 'common/components/FixedWidthLeftColumnTable';
-import { InformationLabel } from 'common/components/InformationLabel';
+} from '@common/components/FixedWidthLeftColumnTable';
+import { InformationLabel } from '@common/components/InformationLabel';
 
 export interface IRequestCookiesProps {
     cookies: IRequestCookie[];

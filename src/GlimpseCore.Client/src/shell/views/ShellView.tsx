@@ -2,14 +2,14 @@ import React from 'react';
 import { connect } from 'react-redux';
 import classNames from 'classnames';
 
-import { IStoreState } from 'client/IStoreState';
+import { IStoreState } from '@client/IStoreState';
 import { getSelectedThemeName } from '../themes/ThemesSelectors';
 
 import styles from './ShellView.scss';
 import ShellActivityBarView from './ShellActivityBarView';
 import ShellStatusBarView from './ShellStatusBarView';
-import SmileyFeedback from 'shell/feedback/views/SmileyFeedback';
-import { Dialog } from 'client/shell/rating-dialog/views/RatingDialog';
+import SmileyFeedback from '@shell/feedback/views/SmileyFeedback';
+import { Dialog } from '@client/shell/rating-dialog/views/RatingDialog';
 
 export interface IShellViewProps {
     messages;

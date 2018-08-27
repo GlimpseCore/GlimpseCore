@@ -2,9 +2,9 @@ import { connect } from 'react-redux';
 
 import { getColorStyleForCategory } from './TimelineCommon';
 import { getAgentFilterSummaries, getCategoryFilterSummaries } from '../TimelineSelectors';
-import { IFilterBarProps, IFilterBarCallbacks, FilterBar } from 'common/components/FilterBar';
-import { IStoreState } from 'client/IStoreState';
-import loggingFilterBarStyles from 'routes/requests/details/logging/views/LoggingFilterBar.scss';
+import { IFilterBarProps, IFilterBarCallbacks, FilterBar } from '@common/components/FilterBar';
+import { IStoreState } from '@client/IStoreState';
+import loggingFilterBarStyles from '@routes/requests/details/logging/views/LoggingFilterBar.scss';
 import { toggleCategoryAction, toggleAgentAction, resetAllAction } from '../TimelineActions';
 import { TimelineEventCategory, AgentType } from '../TimelineInterfaces';
 

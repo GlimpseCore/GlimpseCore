@@ -1,7 +1,7 @@
 import uriTemplate from 'uri-templates';
 
-import { createActionCreator, createSimpleActionCreator } from 'common/actions/ActionCreator';
-import { getOriginalQueryStringParam } from 'common/util/UrlUtilities';
+import { createActionCreator, createSimpleActionCreator } from '@common/actions/ActionCreator';
+import { getOriginalQueryStringParam } from '@common/util/UrlUtilities';
 import { IMetadataState } from './IMetadataState';
 
 export const featchRequestedPayloadAction = createSimpleActionCreator('METADATA_REQUESTED_PAYLOAD');

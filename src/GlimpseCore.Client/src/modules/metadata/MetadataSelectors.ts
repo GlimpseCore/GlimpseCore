@@ -1,6 +1,6 @@
 import { createSelector } from 'reselect';
 
-import { IStoreState } from 'client/IStoreState';
+import { IStoreState } from '@client/IStoreState';
 
 const getMetadataState = (state: IStoreState) => state.session.metadata;
 

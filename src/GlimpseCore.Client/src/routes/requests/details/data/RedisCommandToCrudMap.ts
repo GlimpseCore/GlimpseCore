@@ -1,4 +1,4 @@
-import { DataOperationType } from 'routes/requests/details/data/DataInterfaces';
+import { DataOperationType } from '@routes/requests/details/data/DataInterfaces';
 
 export const redisCommandToNumberMap = {
     // CREATE

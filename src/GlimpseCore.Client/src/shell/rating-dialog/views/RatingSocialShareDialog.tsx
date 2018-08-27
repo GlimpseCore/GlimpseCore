@@ -2,8 +2,8 @@
 import React from 'react';
 import classNames from 'classnames';
 
-import { Icon } from 'common/components/Icon';
-import { getCurrentRatingColor } from 'shell/rating-dialog/views/rating-buttons/RatingButtons.tsx';
+import { Icon } from '@common/components/Icon';
+import { getCurrentRatingColor } from '@shell/rating-dialog/views/rating-buttons/RatingButtons.tsx';
 
 import styles from './RatingDialog.scss';
 

@@ -1,5 +1,5 @@
-import { isArray } from 'common/util/CommonUtilities';
-import { getValueAtKeyCaseInsensitive } from 'common/util/ObjectUtilities';
+import { isArray } from '@common/util/CommonUtilities';
+import { getValueAtKeyCaseInsensitive } from '@common/util/ObjectUtilities';
 
 // consts are lower-cased attribute names that can appear in the Set-Cookie header value
 const attrExpires = 'expires';

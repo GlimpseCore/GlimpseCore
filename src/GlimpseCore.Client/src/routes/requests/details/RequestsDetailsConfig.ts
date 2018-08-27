@@ -1,6 +1,6 @@
 import RequestsDetailsView from './views/RequestsDetails';
 
-import { processRoutes } from 'common/config/config-processor';
+import { processRoutes } from '@common/config/config-processor';
 import { tabSelected, requestSelected } from './RequestsDetailsActions';
 import { getFilteredRequests } from '../RequestsFilterSelectors';
 

@@ -3,14 +3,14 @@ import ReactRouter from 'react-router';
 import { connect } from 'react-redux';
 
 import styles from './ServiceDetails.scss';
-import DetailBiPanel from 'common/components/DetailBiPanel';
+import DetailBiPanel from '@common/components/DetailBiPanel';
 import {
     requestConfig,
     responseConfig
-} from 'routes/requests/details/service/views/ServiceTabStripConfig';
+} from '@routes/requests/details/service/views/ServiceTabStripConfig';
 import { SERVICE_TAB_NAME } from '../ServiceConstants';
-import TabStrip, { TabStripType } from 'common/components/TabStrip';
-import { Resize, toggleOpenState } from 'common/components/resize/Resize';
+import TabStrip, { TabStripType } from '@common/components/TabStrip';
+import { Resize, toggleOpenState } from '@common/components/resize/Resize';
 
 import { IExchangeModel } from '../ServiceInterfaces';
 

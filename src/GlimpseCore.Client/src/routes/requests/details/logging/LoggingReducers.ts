@@ -1,6 +1,6 @@
 import { Action, combineReducers } from 'redux';
 
-import { getIntegersForEnum } from 'common/util/CommonUtilities';
+import { getIntegersForEnum } from '@common/util/CommonUtilities';
 
 import { AgentType } from '../timeline/TimelineInterfaces';
 import {

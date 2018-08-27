@@ -2,8 +2,8 @@ import isEmpty from 'lodash/isEmpty';
 import React from 'react';
 
 import styles from './QueryView.scss';
-import commonStyles from 'common/components/Common.scss';
-import { ParameterList } from 'common/components/ParameterList';
+import commonStyles from '@common/components/Common.scss';
+import { ParameterList } from '@common/components/ParameterList';
 
 export interface IQueryViewProps {
     queryParams: { [key: string]: string | string[] };

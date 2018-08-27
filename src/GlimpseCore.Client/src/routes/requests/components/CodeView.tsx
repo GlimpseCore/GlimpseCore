@@ -2,8 +2,8 @@ import React from 'react';
 import beautify from 'js-beautify';
 import classNames from 'classnames';
 
-import { isObject } from 'common/util/CommonUtilities';
-import { convertToObject } from 'common/util/ObjectUtilities';
+import { isObject } from '@common/util/CommonUtilities';
+import { convertToObject } from '@common/util/ObjectUtilities';
 
 import styles from './CodeView.scss';
 import Highlight from 'react-highlight';

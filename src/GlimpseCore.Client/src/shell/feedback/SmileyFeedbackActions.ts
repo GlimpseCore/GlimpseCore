@@ -1,4 +1,4 @@
-import { createSimpleActionCreator, createActionCreator } from 'common/actions/ActionCreator';
+import { createSimpleActionCreator, createActionCreator } from '@common/actions/ActionCreator';
 
 export const toggleSmileyFeedbackDialog = createSimpleActionCreator('shell.feedback.toggle');
 export const closeSmileyFeedbackDialog = createSimpleActionCreator('shell.feedback.close');

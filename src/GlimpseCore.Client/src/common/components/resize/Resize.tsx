@@ -6,8 +6,8 @@ import classNames from 'classnames';
 import styles from './Resize.scss';
 import { saveSize, saveOpenState, toggleOpenState } from './ResizeActions';
 import { getResizePanelsState } from './ResizeSelectors';
-import { IStoreState } from 'client/IStoreState';
-import { clamp } from 'common/util/CommonUtilities';
+import { IStoreState } from '@client/IStoreState';
+import { clamp } from '@common/util/CommonUtilities';
 
 // enable DOM events so `preventDefault()` could be called on events
 Hammer.defaults.domEvents = true;

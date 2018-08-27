@@ -1,4 +1,4 @@
-import { IStoreState } from 'client/IStoreState';
+import { IStoreState } from '@client/IStoreState';
 
 export const getSelectedThemeName = (state: IStoreState) =>
     state.persisted.global.themes.selectedTheme;

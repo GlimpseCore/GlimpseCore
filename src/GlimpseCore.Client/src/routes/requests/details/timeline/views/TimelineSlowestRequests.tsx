@@ -2,14 +2,14 @@ import React from 'react'; // tslint:disable-line:no-unused-variable
 import { connect } from 'react-redux';
 import classNames from 'classnames';
 import { ISlowTimelineSpan } from '../TimelineInterfaces';
-import { IStoreState } from 'client/IStoreState';
+import { IStoreState } from '@client/IStoreState';
 import { getSlowestTimelineEvents } from '../TimelineSelectors';
-import Icon from 'common/components/Icon';
-import { TimeDuration, TimeDurationFormat } from 'common/components/TimeDuration';
-import commonStyles from 'common/components/Common.scss';
+import Icon from '@common/components/Icon';
+import { TimeDuration, TimeDurationFormat } from '@common/components/TimeDuration';
+import commonStyles from '@common/components/Common.scss';
 import styles from './TimelineSlowestRequests.scss';
 import { getColorStyleForCategory } from './TimelineCommon';
-import MessageRowLink from 'common/components/MessageRowLink';
+import MessageRowLink from '@common/components/MessageRowLink';
 import TimelineSlownessIcon from './TimelineSlownessIcon';
 
 // tslint:disable-next-line:variable-name

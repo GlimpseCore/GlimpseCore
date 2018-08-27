@@ -2,25 +2,25 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { replace } from 'react-router-redux';
 
-import styles from 'client/routes/requests/details/service/views/ServiceDetails.scss';
-import DetailBiPanel from 'common/components/DetailBiPanel';
-import TabStrip, { TabStripType } from 'common/components/TabStrip';
-import { IDataOperation, DataDatabaseType } from 'routes/requests/details/data/DataInterfaces';
+import styles from '@client/routes/requests/details/service/views/ServiceDetails.scss';
+import DetailBiPanel from '@common/components/DetailBiPanel';
+import TabStrip, { TabStripType } from '@common/components/TabStrip';
+import { IDataOperation, DataDatabaseType } from '@routes/requests/details/data/DataInterfaces';
 import {
     mongoLeftSectionConfig,
     mongoRightSectionConfig
-} from 'routes/requests/details/data/DataDetailsMongoDbTabStripConfig';
+} from '@routes/requests/details/data/DataDetailsMongoDbTabStripConfig';
 import {
     redisLeftSectionConfig,
     redisRightSectionConfig
-} from 'routes/requests/details/data/DataDetailsRedisTabStripConfig';
-import { Resize, toggleOpenState } from 'common/components/resize/Resize';
+} from '@routes/requests/details/data/DataDetailsRedisTabStripConfig';
+import { Resize, toggleOpenState } from '@common/components/resize/Resize';
 import {
     SIDEBAR_MIN_HEIGHT,
     SIDEBAR_NORMAL_HEIGHT,
     SIDEBAR_THRESHOLD,
     SIDEBAR_MAX_HEIGHT
-} from 'client/routes/requests/details/service/ServiceConstants';
+} from '@client/routes/requests/details/service/ServiceConstants';
 
 interface IDataDetailsProps {
     location;

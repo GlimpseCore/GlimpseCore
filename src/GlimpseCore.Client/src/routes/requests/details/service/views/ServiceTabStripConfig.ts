@@ -12,15 +12,15 @@ import {
     buildRequestRouteData,
     buildResponseRouteData,
     createRouteConfig
-} from 'routes/requests/details/components/request-response-tab-strip/RequestResponseTabStripConfig';
+} from '@routes/requests/details/components/request-response-tab-strip/RequestResponseTabStripConfig';
 
-import { QueryView } from 'routes/requests/details/components/request-response-tab-strip/query/QueryView';
+import { QueryView } from '@routes/requests/details/components/request-response-tab-strip/query/QueryView';
 import {
     RequestCookiesView,
     ResponseCookiesView
-} from 'routes/requests/details/components/request-response-tab-strip/cookies/CookiesView';
-import { BodyView } from 'routes/requests/details/components/request-response-tab-strip/body/BodyView';
-import { HeadersView } from 'routes/requests/details/components/request-response-tab-strip/headers/HeadersView';
+} from '@routes/requests/details/components/request-response-tab-strip/cookies/CookiesView';
+import { BodyView } from '@routes/requests/details/components/request-response-tab-strip/body/BodyView';
+import { HeadersView } from '@routes/requests/details/components/request-response-tab-strip/headers/HeadersView';
 
 const requestHeadersView = connect(getFilteredRequestHeadersSelector)(HeadersView);
 const responseHeadersView = connect(getFilteredResponseHeadersSelector)(HeadersView);

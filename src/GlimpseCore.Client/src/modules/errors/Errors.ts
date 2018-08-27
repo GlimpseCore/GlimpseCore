@@ -1,5 +1,5 @@
-import { default as telemetryClient } from 'modules/telemetry/TelemetryClient';
-import { IProperties } from 'modules/telemetry/TelemetryInterfaces';
+import { default as telemetryClient } from '@modules/telemetry/TelemetryClient';
+import { IProperties } from '@modules/telemetry/TelemetryInterfaces';
 
 enum GlimpseErrorSeverity {
     Error = 3,

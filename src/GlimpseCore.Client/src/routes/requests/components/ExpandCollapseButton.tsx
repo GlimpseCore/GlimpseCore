@@ -3,8 +3,8 @@ import { connect } from 'react-redux';
 
 import { expandAction, collapseAction } from './expansion/ExpansionActions';
 import { getExpansionState, isExpanded } from './expansion/ExpansionSelectors';
-import { Icon } from 'common/components/Icon';
-import { IStoreState } from 'client/IStoreState';
+import { Icon } from '@common/components/Icon';
+import { IStoreState } from '@client/IStoreState';
 
 import styles from './ExpandCollapseButton.scss';
 

@@ -1,4 +1,4 @@
-import { isObject } from 'common/util/CommonUtilities';
+import { isObject } from '@common/util/CommonUtilities';
 
 const getArrayHash = args => {
     let hash = '';

@@ -5,8 +5,8 @@ import classNames from 'classnames';
 import includes from 'lodash/includes';
 import isObjectLike from 'lodash/isObjectLike';
 
-import ExpandCollapseButton from 'routes/requests/components/ExpandCollapseButton';
-import ExpandableText from 'routes/requests/components/ExpandableText';
+import ExpandCollapseButton from '@routes/requests/components/ExpandCollapseButton';
+import ExpandableText from '@routes/requests/components/ExpandableText';
 import {
     getVisibleLoggingMessages,
     getCountableMessageCount,
@@ -15,32 +15,32 @@ import {
     getCountableFilteredMessageCount
 } from '../LoggingSelectors';
 
-import { getSelectedContextId } from 'routes/requests/RequestsSelector';
-import { areObjectsEqual } from 'common/util/ObjectUtilities';
-import { templateBatchProcessor } from 'common/util/TemplateProcessor';
+import { getSelectedContextId } from '@routes/requests/RequestsSelector';
+import { areObjectsEqual } from '@common/util/ObjectUtilities';
+import { templateBatchProcessor } from '@common/util/TemplateProcessor';
 import { ILoggingMessage, LoggingMessageLevel } from '../LoggingInterfaces';
-import { IStoreState } from 'client/IStoreState';
+import { IStoreState } from '@client/IStoreState';
 
-import commonStyles from 'common/components/Common.scss';
+import commonStyles from '@common/components/Common.scss';
 import styles from './Logging.scss';
-import { Icon } from 'common/components/Icon';
-import MessageRowTarget from 'common/components/MessageRowTarget';
+import { Icon } from '@common/components/Icon';
+import MessageRowTarget from '@common/components/MessageRowTarget';
 
-import AgentTypeIcon from 'common/components/AgentTypeIcon';
+import AgentTypeIcon from '@common/components/AgentTypeIcon';
 import LoggingLevelIcon from './LoggingLevelIcon';
-import ExpandCollapseAllBar from 'routes/requests/components/ExpandCollapseAllBar';
-import JsonTree from 'routes/requests/components/JsonTree';
-import JsonTable from 'routes/requests/components/JsonTable';
+import ExpandCollapseAllBar from '@routes/requests/components/ExpandCollapseAllBar';
+import JsonTree from '@routes/requests/components/JsonTree';
+import JsonTable from '@routes/requests/components/JsonTable';
 import LoggingLabel from './LoggingLabel';
 import LoggingStatement from './LoggingStatement';
 import LoggingTimeSpan from './LoggingTimeSpan';
 import LoggingFilterBarContainer from './LoggingFilterBar';
-import StackFrame from 'common/components/StackFrame';
-import { TimeDuration } from 'common/components/TimeDuration';
+import StackFrame from '@common/components/StackFrame';
+import { TimeDuration } from '@common/components/TimeDuration';
 
-import { addExploredCategoryAction } from 'routes/requests/details/logging/LoggingActions';
-import { ILoggingExploredCategories } from 'routes/requests/details/logging/LoggingInterfaces';
-import { FilterHeader } from 'common/components/FilterHeader';
+import { addExploredCategoryAction } from '@routes/requests/details/logging/LoggingActions';
+import { ILoggingExploredCategories } from '@routes/requests/details/logging/LoggingInterfaces';
+import { FilterHeader } from '@common/components/FilterHeader';
 
 export interface ILoggingProps {
     contextId: string;

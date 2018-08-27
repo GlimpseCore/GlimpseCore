@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import { AgentType } from 'routes/requests/details/timeline/TimelineInterfaces';
+import { AgentType } from '@routes/requests/details/timeline/TimelineInterfaces';
 import {
     LoggingMessageLevel,
     ILoggingAgentSummary,
@@ -9,12 +9,12 @@ import {
 import { toggleLevelAction, toggleAgentAction, showAllAction } from '../LoggingActions';
 import { getLevelFiltersSummaries, getAgentFiltersSummaries } from '../LoggingSelectors';
 
-import { selectCategoryAction } from 'routes/requests/details/logging/LoggingActions';
+import { selectCategoryAction } from '@routes/requests/details/logging/LoggingActions';
 
 import styles from './LoggingFilterBar.scss';
-import { IFilterBarProps, IFilterBarCallbacks, FilterBar } from 'common/components/FilterBar';
-import { IStoreState } from 'client/IStoreState';
-import { IDropdownOption } from 'common/components/Dropdown';
+import { IFilterBarProps, IFilterBarCallbacks, FilterBar } from '@common/components/FilterBar';
+import { IStoreState } from '@client/IStoreState';
+import { IDropdownOption } from '@common/components/Dropdown';
 
 import {
     getCurrentExploredCategoriesCount,

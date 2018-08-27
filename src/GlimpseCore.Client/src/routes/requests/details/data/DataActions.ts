@@ -2,7 +2,7 @@ import {
     createActionCreator,
     createSimpleActionCreator,
     createRequestPersistedActionCreator
-} from 'common/actions/ActionCreator';
+} from '@common/actions/ActionCreator';
 
 export const toggleDatabaseFilterAction = createActionCreator<string>(
     'request.detail.data.toggle.database'

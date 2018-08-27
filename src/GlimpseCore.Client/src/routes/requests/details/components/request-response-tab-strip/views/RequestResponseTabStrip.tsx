@@ -2,13 +2,13 @@ import React from 'react';
 import { connect } from 'react-redux';
 import classNames from 'classnames';
 
-import { IStoreState } from 'client/IStoreState';
+import { IStoreState } from '@client/IStoreState';
 
-import styles from 'routes/requests/details/components/request-response-tab-strip/views/RequestResponseTabStrip.scss';
-import commonStyles from 'common/components/Common.scss';
-import tabStripStyles from 'common/components/TabStrip.scss';
-import TabStrip, { TabStripType } from 'common/components/TabStrip';
-import RequestResponseTabStripModal from 'routes/requests/details/components/request-response-tab-strip/views/RequestResponseTabStripModal';
+import styles from '@routes/requests/details/components/request-response-tab-strip/views/RequestResponseTabStrip.scss';
+import commonStyles from '@common/components/Common.scss';
+import tabStripStyles from '@common/components/TabStrip.scss';
+import TabStrip, { TabStripType } from '@common/components/TabStrip';
+import RequestResponseTabStripModal from '@routes/requests/details/components/request-response-tab-strip/views/RequestResponseTabStripModal';
 
 interface IRequestResponseTabStripProps {
     requestConfig;

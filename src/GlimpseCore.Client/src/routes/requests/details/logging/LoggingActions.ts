@@ -1,4 +1,4 @@
-import { createActionCreator, createSimpleActionCreator } from 'common/actions/ActionCreator';
+import { createActionCreator, createSimpleActionCreator } from '@common/actions/ActionCreator';
 import { ILoggingExploredCategories } from './LoggingInterfaces';
 
 export const showAllActionID = 'request.detail.logging.showAll';

@@ -6,10 +6,10 @@ import TimelineOverview from './TimelineOverview';
 import TimelineSlowestRequests from './TimelineSlowestRequests';
 import TimelineFilterBarContainer from './TimelineFilterBar';
 import styles from './Timeline.scss';
-import commonStyles from 'common/components/Common.scss';
+import commonStyles from '@common/components/Common.scss';
 import { getTimelineEvents, getSelectedTimelineEvents } from '../TimelineSelectors';
-import { IStoreState } from 'client/IStoreState';
-import { getSelectedContextId } from 'routes/requests/RequestsSelector';
+import { IStoreState } from '@client/IStoreState';
+import { getSelectedContextId } from '@routes/requests/RequestsSelector';
 
 export interface ITimelineProps {
     totalEventCount: number;

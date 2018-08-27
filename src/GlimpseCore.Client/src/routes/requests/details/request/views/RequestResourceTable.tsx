@@ -2,11 +2,11 @@ import map from 'lodash/_baseMap';
 import React from 'react';
 import classNames from 'classnames';
 
-import InformationLabel from 'common/components/InformationLabel';
-import { toStringWithFixedPoints, roundWithFixedPoints } from 'common/util/StringUtilities';
+import InformationLabel from '@common/components/InformationLabel';
+import { toStringWithFixedPoints, roundWithFixedPoints } from '@common/util/StringUtilities';
 
 import styles from './RequestResourceTable.scss';
-import commonStyles from 'common/components/Common.scss';
+import commonStyles from '@common/components/Common.scss';
 
 interface IRequestResourceType {
     type: string;

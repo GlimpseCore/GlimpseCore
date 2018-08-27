@@ -3,14 +3,14 @@ import React from 'react';
 import classNames from 'classnames';
 import { connect } from 'react-redux';
 
-import UrlText from 'common/components/UrlText';
-import StatusLabel from 'common/components/StatusLabel';
-import { calculateDuration } from 'client/routes/requests/details/RequestsDetailsSelector';
-import { getSingleMessageByType } from 'client/routes/requests/RequestsSelector';
-import TimeDuration from 'common/components/TimeDuration';
-import { IStoreState } from 'client/IStoreState';
+import UrlText from '@common/components/UrlText';
+import StatusLabel from '@common/components/StatusLabel';
+import { calculateDuration } from '@client/routes/requests/details/RequestsDetailsSelector';
+import { getSingleMessageByType } from '@client/routes/requests/RequestsSelector';
+import TimeDuration from '@common/components/TimeDuration';
+import { IStoreState } from '@client/IStoreState';
 
-import { IRequest } from 'routes/requests/RequestsInterfaces';
+import { IRequest } from '@routes/requests/RequestsInterfaces';
 
 import styles from './RequestsOverviewTopPanel.scss';
 

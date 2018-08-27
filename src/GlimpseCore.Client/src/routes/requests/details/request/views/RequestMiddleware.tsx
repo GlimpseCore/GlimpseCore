@@ -2,9 +2,9 @@ import classNames from 'classnames';
 import * as Glimpse from '@glimpse/glimpse-definitions';
 import React from 'react';
 import { connect } from 'react-redux';
-import { messageTargetId } from 'client/common/util/CommonUtilities';
+import { messageTargetId } from '@client/common/util/CommonUtilities';
 
-import { trainCase } from 'common/util/StringUtilities';
+import { trainCase } from '@common/util/StringUtilities';
 import {
     getMiddleware,
     IFlattenedMiddleware,
@@ -12,17 +12,17 @@ import {
     IResponseHeaderOperation,
     ResponseHeaderOperationType
 } from '../RequestMiddlewareSelectors';
-import { IStoreState } from 'client/IStoreState';
+import { IStoreState } from '@client/IStoreState';
 import {
     parseResponseCookie,
     IResponseCookie
-} from 'routes/requests/details/components/request-response-tab-strip/cookies/CookieUtils';
+} from '@routes/requests/details/components/request-response-tab-strip/cookies/CookieUtils';
 
 import styles from './RequestMiddleware.scss';
-import commonStyles from 'common/components/Common.scss';
-import messageRowTargetStyles from 'common/components/MessageRowTarget.scss';
-import StatusLabel from 'common/components/StatusLabel';
-import StackFrame from 'common/components/StackFrame';
+import commonStyles from '@common/components/Common.scss';
+import messageRowTargetStyles from '@common/components/MessageRowTarget.scss';
+import StatusLabel from '@common/components/StatusLabel';
+import StackFrame from '@common/components/StackFrame';
 
 interface IMiddlewareViewProps {
     middleware: IFlattenedMiddleware[];

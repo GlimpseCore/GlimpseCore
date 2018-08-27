@@ -3,8 +3,8 @@ import sortBy from 'lodash/sortBy';
 import { createSelector } from 'reselect';
 
 import { AgentType } from '../timeline/TimelineInterfaces';
-import { IMessage } from 'modules/messages/schemas/IMessage';
-import { IStoreState } from 'client/IStoreState';
+import { IMessage } from '@modules/messages/schemas/IMessage';
+import { IStoreState } from '@client/IStoreState';
 import {
     ILoggingMessage,
     ILoggingMessagePayloads,
@@ -17,14 +17,14 @@ import {
 } from './LoggingInterfaces';
 
 import { selectedCategoryInitialState } from './LoggingReducers';
-import { getNamesForEnum } from 'common/util/CommonUtilities';
-import { getMessageByType } from 'routes/requests/RequestsSelector';
+import { getNamesForEnum } from '@common/util/CommonUtilities';
+import { getMessageByType } from '@routes/requests/RequestsSelector';
 import { getSelectedContext } from '../RequestsDetailsSelector';
 import { getServerOffsetFactor } from '../request/RequestSelectors';
 import {
     getExpansionState,
     isExpanded
-} from 'routes/requests/components/expansion/ExpansionSelectors';
+} from '@routes/requests/components/expansion/ExpansionSelectors';
 
 //
 // ROOT RECORDS SELECTORS

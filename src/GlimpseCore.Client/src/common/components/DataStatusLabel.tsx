@@ -3,9 +3,9 @@ import classNames from 'classnames';
 
 import { Icon } from './Icon';
 import styles from './StatusLabel.scss';
-import requestMiddlewareStyles from 'client/routes/requests/details/request/views/RequestMiddleware.scss';
+import requestMiddlewareStyles from '@client/routes/requests/details/request/views/RequestMiddleware.scss';
 import commonStyles from './Common.scss';
-import { DataOperationStatus } from 'client/routes/requests/details/data/DataInterfaces';
+import { DataOperationStatus } from '@client/routes/requests/details/data/DataInterfaces';
 
 interface IDataStatusLabelProps {
     statusCode: DataOperationStatus;

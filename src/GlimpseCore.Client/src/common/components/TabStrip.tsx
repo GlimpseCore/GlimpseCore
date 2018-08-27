@@ -2,7 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 
 import styles from './TabStrip.scss';
-import RouteButton from 'common/components/RouteButton';
+import RouteButton from '@common/components/RouteButton';
 
 export enum TabStripType {
     Plain,

@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import classNames from 'classnames';
 
-import { IStoreState } from 'client/IStoreState';
+import { IStoreState } from '@client/IStoreState';
 
 import styles from './UrlText.scss';
 import commonStyles from './Common.scss';

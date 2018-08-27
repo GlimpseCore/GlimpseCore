@@ -13,7 +13,7 @@ import { convertStatusCodeToStatusCodeClass } from './ServiceUtils';
 import {
     getSelectedRequestPersistedState,
     getMessageByType
-} from 'routes/requests/RequestsSelector';
+} from '@routes/requests/RequestsSelector';
 import { getSelectedContext } from '../RequestsDetailsSelector';
 import { getServerOffsetFactor } from '../request/RequestSelectors';
 import {
@@ -25,9 +25,9 @@ import {
 } from '../components/request-response-tab-strip/headers/HeadersSelectors';
 import { createGetBodySelector } from '../components/request-response-tab-strip/body/BodySelectors';
 import { createGetQuerySelector } from '../components/request-response-tab-strip/query/QuerySelectors';
-import { IStoreState } from 'client/IStoreState';
-import { getIntegersForEnum } from 'common/util/CommonUtilities';
-import { getValueAtKeyCaseInsensitive } from 'common/util/ObjectUtilities';
+import { IStoreState } from '@client/IStoreState';
+import { getIntegersForEnum } from '@common/util/CommonUtilities';
+import { getValueAtKeyCaseInsensitive } from '@common/util/ObjectUtilities';
 
 // TODO - https://github.com/Glimpse/Glimpse.Client/issues/656, https://github.com/Glimpse/Glimpse.Client/issues/657
 // refactor into common location

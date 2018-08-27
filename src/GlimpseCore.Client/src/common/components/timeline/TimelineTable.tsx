@@ -2,12 +2,12 @@ import range from 'lodash/range';
 import classNames from 'classnames';
 import React from 'react';
 
-import MessageRowTarget from 'common/components/MessageRowTarget';
-import { TimeDuration, TimeDurationFormat } from 'common/components/TimeDuration';
+import MessageRowTarget from '@common/components/MessageRowTarget';
+import { TimeDuration, TimeDurationFormat } from '@common/components/TimeDuration';
 import { ITimelineComponentEvent, ITimelineComponentSpan } from './TimelineCommonInterfaces';
 
 import styles from './TimelineTable.scss';
-import commonStyles from 'common/components/Common.scss';
+import commonStyles from '@common/components/Common.scss';
 
 /**
  * An individual data column within the timeline table.

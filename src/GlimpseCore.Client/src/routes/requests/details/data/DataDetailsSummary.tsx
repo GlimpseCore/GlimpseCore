@@ -1,16 +1,16 @@
 import React from 'react'; // tslint:disable-line:no-unused-variable
 import { connect } from 'react-redux';
 
-import commonStyles from 'common/components/Common.scss';
+import commonStyles from '@common/components/Common.scss';
 
-import { TimelineTable, ITimelineTableProps } from 'common/components/timeline/TimelineTable';
-import { ITimelineComponentSpan } from 'common/components/timeline/TimelineCommonInterfaces';
-import { getSelectedOperationSelector } from 'routes/requests/details/data/DataSelectors';
-import { DataOperationType, DataDatabaseType } from 'routes/requests/details/data/DataInterfaces';
-import { getSelectedContextId } from 'routes/requests/RequestsSelector';
-import { IStoreState } from 'client/IStoreState';
-import { isArray } from 'common/util/CommonUtilities';
-import JsonTree from 'client/routes/requests/components/JsonTree';
+import { TimelineTable, ITimelineTableProps } from '@common/components/timeline/TimelineTable';
+import { ITimelineComponentSpan } from '@common/components/timeline/TimelineCommonInterfaces';
+import { getSelectedOperationSelector } from '@routes/requests/details/data/DataSelectors';
+import { DataOperationType, DataDatabaseType } from '@routes/requests/details/data/DataInterfaces';
+import { getSelectedContextId } from '@routes/requests/RequestsSelector';
+import { IStoreState } from '@client/IStoreState';
+import { isArray } from '@common/util/CommonUtilities';
+import JsonTree from '@client/routes/requests/components/JsonTree';
 
 const firstColumnWidth = 30;
 const nameColumn = {

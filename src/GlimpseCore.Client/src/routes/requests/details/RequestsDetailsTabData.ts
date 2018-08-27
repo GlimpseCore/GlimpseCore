@@ -1,5 +1,5 @@
-//import { isExperimentalMode } from 'common/util/ConfigurationUtilities';
-import { processTabs } from 'common/config/config-processor';
+//import { isExperimentalMode } from '@common/util/ConfigurationUtilities';
+import { processTabs } from '@common/config/config-processor';
 
 import dataConfig from './data/DataConfig';
 import debugConfig from './debug/DebugConfig';

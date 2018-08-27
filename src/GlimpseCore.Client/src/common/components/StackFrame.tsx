@@ -4,11 +4,11 @@ import classNames from 'classnames';
 import { connect } from 'react-redux';
 import * as Glimpse from '@glimpse/glimpse-definitions';
 
-import { isLocalhost } from 'common/util/UrlUtilities';
-import { stopPropagation } from 'common/util/CommonUtilities';
-import { getConfig } from 'modules/metadata/MetadataSelectors';
+import { isLocalhost } from '@common/util/UrlUtilities';
+import { stopPropagation } from '@common/util/CommonUtilities';
+import { getConfig } from '@modules/metadata/MetadataSelectors';
 
-import { IStoreState } from 'client/IStoreState';
+import { IStoreState } from '@client/IStoreState';
 
 import styles from './StackFrame.scss';
 import commonStyles from './Common.scss';

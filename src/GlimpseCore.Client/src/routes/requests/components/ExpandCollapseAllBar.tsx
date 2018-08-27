@@ -2,8 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import { expandAllAction, collapseAllAction } from './expansion/ExpansionActions';
-import { Icon } from 'common/components/Icon';
-import { IStoreState } from 'client/IStoreState';
+import { Icon } from '@common/components/Icon';
+import { IStoreState } from '@client/IStoreState';
 
 import styles from './ExpandCollapseAllBar.scss';
 

@@ -3,10 +3,10 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 
 import styles from './LoggingStatement.scss'; // tslint:disable-line:no-unused-variable
-import JsonTree from 'routes/requests/components/JsonTree';
+import JsonTree from '@routes/requests/components/JsonTree';
 
 /* tslint:disable:no-var-requires */
-import sprintfjs from 'common/util/printf';
+import sprintfjs from '@common/util/printf';
 const ansiHTML = require('ansi-html');
 const emojione = require('emojione');
 const autolinker = require('autolinker');

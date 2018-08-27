@@ -3,7 +3,7 @@ import {
     REQUESTS_DETAILS_SELECTED
 } from './RequestsDetailsConstants';
 
-import { fetchByContext } from 'modules/messages/MessagesActions';
+import { fetchByContext } from '@modules/messages/MessagesActions';
 
 export function tabSelected(target, previousTarget) {
     return {

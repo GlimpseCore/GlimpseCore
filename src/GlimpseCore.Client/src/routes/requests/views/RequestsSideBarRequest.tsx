@@ -3,21 +3,21 @@ import React from 'react';
 import classNames from 'classnames';
 import { connect } from 'react-redux';
 
-import { getTime } from 'common/util/DateTimeUtilities';
-import { IStoreState } from 'client/IStoreState';
-import { IRequest } from 'routes/requests/RequestsInterfaces';
-import { getValueAtKeyCaseInsensitive } from 'common/util/ObjectUtilities';
-import { selectRequestAction } from 'routes/requests/RequestsActions';
-import { getSingleMessageByType } from 'client/routes/requests/RequestsSelector';
+import { getTime } from '@common/util/DateTimeUtilities';
+import { IStoreState } from '@client/IStoreState';
+import { IRequest } from '@routes/requests/RequestsInterfaces';
+import { getValueAtKeyCaseInsensitive } from '@common/util/ObjectUtilities';
+import { selectRequestAction } from '@routes/requests/RequestsActions';
+import { getSingleMessageByType } from '@client/routes/requests/RequestsSelector';
 
 import styles from './RequestsSideBarRequest.scss';
-import commonStyles from 'common/components/Common.scss';
-import RouteButton from 'common/components/RouteButton';
-import TimeDuration from 'common/components/TimeDuration';
-import StatusLabel from 'common/components/StatusLabel';
-import UrlText from 'common/components/UrlText';
-import { ClientLabel } from 'common/components/ClientLabel';
-import { calculateDuration } from 'client/routes/requests/details/RequestsDetailsSelector';
+import commonStyles from '@common/components/Common.scss';
+import RouteButton from '@common/components/RouteButton';
+import TimeDuration from '@common/components/TimeDuration';
+import StatusLabel from '@common/components/StatusLabel';
+import UrlText from '@common/components/UrlText';
+import { ClientLabel } from '@common/components/ClientLabel';
+import { calculateDuration } from '@client/routes/requests/details/RequestsDetailsSelector';
 
 export interface IRequestsSideBarRequestProps {
     isSelected: boolean;

@@ -3,7 +3,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import classNames from 'classnames';
 import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
-import telemetryClient from 'modules/telemetry/TelemetryClient';
+import telemetryClient from '@modules/telemetry/TelemetryClient';
 
 import {
     closeSmileyFeedbackDialog,
@@ -11,14 +11,14 @@ import {
     setSmileyFeedbackDialogInputValue,
     setSmileyFeedbackDialogSubmited,
     resetSmileyFeedbackDialog
-} from 'shell/feedback/SmileyFeedbackActions';
-import { getSmileyFeedbackState } from 'shell/feedback/SmileyFeedbackSelectors';
-import { ISmileyFeedbackState } from 'shell/feedback/ISmileyFeedbackState';
-import { Icon } from 'common/components/Icon';
-import { OctopusFeedback, OctopusFeedbackTentacles } from 'common/components/Octopus';
+} from '@shell/feedback/SmileyFeedbackActions';
+import { getSmileyFeedbackState } from '@shell/feedback/SmileyFeedbackSelectors';
+import { ISmileyFeedbackState } from '@shell/feedback/ISmileyFeedbackState';
+import { Icon } from '@common/components/Icon';
+import { OctopusFeedback, OctopusFeedbackTentacles } from '@common/components/Octopus';
 
 import styles from './SmileyFeedback.scss';
-import commonStyles from 'common/components/Common.scss';
+import commonStyles from '@common/components/Common.scss';
 
 export interface ISmileyFeedbackProps {
     dispatch: () => void;

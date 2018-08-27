@@ -1,12 +1,12 @@
 import { createSelector } from 'reselect';
 
-import { IStoreState } from 'client/IStoreState';
+import { IStoreState } from '@client/IStoreState';
 import { IRequestsLookup, IRequest } from './RequestsInterfaces';
 import { IRequestsFilterState, IRequestFilterDetails } from './RequestsFilterInterfaces';
 import { getRequestsLookup } from './RequestsSelector';
-import { isDataType } from 'common/util/ContentTypes';
-import { initialState as initialFilterState } from 'routes/requests/RequestsFilterReducer';
-import { timeStart, timeEnd } from 'common/util/Log';
+import { isDataType } from '@common/util/ContentTypes';
+import { initialState as initialFilterState } from '@routes/requests/RequestsFilterReducer';
+import { timeStart, timeEnd } from '@common/util/Log';
 
 export const getFilters: (state: IStoreState) => IRequestsFilterState = state =>
     state.persisted.global.requests.filter;

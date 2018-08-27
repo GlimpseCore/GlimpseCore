@@ -2,7 +2,7 @@ import { createSelector } from 'reselect';
 
 import { getExpansion } from './ExpansionReducers';
 import { ExpandedState, IExpansionPersistedState } from './IExpansionPersistedState';
-import { getSelectedRequestPersistedState } from 'routes/requests/RequestsSelector';
+import { getSelectedRequestPersistedState } from '@routes/requests/RequestsSelector';
 
 const defaultState: IExpansionPersistedState = {
     elements: {}

@@ -2,7 +2,7 @@
 import React from 'react';
 import classNames from 'classnames';
 
-import { AgentType } from 'routes/requests/details/timeline/TimelineInterfaces';
+import { AgentType } from '@routes/requests/details/timeline/TimelineInterfaces';
 import Icon from './Icon';
 
 import styles from './AgentTypeIcon.scss';

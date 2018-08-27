@@ -1,9 +1,9 @@
 import React from 'react'; // tslint:disable-line:no-unused-variable
 
-import { CodeView } from 'routes/requests/components/CodeView';
-import styles from 'client/routes/requests/details/data/DataDetailsQuery.scss';
-import { isObject, isArray } from 'common/util/CommonUtilities';
-import JsonTree from 'client/routes/requests/components/JsonTree';
+import { CodeView } from '@routes/requests/components/CodeView';
+import styles from '@client/routes/requests/details/data/DataDetailsQuery.scss';
+import { isObject, isArray } from '@common/util/CommonUtilities';
+import JsonTree from '@client/routes/requests/components/JsonTree';
 
 export interface IDataDetailsCodeJsonTree {
     code;

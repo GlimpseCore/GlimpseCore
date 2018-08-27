@@ -1,8 +1,8 @@
 import { Action, combineReducers } from 'redux';
 
-import { toBoolean } from 'common/util/StringUtilities';
-import { getOriginalQueryStringParam } from 'common/util/UrlUtilities';
-import { IStorePersistedRequestsState } from 'client/IStoreState';
+import { toBoolean } from '@common/util/StringUtilities';
+import { getOriginalQueryStringParam } from '@common/util/UrlUtilities';
+import { IStorePersistedRequestsState } from '@client/IStoreState';
 import { IRequestPersistedState } from './RequestsInterfaces';
 
 import {
@@ -17,8 +17,8 @@ import {
     toggleFilterModeAction,
     purgeOldRequestsAction
 } from './RequestsActions';
-import { storeInitAction } from 'client/StoreActions';
-import { purgeOldRecords } from 'common/util/ReducerUtilities';
+import { storeInitAction } from '@client/StoreActions';
+import { purgeOldRecords } from '@common/util/ReducerUtilities';
 
 let defaultFollowMode = toBoolean(getOriginalQueryStringParam('follow'));
 

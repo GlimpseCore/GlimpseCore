@@ -5,15 +5,15 @@ import forEach from 'lodash/forEach';
 import sortBy from 'lodash/sortBy';
 import { createSelector } from 'reselect';
 
-import { IMessage } from 'modules/messages/schemas/IMessage';
+import { IMessage } from '@modules/messages/schemas/IMessage';
 import { getServerOffsetFactor } from '../request/RequestSelectors';
-import { getMessageByType } from 'routes/requests/RequestsSelector';
+import { getMessageByType } from '@routes/requests/RequestsSelector';
 import { getSelectedContext } from '../RequestsDetailsSelector';
 import {
     isGlimpseCookieName,
     parseResponseCookie
-} from 'routes/requests/details/components/request-response-tab-strip/cookies/CookieUtils';
-import { isGlimpseHeaderName } from 'routes/requests/details/components/request-response-tab-strip/headers/HeadersSelectors';
+} from '@routes/requests/details/components/request-response-tab-strip/cookies/CookieUtils';
+import { isGlimpseHeaderName } from '@routes/requests/details/components/request-response-tab-strip/headers/HeadersSelectors';
 
 interface ICorrelatedMiddlewareMessages {
     startMessage: IMessage<

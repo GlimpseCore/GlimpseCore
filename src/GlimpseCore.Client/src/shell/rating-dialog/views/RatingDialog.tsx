@@ -6,9 +6,9 @@ import { RatingSocialShareDialog } from './RatingSocialShareDialog';
 import { RatingScoreDialog } from './RatingScoreDialog';
 import { RatingFeedbackDialog } from './RatingFeedbackDialog';
 import { RatingThankYouDialog } from './RatingThankYouDialog';
-import telemetryClient from 'modules/telemetry/TelemetryClient';
-import { Icon } from 'common/components/Icon';
-import { IStoreState } from 'client/IStoreState';
+import telemetryClient from '@modules/telemetry/TelemetryClient';
+import { Icon } from '@common/components/Icon';
+import { IStoreState } from '@client/IStoreState';
 import { getDialogState } from '../RatingDialogSelectors';
 import { DialogsType } from '../RatingDialogInterfaces';
 import {
@@ -19,7 +19,7 @@ import {
     setRating,
     submitDialog
 } from '../RatingDialogActions';
-import { OctopusFeedback, OctopusFeedbackTentacles } from 'common/components/Octopus';
+import { OctopusFeedback, OctopusFeedbackTentacles } from '@common/components/Octopus';
 
 import styles from './RatingDialog.scss';
 

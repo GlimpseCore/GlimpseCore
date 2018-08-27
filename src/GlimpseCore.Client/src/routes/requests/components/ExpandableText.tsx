@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import classNames from 'classnames';
 
 import ExpandCollapseButton from './ExpandCollapseButton';
-import { IStoreState } from 'client/IStoreState';
+import { IStoreState } from '@client/IStoreState';
 import { getExpansionState, isExpanded } from './expansion/ExpansionSelectors';
 
 import styles from './ExpandableText.scss';

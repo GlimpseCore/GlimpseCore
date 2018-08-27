@@ -1,9 +1,9 @@
 import * as Glimpse from '@glimpse/glimpse-definitions';
 
 import { getValueAtKeyCaseInsensitive } from './ObjectUtilities';
-import { IMessage } from 'modules/messages/schemas/IMessage';
+import { IMessage } from '@modules/messages/schemas/IMessage';
 import parseUrl from 'url-parse';
-import { getNamesForEnum } from 'common/util/CommonUtilities';
+import { getNamesForEnum } from '@common/util/CommonUtilities';
 
 /**
  * bit flag enums to classify the content type of a request

@@ -3,15 +3,15 @@ import { connect } from 'react-redux';
 import classNames from 'classnames';
 import Modal from 'react-modal';
 
-import { IMessage } from 'modules/messages/schemas/IMessage';
-import { IStoreState } from 'client/IStoreState';
-import { fetchReceived } from 'modules/messages/MessagesActions';
-import { getSelectedThemeName } from 'shell/themes/ThemesSelectors';
+import { IMessage } from '@modules/messages/schemas/IMessage';
+import { IStoreState } from '@client/IStoreState';
+import { fetchReceived } from '@modules/messages/MessagesActions';
+import { getSelectedThemeName } from '@shell/themes/ThemesSelectors';
 
-import commonStyles from 'common/components/Common.scss';
-import shellStatusBarStyles from 'shell/views/ShellStatusBarView.scss';
+import commonStyles from '@common/components/Common.scss';
+import shellStatusBarStyles from '@shell/views/ShellStatusBarView.scss';
 import styles from './MessageInputButton.scss';
-import { Icon } from 'common/components/Icon';
+import { Icon } from '@common/components/Icon';
 
 interface IDebugInputButtonProps {
     theme: string;

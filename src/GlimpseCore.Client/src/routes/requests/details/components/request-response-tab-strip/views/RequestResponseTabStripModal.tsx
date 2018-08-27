@@ -3,15 +3,15 @@ import { connect } from 'react-redux';
 import classNames from 'classnames';
 import Modal from 'react-modal';
 
-import { IStoreState } from 'client/IStoreState';
-import { getSelectedRequest } from 'routes/requests/details/RequestsDetailsSelector';
-import { getSelectedThemeName } from 'shell/themes/ThemesSelectors';
+import { IStoreState } from '@client/IStoreState';
+import { getSelectedRequest } from '@routes/requests/details/RequestsDetailsSelector';
+import { getSelectedThemeName } from '@shell/themes/ThemesSelectors';
 
 import styles from './RequestResponseTabStripModal.scss';
-import commonStyles from 'common/components/Common.scss';
-import { Icon } from 'common/components/Icon';
-import UrlText from 'common/components/UrlText';
-import tabStripStyles from 'common/components/TabStrip.scss';
+import commonStyles from '@common/components/Common.scss';
+import { Icon } from '@common/components/Icon';
+import UrlText from '@common/components/UrlText';
+import tabStripStyles from '@common/components/TabStrip.scss';
 
 interface IRequestResponseTabStripModalProps {
     title: string;

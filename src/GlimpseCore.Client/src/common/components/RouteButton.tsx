@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 import styles from './RouteButton.scss';
-import { basename } from 'client/history';
+import { basename } from '@client/history';
 
 export interface IRouteButtonComponentProps {
     /**

@@ -1,7 +1,7 @@
 import debounce from 'lodash/debounce';
 import { Dispatch } from 'redux';
 
-import { timeStart, timeEnd, log, logError } from 'common/util/Log';
+import { timeStart, timeEnd, log, logError } from '@common/util/Log';
 
 /**
  * Ensures that reducer state is persisted to local storage as required

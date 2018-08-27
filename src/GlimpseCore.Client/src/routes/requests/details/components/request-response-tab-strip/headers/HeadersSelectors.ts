@@ -2,12 +2,12 @@ import mapValues from 'lodash/mapValues';
 import pickBy from 'lodash/pickBy';
 import Reselect, { createSelector } from 'reselect';
 
-import { IStoreState } from 'client/IStoreState';
-import { IMessage } from 'modules/messages/schemas/IMessage';
-import { convertStringToAgentType } from 'routes/requests/details/timeline/TimelineUtils';
-import { AgentType } from 'routes/requests/details/timeline/TimelineInterfaces';
-import { isArray } from 'common/util/CommonUtilities';
-import { getKeyCaseInsensitive } from 'common/util/ObjectUtilities';
+import { IStoreState } from '@client/IStoreState';
+import { IMessage } from '@modules/messages/schemas/IMessage';
+import { convertStringToAgentType } from '@routes/requests/details/timeline/TimelineUtils';
+import { AgentType } from '@routes/requests/details/timeline/TimelineInterfaces';
+import { isArray } from '@common/util/CommonUtilities';
+import { getKeyCaseInsensitive } from '@common/util/ObjectUtilities';
 import {
     IRequestCookie,
     IResponseCookie,

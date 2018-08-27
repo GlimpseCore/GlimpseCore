@@ -6,16 +6,16 @@ import {
     getSelectedExchangeId,
     getTotalOperationCountSelector,
     getFilteredByAllOperationsSelector
-} from 'routes/requests/details/data/DataSelectors';
-import { IDataOperation } from 'routes/requests/details/data/DataInterfaces';
-import { IStoreState } from 'client/IStoreState';
-import { FilterHeader } from 'common/components/FilterHeader';
+} from '@routes/requests/details/data/DataSelectors';
+import { IDataOperation } from '@routes/requests/details/data/DataInterfaces';
+import { IStoreState } from '@client/IStoreState';
+import { FilterHeader } from '@common/components/FilterHeader';
 
-import commonStyles from 'common/components/Common.scss';
-import serviceStyles from 'routes/requests/details/service/views/Service.scss';
+import commonStyles from '@common/components/Common.scss';
+import serviceStyles from '@routes/requests/details/service/views/Service.scss';
 import { DataFilterBar } from './DataFilterBar';
 import { DataTable } from './DataTable';
-import { getSelectedContextId } from 'routes/requests/RequestsSelector';
+import { getSelectedContextId } from '@routes/requests/RequestsSelector';
 
 interface IDataProps {
     children?;

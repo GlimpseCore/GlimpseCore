@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { roundWithFixedPoints } from 'common/util/StringUtilities';
+import { roundWithFixedPoints } from '@common/util/StringUtilities';
 
 export class TimeDurationValue {
     public readonly value: string;

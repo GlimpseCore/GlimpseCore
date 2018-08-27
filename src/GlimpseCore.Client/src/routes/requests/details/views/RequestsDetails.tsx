@@ -2,13 +2,13 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import { getSelectedRequest } from '../RequestsDetailsSelector';
-import { tabData } from 'routes/requests/details/RequestsDetailsTabData';
-import { IStoreState } from 'client/IStoreState';
-import { IRequest } from 'routes/requests/RequestsInterfaces';
+import { tabData } from '@routes/requests/details/RequestsDetailsTabData';
+import { IStoreState } from '@client/IStoreState';
+import { IRequest } from '@routes/requests/RequestsInterfaces';
 
 import styles from './RequestsDetails.scss';
-import TabStrip, { TabStripType } from 'common/components/TabStrip';
-import RequestsStatusBlock from 'routes/requests/components/RequestsStatusBlock';
+import TabStrip, { TabStripType } from '@common/components/TabStrip';
+import RequestsStatusBlock from '@routes/requests/components/RequestsStatusBlock';
 import RequestsOverviewTopPanel from './RequestsOverviewTopPanel';
 
 export interface IRequestsDetailsProps {

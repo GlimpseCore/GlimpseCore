@@ -14,16 +14,16 @@ import {
     ContentDispositionType,
     getContentDisposition,
     parseContentDisposition
-} from 'common/util/ContentDispositions';
-import { IStoreState } from 'client/IStoreState';
-import { IMessage } from 'modules/messages/schemas/IMessage';
-import IMultipartSummary from 'modules/messages/schemas/IMultipartSummary';
-import { isObjectEmpty } from 'common/util/CommonUtilities';
+} from '@common/util/ContentDispositions';
+import { IStoreState } from '@client/IStoreState';
+import { IMessage } from '@modules/messages/schemas/IMessage';
+import IMultipartSummary from '@modules/messages/schemas/IMultipartSummary';
+import { isObjectEmpty } from '@common/util/CommonUtilities';
 import {
     getContentType,
     getContentEncoding,
     getMediaTypeFromContentType
-} from 'common/util/ContentTypes';
+} from '@common/util/ContentTypes';
 
 function parseBodyPart(
     rawContent: string,

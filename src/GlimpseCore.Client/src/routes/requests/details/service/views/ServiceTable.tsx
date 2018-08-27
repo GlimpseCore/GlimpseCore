@@ -3,32 +3,32 @@ import { connect } from 'react-redux';
 import { push } from 'react-router-redux';
 import classNames from 'classnames';
 
-import AgentTypeIcon from 'common/components/AgentTypeIcon';
-import { getContentType, getMediaTypeFromContentType } from 'common/util/ContentTypes';
+import AgentTypeIcon from '@common/components/AgentTypeIcon';
+import { getContentType, getMediaTypeFromContentType } from '@common/util/ContentTypes';
 import {
     getStatusCodeFilteredWebServiceExchanges,
     getSelectedExchange,
     getTimelineEventsOffsetBoundary
 } from '../ServiceSelectors';
-import StackFrame from 'common/components/StackFrame';
-import Icon from 'common/components/Icon';
+import StackFrame from '@common/components/StackFrame';
+import Icon from '@common/components/Icon';
 import { IExchangeModel } from '../ServiceInterfaces';
-import { IStoreState } from 'client/IStoreState';
-import RouteButton from 'common/components/RouteButton';
+import { IStoreState } from '@client/IStoreState';
+import RouteButton from '@common/components/RouteButton';
 import { SERVICE_TAB_NAME } from '../ServiceConstants';
-import StatusLabel from 'common/components/StatusLabel';
-import { formatMilliseconds, TimeDuration } from 'common/components/TimeDuration';
-import { toStringWithFixedPoints } from 'common/util/StringUtilities';
-import TimelineActivity from 'common/components/timeline/TimelineActivity';
+import StatusLabel from '@common/components/StatusLabel';
+import { formatMilliseconds, TimeDuration } from '@common/components/TimeDuration';
+import { toStringWithFixedPoints } from '@common/util/StringUtilities';
+import TimelineActivity from '@common/components/timeline/TimelineActivity';
 import {
     TimelineTable,
     ITimelineTableProps,
     ITimelineTableCallbacks,
     getActivityColumnPlaceholder
-} from 'common/components/timeline/TimelineTable';
-import UrlText from 'common/components/UrlText';
+} from '@common/components/timeline/TimelineTable';
+import UrlText from '@common/components/UrlText';
 
-import commonStyles from 'common/components/Common.scss';
+import commonStyles from '@common/components/Common.scss';
 import styles from './ServiceTable.scss';
 
 // tslint:disable-next-line:variable-name

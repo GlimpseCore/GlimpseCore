@@ -7,23 +7,23 @@ import {
     ITimelineTableProps,
     ITimelineTableCallbacks,
     getActivityColumnPlaceholder
-} from 'common/components/timeline/TimelineTable';
-import { TimeDuration } from 'common/components/TimeDuration';
-import TimelineActivity from 'common/components/timeline/TimelineActivity';
+} from '@common/components/timeline/TimelineTable';
+import { TimeDuration } from '@common/components/TimeDuration';
+import TimelineActivity from '@common/components/timeline/TimelineActivity';
 import {
     getFilteredByAllOperationsSelector,
     getSelectedOperationSelector
-} from 'routes/requests/details/data/DataSelectors';
-import { getSelectedContextId } from 'routes/requests/RequestsSelector';
+} from '@routes/requests/details/data/DataSelectors';
+import { getSelectedContextId } from '@routes/requests/RequestsSelector';
 import { getTimelineEventsOffsetBoundary } from './DataSelectors';
-import { IStoreState } from 'client/IStoreState';
+import { IStoreState } from '@client/IStoreState';
 import { IDataOperation, DataDatabaseType } from './DataInterfaces';
 
-import serviceTableStyles from 'routes/requests/details/service/views/ServiceTable.scss';
-import timelineCommonStyles from 'client/routes/requests/details/timeline/views/TimelineCommon.scss';
-import commonStyles from 'common/components/Common.scss';
+import serviceTableStyles from '@routes/requests/details/service/views/ServiceTable.scss';
+import timelineCommonStyles from '@client/routes/requests/details/timeline/views/TimelineCommon.scss';
+import commonStyles from '@common/components/Common.scss';
 
-import { DataStatusLabel } from 'common/components/DataStatusLabel';
+import { DataStatusLabel } from '@common/components/DataStatusLabel';
 
 const indexColumn = {
     headerFunc: () => {

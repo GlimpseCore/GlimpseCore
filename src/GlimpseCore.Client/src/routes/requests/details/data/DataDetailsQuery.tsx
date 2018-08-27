@@ -2,11 +2,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { CodeView, ICodeViewProps } from 'routes/requests/components/CodeView';
+import { CodeView, ICodeViewProps } from '@routes/requests/components/CodeView';
 import { getSelectedOperationSelector } from './DataSelectors';
-import { IStoreState } from 'client/IStoreState';
+import { IStoreState } from '@client/IStoreState';
 import styles from './DataDetailsQuery.scss';
-import { trancateItemsInArray } from 'common/util/StringUtilities';
+import { trancateItemsInArray } from '@common/util/StringUtilities';
 import { RedisCommandDocs } from './RedisCommandDocs';
 
 interface IDataDetailsQuery extends ICodeViewProps {

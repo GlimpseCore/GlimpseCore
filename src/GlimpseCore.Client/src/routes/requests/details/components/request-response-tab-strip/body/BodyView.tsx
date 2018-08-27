@@ -2,17 +2,17 @@ import React from 'react';
 import bytes from 'bytes';
 import classNames from 'classnames';
 
-import { isObject } from 'common/util/CommonUtilities';
-import { getMediaTypeMetadata } from 'common/util/ContentTypes';
+import { isObject } from '@common/util/CommonUtilities';
+import { getMediaTypeMetadata } from '@common/util/ContentTypes';
 
 import styles from './BodyView.scss';
-import commonStyles from 'common/components/Common.scss';
+import commonStyles from '@common/components/Common.scss';
 
 import { BodyType, IMultipartPart, IRequestResponseBodyResult } from './BodyInterfaces';
-import { CodeView } from 'routes/requests/components/CodeView';
-import { InformationLabel } from 'common/components/InformationLabel';
+import { CodeView } from '@routes/requests/components/CodeView';
+import { InformationLabel } from '@common/components/InformationLabel';
 import MultipartSummary from './MultipartSummary';
-import { ParameterList, IParameterValue } from 'common/components/ParameterList';
+import { ParameterList, IParameterValue } from '@common/components/ParameterList';
 import { ungzip } from 'pako/lib/inflate';
 
 interface IBodyViewContentErrors {

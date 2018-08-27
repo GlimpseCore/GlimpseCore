@@ -1,4 +1,4 @@
-import { createRequestPersistedActionCreator } from 'common/actions/ActionCreator';
+import { createRequestPersistedActionCreator } from '@common/actions/ActionCreator';
 import { EXPANSION_SET } from './ExpansionConstants';
 import { ExpandedState } from './IExpansionPersistedState';
 

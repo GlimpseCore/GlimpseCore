@@ -4,7 +4,7 @@ import groupBy from 'lodash/groupBy';
 import flatten from 'lodash/flatten';
 import { createSelector } from 'reselect';
 
-import { getMessageByType } from 'routes/requests/RequestsSelector';
+import { getMessageByType } from '@routes/requests/RequestsSelector';
 import { getSelectedContext } from '../RequestsDetailsSelector';
 
 export function toResourceType(

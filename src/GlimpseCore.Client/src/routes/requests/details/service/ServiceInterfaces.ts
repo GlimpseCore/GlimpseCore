@@ -1,7 +1,7 @@
 import * as Glimpse from '@glimpse/glimpse-definitions';
 
-import { IMessage } from 'modules/messages/schemas/IMessage';
-import { ITimelineComponentSpan } from 'common/components/timeline/TimelineCommonInterfaces';
+import { IMessage } from '@modules/messages/schemas/IMessage';
+import { ITimelineComponentSpan } from '@common/components/timeline/TimelineCommonInterfaces';
 import { AgentType } from '../timeline/TimelineInterfaces';
 
 export interface IExchangeModels {

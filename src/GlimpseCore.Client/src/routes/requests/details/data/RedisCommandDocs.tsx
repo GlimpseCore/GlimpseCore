@@ -1,7 +1,7 @@
 // tslint:disable-next-line:no-unused-variable
 import React from 'react';
-import { redisDocs } from 'common/docs/redis';
-import commonStyles from 'common/components/Common.scss';
+import { redisDocs } from '@common/docs/redis';
+import commonStyles from '@common/components/Common.scss';
 import styles from './RedisCommandDocs.scss';
 
 interface IRedisDocsArgument {

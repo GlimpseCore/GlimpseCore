@@ -2,8 +2,8 @@ import React from 'react';
 import classNames from 'classnames';
 
 import styles from './RequestsStatusBlock.scss';
-import DataLoadingErrorTimer from 'common/components/DataLoadingErrorTimer';
-import { IRequestFilterDetails } from 'routes/requests/RequestsFilterInterfaces';
+import DataLoadingErrorTimer from '@common/components/DataLoadingErrorTimer';
+import { IRequestFilterDetails } from '@routes/requests/RequestsFilterInterfaces';
 
 interface IRequestsStatusBlockProps {
     className?: string;

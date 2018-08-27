@@ -2,7 +2,7 @@ import { Action } from 'redux';
 
 import { IRequestsFilterState } from './RequestsFilterInterfaces';
 import { applyFilterStateAction, resetFilterStateAction } from './RequestsFilterActions';
-import { ContentTypeClass } from 'common/util/ContentTypes';
+import { ContentTypeClass } from '@common/util/ContentTypes';
 
 export const initialState: IRequestsFilterState = {
     method: {},

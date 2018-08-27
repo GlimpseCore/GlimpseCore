@@ -1,7 +1,7 @@
 import * as Glimpse from '@glimpse/glimpse-definitions';
 import { createSelector } from 'reselect';
 
-import { IStoreState } from 'client/IStoreState';
+import { IStoreState } from '@client/IStoreState';
 import { IContext, IRequest } from '../RequestsInterfaces';
 import { getSelectedContextId, getByContextId, getRequestsLookup } from '../RequestsSelector';
 

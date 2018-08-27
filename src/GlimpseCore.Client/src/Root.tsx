@@ -5,9 +5,9 @@ import { RedirectFunction, Router, RouterState } from 'react-router';
 import { syncHistoryWithStore } from 'react-router-redux';
 
 import { baseUrlProperty, browserHistory } from './history';
-import { fetch as fetchMetadata, metadataUriProperty } from 'modules/metadata/MetadataActions';
+import { fetch as fetchMetadata, metadataUriProperty } from '@modules/metadata/MetadataActions';
 
-import ShellView from 'shell/views/ShellView';
+import ShellView from '@shell/views/ShellView';
 import { IStoreState } from './IStoreState';
 
 //const exceptionsConfig = require('./routes/exceptions/exceptions-config').default;

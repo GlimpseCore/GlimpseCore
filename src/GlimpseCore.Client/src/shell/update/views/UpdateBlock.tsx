@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import React from 'react';
 
-import { IStoreState } from 'client/IStoreState';
+import { IStoreState } from '@client/IStoreState';
 
 import styles from '../../views/ShellStatusBarView.scss';
 import { getUpdateInfo } from '../UpdateSelectors';

@@ -5,11 +5,11 @@ import classNames from 'classnames';
 import { requestConfig, responseConfig } from '../RequestTabStripConfig';
 
 import styles from './Request.scss';
-import commonStyles from 'common/components/Common.scss';
+import commonStyles from '@common/components/Common.scss';
 
 import RequestMiddlewareView from './RequestMiddleware';
 import RequestResource from './RequestResource';
-import RequestResponseTabStripView from 'routes/requests/details/components/request-response-tab-strip/views/RequestResponseTabStrip';
+import RequestResponseTabStripView from '@routes/requests/details/components/request-response-tab-strip/views/RequestResponseTabStrip';
 
 // TODO: detailAxis will probably go away... can probably derive it
 

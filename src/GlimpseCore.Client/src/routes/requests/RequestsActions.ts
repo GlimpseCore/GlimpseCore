@@ -2,9 +2,9 @@ import { replace } from 'react-router-redux';
 import { push } from 'react-router-redux';
 import { Dispatch } from 'redux';
 
-import { createSimpleActionCreator } from 'common/actions/ActionCreator';
-import { MESSAGES_CLEAR_ALL } from 'modules/messages/MessagesConstants';
-import { setupPurgeOldRecords } from 'common/util/ReducerUtilities';
+import { createSimpleActionCreator } from '@common/actions/ActionCreator';
+import { MESSAGES_CLEAR_ALL } from '@modules/messages/MessagesConstants';
+import { setupPurgeOldRecords } from '@common/util/ReducerUtilities';
 
 const clearAll = createSimpleActionCreator(MESSAGES_CLEAR_ALL);
 

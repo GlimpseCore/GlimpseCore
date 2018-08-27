@@ -8,7 +8,7 @@ import {
     messageSummaryTypes
 } from './MessagesConstants';
 
-import { current as currentMetadata } from 'modules/metadata/MetadataActions';
+import { current as currentMetadata } from '@modules/metadata/MetadataActions';
 
 // TODO: don't like having the callbacks here but need to for the moment
 

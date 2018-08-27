@@ -1,6 +1,6 @@
 import { ISaveSizeAction, ISaveOpenAction, IToggleOpenAction } from './ResizeInterfaces';
 
-import { createActionCreator } from 'common/actions/ActionCreator';
+import { createActionCreator } from '@common/actions/ActionCreator';
 
 export const saveSize = createActionCreator<ISaveSizeAction>('common.resize.set.size');
 export const saveOpenState = createActionCreator<ISaveOpenAction>('common.resize.set.open');

@@ -1,4 +1,4 @@
-import { IStoreState } from 'client/IStoreState';
+import { IStoreState } from '@client/IStoreState';
 
 export const getUpdateInfo = (state: IStoreState) => state.persisted.global.update;
 

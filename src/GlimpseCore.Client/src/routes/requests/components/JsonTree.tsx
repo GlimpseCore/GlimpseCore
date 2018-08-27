@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 import { expandAction, collapseAction } from './expansion/ExpansionActions';
 import { getExpansionState, isExpanded } from './expansion/ExpansionSelectors';
-import { IStoreState } from 'client/IStoreState';
+import { IStoreState } from '@client/IStoreState';
 
 // NOTE: We install a custom fork of react-json-tree (from a *.tgz in ./bin),
 //       with added support for expand/collapse notifications. A PR with that

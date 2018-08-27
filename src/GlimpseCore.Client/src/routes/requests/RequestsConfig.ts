@@ -1,7 +1,7 @@
 import Requests from './views/Requests';
 
 import detailConfig from './details/RequestsDetailsConfig';
-import { fetch as fetchMessages } from 'modules/messages/MessagesActions';
+import { fetch as fetchMessages } from '@modules/messages/MessagesActions';
 
 const path = '/requests';
 let hasAlreadyEntered = false;

@@ -1,10 +1,10 @@
 import React from 'react';
 import classNames from 'classnames';
-import { RequestResponseTabStripModalModal } from 'routes/requests/details/components/request-response-tab-strip/views/RequestResponseTabStripModal';
+import { RequestResponseTabStripModalModal } from '@routes/requests/details/components/request-response-tab-strip/views/RequestResponseTabStripModal';
 import styles from './DetailBiPanel.scss';
-import modalStyles from 'routes/requests/details/components/request-response-tab-strip/views/RequestResponseTabStripModal.scss';
-import { Icon } from 'common/components/Icon';
-import commonStyles from 'common/components/Common.scss';
+import modalStyles from '@routes/requests/details/components/request-response-tab-strip/views/RequestResponseTabStripModal.scss';
+import { Icon } from '@common/components/Icon';
+import commonStyles from '@common/components/Common.scss';
 
 export interface IDetailBiPanelProps {
     leftDetailPanel;

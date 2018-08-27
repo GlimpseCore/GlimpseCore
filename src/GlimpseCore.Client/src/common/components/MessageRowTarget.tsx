@@ -1,8 +1,8 @@
 import React from 'react'; // tslint:disable-line:no-unused-variable
 import classNames from 'classnames';
 import styles from './MessageRowTarget.scss';
-import commonStyles from 'common/components/Common.scss';
-import { messageTargetId } from 'client/common/util/CommonUtilities';
+import commonStyles from '@common/components/Common.scss';
+import { messageTargetId } from '@client/common/util/CommonUtilities';
 
 export interface IMessageRowTarget {
     elementKey: string;

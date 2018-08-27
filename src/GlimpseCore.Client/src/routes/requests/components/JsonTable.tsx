@@ -3,7 +3,7 @@ import uniq from 'lodash/uniq';
 import classNames from 'classnames';
 
 import JsonTree from './JsonTree';
-import commonStyles from 'common/components/Common.scss';
+import commonStyles from '@common/components/Common.scss';
 import styles from './JsonTable.scss';
 
 export interface IJsonTableProps {

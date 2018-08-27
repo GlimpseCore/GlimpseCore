@@ -1,10 +1,10 @@
 import * as Glimpse from '@glimpse/glimpse-definitions';
 import { createSelector } from 'reselect';
 
-import { classifyRequest } from 'common/util/ContentTypes';
+import { classifyRequest } from '@common/util/ContentTypes';
 
-import { IMessage } from 'modules/messages/schemas/IMessage';
-import { IStoreState } from 'client/IStoreState';
+import { IMessage } from '@modules/messages/schemas/IMessage';
+import { IStoreState } from '@client/IStoreState';
 import {
     IContext,
     IContextByType,
@@ -13,8 +13,8 @@ import {
     IRequestsLookup
 } from './RequestsInterfaces';
 
-import { reportMalformedMessageError } from 'modules/errors/Errors';
-import { timeStart, timeEnd } from 'common/util/Log';
+import { reportMalformedMessageError } from '@modules/errors/Errors';
+import { timeStart, timeEnd } from '@common/util/Log';
 
 const getMessagesLookup: (state: IStoreState) => IMessagesLookup = (() => {
     const initialResult: IMessagesLookup = {

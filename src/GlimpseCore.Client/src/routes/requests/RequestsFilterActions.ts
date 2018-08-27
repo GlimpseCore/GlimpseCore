@@ -1,4 +1,4 @@
-import { createActionCreator, createSimpleActionCreator } from 'common/actions/ActionCreator';
+import { createActionCreator, createSimpleActionCreator } from '@common/actions/ActionCreator';
 import { IRequestsFilterState } from './RequestsFilterInterfaces';
 
 export const applyFilterStateAction = createActionCreator<IRequestsFilterState>(

@@ -1,4 +1,4 @@
-import { IStoreState } from 'client/IStoreState';
+import { IStoreState } from '@client/IStoreState';
 
 export const getResizePanelsState = (state: IStoreState) => state.persisted.global.resizePanels;
 

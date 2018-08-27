@@ -1,14 +1,14 @@
 import React from 'react'; // tslint:disable-line:no-unused-variable
 import { connect } from 'react-redux';
 
-import commonStyles from 'common/components/Common.scss';
+import commonStyles from '@common/components/Common.scss';
 
-import { TimelineTable, ITimelineTableProps } from 'common/components/timeline/TimelineTable';
-import { getSelectedOperationSelector } from 'routes/requests/details/data/DataSelectors';
-import { getSelectedContextId } from 'routes/requests/RequestsSelector';
-import { IStoreState } from 'client/IStoreState';
-import { isArray, isObject } from 'common/util/CommonUtilities';
-import JsonTree from 'client/routes/requests/components/JsonTree';
+import { TimelineTable, ITimelineTableProps } from '@common/components/timeline/TimelineTable';
+import { getSelectedOperationSelector } from '@routes/requests/details/data/DataSelectors';
+import { getSelectedContextId } from '@routes/requests/RequestsSelector';
+import { IStoreState } from '@client/IStoreState';
+import { isArray, isObject } from '@common/util/CommonUtilities';
+import JsonTree from '@client/routes/requests/components/JsonTree';
 import { DataDatabaseType } from './DataInterfaces';
 
 const nameColumn = {

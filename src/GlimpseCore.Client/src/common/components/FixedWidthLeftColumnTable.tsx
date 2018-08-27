@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import { Table, Column, Cell } from 'fixed-data-table-2';
 import '../lib/fixed-data-table.css';
 import Measure from 'react-measure';
-import { measureTextWidth } from 'common/util/TextUtilities';
+import { measureTextWidth } from '@common/util/TextUtilities';
 import styles from './FixedWidthLeftColumnTable.scss';
 import commonStyles from './Common.scss';
 

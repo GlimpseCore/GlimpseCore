@@ -3,11 +3,11 @@ import { connect } from 'react-redux';
 import isEmpty from 'lodash/isEmpty';
 
 import styles from './RequestResource.scss';
-import commonStyles from 'common/components/Common.scss';
+import commonStyles from '@common/components/Common.scss';
 
 import { getBrowserResourceTypeData } from '../RequestResourceSelectors';
 import RequestResourceTable from './RequestResourceTable';
-import { IStoreState } from 'client/IStoreState';
+import { IStoreState } from '@client/IStoreState';
 
 interface IRequestResourceProps {
     counts: { [key: string]: number };

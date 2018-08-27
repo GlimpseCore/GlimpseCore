@@ -12,7 +12,7 @@ import {
     IDataPersistedRequestState
 } from './DataInterfaces';
 
-import { getNamesForEnum } from 'common/util/CommonUtilities';
+import { getNamesForEnum } from '@common/util/CommonUtilities';
 
 import { Action, combineReducers } from 'redux';
 

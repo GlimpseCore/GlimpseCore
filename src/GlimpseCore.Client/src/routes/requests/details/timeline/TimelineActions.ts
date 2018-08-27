@@ -1,20 +1,20 @@
 import * as Glimpse from '@glimpse/glimpse-definitions';
-import { messageTargetId } from 'client/common/util/CommonUtilities';
+import { messageTargetId } from '@client/common/util/CommonUtilities';
 
 import {
     createActionCreator,
     createRequestPersistedActionCreator,
     createSimpleActionCreator
-} from 'common/actions/ActionCreator';
+} from '@common/actions/ActionCreator';
 import {
     TimelineEventCategory,
     ITimelineSpan,
     ITimelineOffsetsActionConfig,
     AgentType
-} from 'routes/requests/details/timeline/TimelineInterfaces';
+} from '@routes/requests/details/timeline/TimelineInterfaces';
 import { push } from 'react-router-redux';
-import { getSelectedServiceExchangePath } from 'routes/requests/details/service/ServiceConfig';
-import { getSelectedDataExchangePath } from 'routes/requests/details/data/DataConfig';
+import { getSelectedServiceExchangePath } from '@routes/requests/details/service/ServiceConfig';
+import { getSelectedDataExchangePath } from '@routes/requests/details/data/DataConfig';
 
 export const toggleCategoryActionID = 'request.detail.timeline.toggleCategory';
 export const toggleAgentActionID = 'request.detail.timeline.toggleAgent';

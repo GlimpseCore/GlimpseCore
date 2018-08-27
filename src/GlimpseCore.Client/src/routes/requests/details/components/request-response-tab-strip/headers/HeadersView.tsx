@@ -3,15 +3,15 @@ import map from 'lodash/map';
 import sortBy from 'lodash/sortBy';
 import React from 'react';
 
-import { trainCase } from 'common/util/StringUtilities';
+import { trainCase } from '@common/util/StringUtilities';
 
 import styles from './HeadersView.scss';
-import commonStyles from 'common/components/Common.scss';
+import commonStyles from '@common/components/Common.scss';
 import {
     FixedWidthLeftColumnTable,
     nameValueColumns
-} from 'common/components/FixedWidthLeftColumnTable';
-import { InformationLabel } from 'common/components/InformationLabel';
+} from '@common/components/FixedWidthLeftColumnTable';
+import { InformationLabel } from '@common/components/InformationLabel';
 
 export interface IHeadersProps {
     headers: {

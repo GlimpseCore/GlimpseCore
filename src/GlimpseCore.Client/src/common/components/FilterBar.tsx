@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './FilterBar.scss';
 import { IFilterButtonProps, FilterButton } from './FilterButton';
-import { Dropdown } from 'common/components/Dropdown';
-import { curryCacheFactory } from 'common/util/CurryCache';
+import { Dropdown } from '@common/components/Dropdown';
+import { curryCacheFactory } from '@common/util/CurryCache';
 
 export interface IFilterGroupProps {
     name: string;

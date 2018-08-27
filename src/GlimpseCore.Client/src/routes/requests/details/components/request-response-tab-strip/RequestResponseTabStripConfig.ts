@@ -1,7 +1,7 @@
 import Redux from 'redux';
 import { RedirectFunction, RouterState } from 'react-router';
 
-import { IStoreState } from 'client/IStoreState';
+import { IStoreState } from '@client/IStoreState';
 
 interface IUrlData {
     requestId: string;

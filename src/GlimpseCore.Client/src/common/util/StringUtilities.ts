@@ -1,4 +1,4 @@
-import { isObject, isArray } from 'common/util/CommonUtilities';
+import { isObject, isArray } from '@common/util/CommonUtilities';
 
 /**
  * Converts strings of the form 'one-two-three' to 'One-Two-Three', also called 'train-case'.

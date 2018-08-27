@@ -1,9 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { toggleOpenState } from 'common/components/resize/Resize';
-import { REQUESTS_SIDEBAR_RESIZER_ID } from 'client/routes/requests/RequestsResizeConstants';
-import { Icon } from 'common/components/Icon';
+import { toggleOpenState } from '@common/components/resize/Resize';
+import { REQUESTS_SIDEBAR_RESIZER_ID } from '@client/routes/requests/RequestsResizeConstants';
+import { Icon } from '@common/components/Icon';
 
 import styles from './ShellActivityBarView.scss';
 

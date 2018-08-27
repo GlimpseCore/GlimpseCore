@@ -3,8 +3,8 @@ import * as Glimpse from '@glimpse/glimpse-definitions';
 import {
     ITimelineComponentEvent,
     ITimelineComponentSpan
-} from 'common/components/timeline/TimelineCommonInterfaces';
-import { IMessage } from 'modules/messages/schemas/IMessage';
+} from '@common/components/timeline/TimelineCommonInterfaces';
+import { IMessage } from '@modules/messages/schemas/IMessage';
 
 export enum AgentType {
     Other,

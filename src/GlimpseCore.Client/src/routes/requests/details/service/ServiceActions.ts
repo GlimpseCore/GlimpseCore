@@ -2,7 +2,7 @@ import {
     createActionCreator,
     createRequestPersistedActionCreator,
     createSimpleActionCreator
-} from 'common/actions/ActionCreator';
+} from '@common/actions/ActionCreator';
 
 export const selectExchangeAction = createRequestPersistedActionCreator<{
     requestId: string;

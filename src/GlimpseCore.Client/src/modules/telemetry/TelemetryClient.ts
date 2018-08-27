@@ -1,4 +1,4 @@
-import { current as currentMetadata } from 'modules/metadata/MetadataActions';
+import { current as currentMetadata } from '@modules/metadata/MetadataActions';
 import { AppInsights } from 'applicationinsights-js';
 import { IProperties, IMeasurements } from './TelemetryInterfaces';
 import * as uuid from 'uuid';

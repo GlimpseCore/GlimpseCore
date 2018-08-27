@@ -1,14 +1,14 @@
 import { connect } from 'react-redux';
 
 import { getSelectedOperationSelector } from './DataSelectors';
-import { IStoreState } from 'client/IStoreState';
-import { DataDatabaseType } from 'client/routes/requests/details/data/DataInterfaces';
+import { IStoreState } from '@client/IStoreState';
+import { DataDatabaseType } from '@client/routes/requests/details/data/DataInterfaces';
 
 import {
     FixedWidthLeftColumnTable,
     ITableProps,
     nameValueColumns
-} from 'common/components/FixedWidthLeftColumnTable';
+} from '@common/components/FixedWidthLeftColumnTable';
 
 import styles from './DataDetailsConnection.scss';
 
