@@ -1,0 +1,8 @@
+module.exports = vendor;
+
+
+//////////////////
+// WEBPACK FOOTER
+// external "vendor"
+// module id = 3
+// module chunks = 0
