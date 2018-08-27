@@ -13,11 +13,11 @@ import store from './store';
 import Root from './Root';
 import { reportWindowOnError, reportConsoleErrorWrite } from './modules/errors/Errors';
 import { setupRequestPurgeOldRecords } from './routes/requests/RequestsActions';
-import { rootElement } from 'common/init/getRootElement';
-import { applyTheme } from 'common/init/applyTheme';
-import { setupUpdateChecker } from 'client/shell/update/UpdateActions';
-import { triggerRatingDialog } from 'client/shell/rating-dialog/TriggerRatingDialog';
-import { incrementSessionNumber } from 'client/shell/sessionNumber/IncrementSessionNumber';
+import { rootElement } from './common/init/getRootElement';
+import { applyTheme } from './common/init/applyTheme';
+import { setupUpdateChecker } from './shell/update/UpdateActions';
+import { triggerRatingDialog } from './shell/rating-dialog/TriggerRatingDialog';
+import { incrementSessionNumber } from './shell/sessionNumber/IncrementSessionNumber';
 
 // Write the `Greetings message` to the `console`.
 greetMessage(GLIMPSE_VERSION);
