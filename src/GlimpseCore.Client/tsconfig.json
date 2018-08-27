@@ -16,7 +16,14 @@
     "noImplicitAny": true,
     "strictNullChecks": true,
     "suppressImplicitAnyIndexErrors": true,
-    "noUnusedLocals": true
+    "noUnusedLocals": true,
+    "paths": {
+      "common": ["src/common"],
+      "shell": ["src/shell"],
+      "modules": ["src/modules"],
+      "routes": ["src/routes"],
+      "client": ["src"],
+    }
   },
   "exclude": [
     "node_modules",

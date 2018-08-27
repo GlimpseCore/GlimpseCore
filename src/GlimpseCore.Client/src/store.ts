@@ -9,7 +9,7 @@ import telemetryClient from './modules/telemetry/TelemetryClient';
 import reduxMiddlewareTelemetryListener from './modules/telemetry/ReduxMiddlewareTelemetryListener';
 import { reportReduxException } from './modules/errors/Errors';
 import { storeInitAction } from './StoreActions';
-import { cleanupPersistedGlobal } from 'common/util/CleanupObjectKeys';
+import { cleanupPersistedGlobal } from './common/util/CleanupObjectKeys';
 
 // hook up middleware for telemetry reporting
 const analyticsMiddleware = telemetryClient.createTelemetryMiddleware();

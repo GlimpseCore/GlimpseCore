@@ -106,6 +106,7 @@
     "@types/react-transition-group": "^2.0.13",
     "@types/redux-thunk": "^2.1.0",
     "react-hot-loader": "^4.3.5",
+    "redux-immutable-state-invariant": "^2.1.0",
     "typescript": "^3.0.1"
   }
 }

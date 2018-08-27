@@ -86,9 +86,9 @@ function triggerLoadAction(store) {
 
 if (FAKE_SERVER) {
     //tslint:disable:no-var-requires
-    require('fake/update/fake-update-actions');
-    require('fake/metadata/fake-metadata-actions');
-    require('fake/messages/fake-messages-actions');
+    //require('fake/update/fake-update-actions');
+    //require('fake/metadata/fake-metadata-actions');
+    //require('fake/messages/fake-messages-actions');
     //tslint:enable:no-var-requires
 }
 

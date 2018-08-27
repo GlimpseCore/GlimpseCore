@@ -1,6 +1,6 @@
 import { rootElement } from './getRootElement';
 import { getSelectedThemeName } from 'shell/themes/ThemesSelectors';
-import store from 'client/store';
+import store from 'store';
 
 /**
  * Function to get theme name from the store with a fallback.
