@@ -2,28 +2,27 @@ const startTime = window.performance.now();
 
 import 'babel-polyfill';
 import 'event-source-polyfill';
-import 'whatwg-fetch';
-// tslint:disable-next-line:no-unused-variable
 import React from 'react';
 import ReactDOM from 'react-dom';
+import 'whatwg-fetch';
 
-import greetMessage from './common/util/greetMessage';
-import './common/util/UrlUtilities';
-import store from './store';
-import Root from './Root';
-import { reportWindowOnError, reportConsoleErrorWrite } from './modules/errors/Errors';
-import { setupRequestPurgeOldRecords } from './routes/requests/RequestsActions';
-import { rootElement } from './common/init/getRootElement';
-import { applyTheme } from './common/init/applyTheme';
-import { setupUpdateChecker } from '@shell/update/UpdateActions';
 import { triggerRatingDialog } from '@shell/rating-dialog/TriggerRatingDialog';
 import { incrementSessionNumber } from '@shell/sessionNumber/IncrementSessionNumber';
+import { setupUpdateChecker } from '@shell/update/UpdateActions';
+import { applyTheme } from './common/init/applyTheme';
+import { rootElement } from './common/init/getRootElement';
+import greetMessage from './common/util/greetMessage';
+import './common/util/UrlUtilities';
+import { reportConsoleErrorWrite, reportWindowOnError } from './modules/errors/Errors';
+import Root from './Root';
+import { setupRequestPurgeOldRecords } from './routes/requests/RequestsActions';
+import store from './store';
 
 // Write the `Greetings message` to the `console`.
 greetMessage(GLIMPSE_VERSION);
 applyTheme();
 
-let render = undefined;
+let render;
 
 import { initBatchingStrategyErrorHandling } from './modules/errors/BatchingStrategyHandler';
 
@@ -35,7 +34,7 @@ if (PRODUCTION) {
     const oldOnError = window.onerror;
     const oldConsoleError = console.error;
 
-    window.onerror = function(messageOrEvent, source, lineno, colno, error, ...rest) {
+    window.onerror = function(messageOrEvent, source: string, lineno: number, colno:number, error: Error, ...rest) {
         const message = error && error.message ? error.message : messageOrEvent;
         try {
             reportWindowOnError(source, lineno, colno, message, error);
@@ -85,17 +84,15 @@ function triggerLoadAction(store) {
 }
 
 if (FAKE_SERVER) {
-    //tslint:disable:no-var-requires
-    //require('fake/update/fake-update-actions');
-    //require('fake/metadata/fake-metadata-actions');
-    //require('fake/messages/fake-messages-actions');
-    //tslint:enable:no-var-requires
+    // require('fake/update/fake-update-actions');
+    // require('fake/metadata/fake-metadata-actions');
+    // require('fake/messages/fake-messages-actions');
 }
 
 if (HOT_RELOAD) {
     // // enable accessability checking
-    // var a11y = require('react-a11y');
-    // a11y(React, { throw: true, includeSrcNode: true, ReactDOM: ReactDOM });
+    var a11y = require('react-a11y');
+    a11y(React, { throw: true, includeSrcNode: true, ReactDOM: ReactDOM });
 
     // live reload css files
     let counter = 0;
@@ -111,7 +108,7 @@ if (HOT_RELOAD) {
                     links[i].remove();
                 }
             }
-            const link = links[links.length - 1];
+            const link : HTMLLinkElement = links[links.length - 1];
             const newLink = document.createElement('link');
             newLink.type = 'text/css';
             newLink.rel = 'stylesheet';
@@ -119,15 +116,13 @@ if (HOT_RELOAD) {
             newLink.onload = () => {
                 link.remove();
             };
-            link.parentNode.insertBefore(newLink, link.nextSibling);
+            (link.parentNode as Node).insertBefore(newLink, link.nextSibling);
         },
         false
     );
 
     // core render with hotload
-    // tslint:disable-next-line:no-var-requires variable-name
     const { AppContainer } = require('react-hot-loader');
-    // tslint:disable-next-line:variable-name
     render = function render(App) {
         const root = (
             <AppContainer>
@@ -139,7 +134,6 @@ if (HOT_RELOAD) {
     };
 } else {
     // core render
-    // tslint:disable-next-line:variable-name
     render = function render(App) {
         const root = <App store={store} />;
         ReactDOM.render(root, rootElement);
@@ -150,14 +144,11 @@ if (HOT_RELOAD) {
 // render everything
 render(Root);
 
-// tslint:disable-next-line:no-any
 if (HOT_RELOAD && (module as any).hot) {
-    // tslint:disable-next-line:no-any
     (module as any).hot.accept('./modules/ModulesReducers', () => {
         const nextReducer = require('./modules/ModulesReducers').default;
         store.replaceReducer(nextReducer);
     });
-    // tslint:disable-next-line:no-any
     (module as any).hot.accept('./Root', () => {
         const nextRoot = require('./Root').default;
         render(nextRoot);
