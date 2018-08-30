@@ -4,7 +4,8 @@ export interface IContext {
 }
 
 export interface IRequestsLookup {
-    listing: any[]
+    listing: any[],
+    byId: object
 }
 
 export interface IRequest {}
