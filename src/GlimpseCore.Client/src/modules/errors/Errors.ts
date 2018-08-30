@@ -34,16 +34,16 @@ export function reportWindowOnError(
     source: string,
     lineNumber: number,
     columnNumber: number,
-    errorMessage: string,
-    errorObject: Error
+    errorMessage: string | Event,
+    errorObject: Error | undefined
 ) {
-    const stack: string = errorObject ? errorObject.stack : undefined;
+    const stack: string = errorObject ? errorObject.stack as string : '';
     const e: IGlimpseError = {
         stack,
         severity: GlimpseErrorSeverity.Error,
         errorClass: GlimpseErrorClass.Internal,
         errorCode: ErrorCode.WindowOnError,
-        message: errorMessage
+        message: errorMessage.toString()
     };
 
     const props: IProperties = {
@@ -146,10 +146,8 @@ function getStack(): string {
             error = err;
         }
     }
-    return error.stack;
+    return error.stack || '';
 }
-
-
 
 // WEBPACK FOOTER //
 // ./src/client/modules/errors/Errors.ts
