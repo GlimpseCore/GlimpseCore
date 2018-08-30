@@ -25,7 +25,7 @@ export class ShellView extends React.Component<IShellViewProps, {}> {
             <div className={classNames(themeName, styles.shell)}>
                 <div className={styles.shellContent}>
                     <div className={classNames(styles.shellContentActivityBar)}>
-                        <ShellActivityBarView />
+                        <ShellActivityBarView children={null} />
                     </div>
                     <div className={styles.shellContentDetail}>
                         <SmileyFeedback />

@@ -62,7 +62,7 @@ export class Root extends React.Component<IShellViewProps, {}> {
                     },
                     indexRoute: {
                         onEnter: (nextState: RouterState, replace: RedirectFunction) => {
-                            replace('/requests');
+                            replace({pathname:'/requests'});
                         }
                     }
                 }
