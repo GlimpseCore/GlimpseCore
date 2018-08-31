@@ -16,17 +16,17 @@ export interface ITimelineTableColumn<T> {
     /**
      * (Optional) Name of the column.
      */
-    name?: string;
+    name: string;
 
     /**
      * (Optional) The CSS class name applied to the column's <th> element.
      */
-    headerClassName?: string;
+    headerClassName: string;
 
     /**
      * A function that generates the content for the column's header.
      */
-    headerFunc: (props?: ITimelineTableProps<T>) => string | JSX.Element;
+    headerFunc: (props: ITimelineTableProps<T>) => string | JSX.Element;
 
     /**
      * (Optional) The CSS class name applied to the column's <td> element.
@@ -75,7 +75,7 @@ export interface ITimelineTableProps<T> {
     /**
      * (Optional) A function that generates the content (i.e. line) for a point-in-time event.
      */
-    eventFunc?: (event: ITimelineComponentEvent, params: T) => JSX.Element;
+    eventFunc: (event: ITimelineComponentEvent, params: T) => JSX.Element;
 
     /**
      * The maximum offset visible within the table.
@@ -95,7 +95,7 @@ export interface ITimelineTableProps<T> {
     /**
      * (Optional) Parameters passed to any content generator function.
      */
-    params?: T;
+    params: T;
 
     /**
      * (Optional) The set of point-in-time events to display within the table.
@@ -115,7 +115,7 @@ export interface ITimelineTableProps<T> {
     /**
      * (Optional) The CSS class name applied to the <tr> element of the selected activity (if any).
      */
-    selectedRowClassName?: string;
+    selectedRowClassName: string;
 
     /**
      * The set of activities to display within the table.
@@ -137,7 +137,7 @@ export interface ITimelineTableCallbacks {
     /**
      * (Optional) The function called when the user selects an activity (i.e. clicks a table row).
      */
-    onSelectActivity?: (activity: ITimelineComponentSpan, requestId?: string) => void;
+    onSelectActivity: (activity: ITimelineComponentSpan, requestId?: string) => void;
     onHoverActivity?: (activity: ITimelineComponentSpan) => void;
     onUnhoverActivity?: (activity: ITimelineComponentSpan) => void;
 }
@@ -199,7 +199,7 @@ interface ITimelineTableActivityRowProps<T> {
     /**
      * (Optional) The CSS class name applied to the <tr> element of the selected activity (if any).
      */
-    selectedRowClassName?: string;
+    selectedRowClassName: string;
 
     /**
      * (Optional) Request context id.
@@ -245,7 +245,7 @@ export const getActivityColumnPlaceholder = (): ITimelineTableColumn<{}> => {
                 </div>
             );
         },
-        width: undefined,
+        width: 0,
         headerClassName: styles.timelineTableActivityHeader,
         valueClassName: styles.timelineTableActivityBarCell
     };
@@ -338,7 +338,7 @@ export class TimelineTable<T> extends React.Component<
         }
     };
 
-    constructor(props?: ITimelineTableProps<T> & ITimelineTableCallbacks) {
+    constructor(props: ITimelineTableProps<T> & ITimelineTableCallbacks) {
         super(props);
         this.validateProps();
     }
@@ -439,7 +439,7 @@ export class TimelineTable<T> extends React.Component<
         let right = 0;
         let totalColumnWidth = 0;
         for (let i = 0; i < columns.length; i++) {
-            const column = columns[i];
+            const column = columns[i] as ITimelineTableColumn<T>;
 
             // add width fo all columns except `activity`
             if (column.name !== 'activity') {
@@ -468,6 +468,7 @@ export class TimelineTable<T> extends React.Component<
                 <th
                     className={classNames(column.headerClassName)}
                     key={`column-${index}`}
+                    // @ts-ignore width is fine for th
                     width={`${column.width}%`}>
                     {column.headerFunc(this.props)}
                 </th>
@@ -481,6 +482,7 @@ export class TimelineTable<T> extends React.Component<
                 <th
                     className={column.headerClassName}
                     key={`column-${index}`}
+                    // @ts-ignore width is fine for th
                     width={`${column.width}%`}
                 />
             );
