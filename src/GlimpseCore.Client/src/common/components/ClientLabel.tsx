@@ -1,7 +1,7 @@
 import React from 'react';
 import { parse } from 'platform';
 import classNames from 'classnames';
-
+import { IconShapeType } from './AgentTypeIcon';
 import { Icon } from './Icon';
 import styles from './ClientLabel.scss';
 import commonStyles from './Common.scss';

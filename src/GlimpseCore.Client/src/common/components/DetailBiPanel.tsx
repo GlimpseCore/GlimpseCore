@@ -32,14 +32,14 @@ class DetailBiPanel extends React.Component<
             openModal: false
         };
     }
-    private setModal = (open: boolean) => (side?: string) => (e?) => {
+    private setModal = (open: boolean) => (side?: 'left' | 'right') => (e?) => {
         if (e) {
             e.stopPropagation();
         }
 
         this.setState(state => ({
             ...state,
-            openModal: open ? side : false
+            openModal: open ? (side || false) : false
         }));
     };
     private openModal = this.setModal(true);

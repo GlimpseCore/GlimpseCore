@@ -9,7 +9,7 @@ import { DataOperationStatus } from '@client/routes/requests/details/data/DataIn
 
 interface IDataStatusLabelProps {
     statusCode: DataOperationStatus;
-    statusMessage?: string;
+    statusMessage: string;
     className?: string;
 }
 

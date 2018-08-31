@@ -7,6 +7,8 @@ import Icon from './Icon';
 
 import styles from './AgentTypeIcon.scss';
 
+export type IconShapeType = string | undefined;
+
 interface IIconType {
     shape: IconShapeType;
     colorClassName: string;

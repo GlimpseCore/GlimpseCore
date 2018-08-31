@@ -4,8 +4,8 @@ interface IDataLoadingTimerProps {
     isDataLoaded: boolean;
     className?: string;
     timeout?: number;
-    getLoadingStatusBlock?: () => JSX.Element | string;
-    getEmptyStatusBlock?: () => JSX.Element | string;
+    getLoadingStatusBlock: () => JSX.Element | string;
+    getEmptyStatusBlock: () => JSX.Element | string;
     onTimeoutElapsed?: () => void;
 }
 
