@@ -88,7 +88,7 @@ const append = function append(container, content, currentStyle?, className?: st
         container.appendChild(content);
     }
     else if (typeof content !== 'undefined' && content !== '') {
-        let toAppend = undefined;
+        let toAppend;
         if (className || currentStyle) {
             content = escapeHtml(content);
 

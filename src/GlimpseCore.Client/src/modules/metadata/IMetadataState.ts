@@ -1,1 +1,3 @@
-export interface IMetadataState {}
+export interface IMetadataState {
+    resources: string;
+}

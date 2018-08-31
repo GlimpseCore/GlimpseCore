@@ -206,7 +206,7 @@ export default class SideBarFilter extends React.Component<
 
         this.props.onFilterReset();
     };
-    private attachGrip = (gripNode: Element): void => {
+    private attachGrip = (gripNode: HTMLDivElement): void => {
         this.grip = gripNode;
     };
     private handlePan = (e: HammerInput): void => {

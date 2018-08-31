@@ -42,7 +42,7 @@ emojione.regUnicode = new RegExp(
 const linkerOptions = { newWindow: true, phone: false, mention: false, hashtag: false };
 
 function process(content, tokenSupport: string, contextId: string, messageId: string) {
-    let contentObj = undefined;
+    let contentObj;
     // intial pass if sprintfjs if needed
     if (content.constructor === Array) {
         contentObj = sprintfjs(content[0], content.slice(1, content.length), tokenSupport);

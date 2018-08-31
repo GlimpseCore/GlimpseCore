@@ -39,7 +39,7 @@ function checkForNewVersion(dispatcher: Dispatch<any>) {
                 // if versions aren't the same, going to assume its newer but only if
                 // current is in the list... this makes sure that during dev we don't
                 // ping notify ourselves
-                let version = undefined;
+                let version;
                 if (
                     latestVersion !== currentVersion &&
                     response &&

@@ -14,7 +14,7 @@ import { current as currentMetadata } from '@modules/metadata/MetadataActions';
 
 const CONNECTION_RETRY_INTERVAL = 2000;
 
-let connectionAll = undefined;
+let connectionAll;
 export function subscribeAll(callback) {
     return dispatch => {
         if (!connectionAll) {
@@ -66,7 +66,7 @@ export function subscribeAll(callback) {
     };
 }
 
-let connectionBy = undefined;
+let connectionBy;
 export function subscribeByContext(contextId, callback) {
     return dispatch => {
         if (connectionBy) {

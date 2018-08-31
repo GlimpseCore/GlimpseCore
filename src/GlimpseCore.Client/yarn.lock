@@ -102,6 +102,10 @@
   dependencies:
     commander "*"
 
+"@types/hammerjs@^2.0.35":
+  version "2.0.35"
+  resolved "https://registry.yarnpkg.com/@types/hammerjs/-/hammerjs-2.0.35.tgz#7b7c950c7d54593e23bffc8d2b4feba9866a7277"
+
 "@types/history@^3":
   version "3.2.2"
   resolved "https://registry.yarnpkg.com/@types/history/-/history-3.2.2.tgz#b6affa240cb10b5f841c6443d8a24d7f3fc8bb0c"
@@ -140,12 +144,12 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react-redux@^5.0.6":
-  version "5.0.21"
-  resolved "https://registry.yarnpkg.com/@types/react-redux/-/react-redux-5.0.21.tgz#98a3a371dfc22c894889f660d7515717639d20f4"
+"@types/react-redux@6":
+  version "6.0.6"
+  resolved "https://registry.yarnpkg.com/@types/react-redux/-/react-redux-6.0.6.tgz#87f1d0a6ea901b93fcaf95fa57641ff64079d277"
   dependencies:
     "@types/react" "*"
-    redux "^3.6.0"
+    redux "^4.0.0"
 
 "@types/react-router-redux@^4":
   version "4.0.51"

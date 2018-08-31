@@ -3,9 +3,9 @@ import forEach from 'lodash/forEach';
 export function getValueAtKeyCaseInsensitive<T>(
     values: { [key: string]: T },
     searchKey: string
-): T {
+): T | undefined {
     const normalizedSearchKey = searchKey.toLowerCase();
-    let foundValue = undefined;
+    let foundValue;
 
     forEach(values, (value, key) => {
         if (key.toLowerCase() === normalizedSearchKey) {
@@ -17,9 +17,9 @@ export function getValueAtKeyCaseInsensitive<T>(
     return foundValue;
 }
 
-export function getKeyCaseInsensitive<T>(values: { [key: string]: T }, searchKey: string): string {
+export function getKeyCaseInsensitive<T>(values: { [key: string]: T }, searchKey: string): string | undefined {
     const normalizedSearchKey = searchKey.toLowerCase();
-    let foundKey = undefined;
+    let foundKey;
 
     forEach(values, (value, key) => {
         if (key.toLowerCase() === normalizedSearchKey) {
@@ -31,11 +31,11 @@ export function getKeyCaseInsensitive<T>(values: { [key: string]: T }, searchKey
     return foundKey;
 }
 
-export function convertToObject(value: string): {} {
+export function convertToObject(value: string): object {
     try {
         return JSON.parse(value);
     } catch (e) {
-        // nothing to do here
+        return {};
     }
 }
 

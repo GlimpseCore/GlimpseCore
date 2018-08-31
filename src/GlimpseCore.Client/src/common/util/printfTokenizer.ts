@@ -2,9 +2,15 @@ function isDigitAt(string, index) {
     const c = string.charCodeAt(index);
     return (48 <= c && c <= 57);
 }
-
+interface IToken {
+    type: string;
+    value?: string;
+    specifier?: string;
+    precision?: string;
+    substitutionIndex?: string;
+}
 export default function tokenizeFormatString(format, formatters) {
-    const tokens = [];
+    const tokens: IToken[] = [];
     let substitutionIndex = 0;
 
     function addStringToken(str) {

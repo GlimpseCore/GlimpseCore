@@ -62,15 +62,15 @@ class ExpandableTextView extends React.Component<IExpandableTextProps, IExpandab
 
     private onMouseEnter() {
         const computedStyles = window.getComputedStyle(this.refs.target);
-        const lineHeight = computedStyles.lineHeight;
+        const lineHeight = computedStyles.lineHeight as string;
 
-        let lineHeightNumber = undefined;
+        let lineHeightNumber;
 
         // NOTE: If line-height is set to 'normal', Chrome returns 'normal' while others return a computed px-value.
         //       If 'normal' is returned, we estimate the line-height based on font-size.
 
         if (lineHeight === 'normal') {
-            const fontSize = computedStyles.fontSize;
+            const fontSize = computedStyles.fontSize as string;
 
             const pxIndex = fontSize.indexOf('px');
 

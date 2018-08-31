@@ -182,7 +182,7 @@ export const getLoggingMessages = (function() {
         messages: ILoggingMessage[],
         collapsedState: (message: ILoggingMessage) => boolean
     ) {
-        let previousMessage = undefined;
+        let previousMessage;
         const groupingStack = [];
 
         // move through each record and work out grouping data

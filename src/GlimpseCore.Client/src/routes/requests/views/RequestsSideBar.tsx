@@ -17,7 +17,7 @@ import RequestsSideBarRequest from './RequestsSideBarRequest';
 //       place for this. That can happen when follow logic is pulled
 //       out of this component.
 const followLoadTime = new Date().getTime();
-let followLastBlacklistedRequestId = undefined;
+let followLastBlacklistedRequestId;
 
 export interface IRequestsSideBarProps {
     /**

@@ -151,7 +151,7 @@ const getItemString = (function() {
     }
 
     return function(type, data, itemType, itemString) {
-        let result = undefined;
+        let result;
         if (type === 'Array') {
             result = rootArray(data, itemString);
         } else if (type === 'Object') {

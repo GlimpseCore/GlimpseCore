@@ -18,7 +18,7 @@ export function getQueryStringParam(
         }
     }
 
-    return undefined;
+    return null;
 }
 
 /**

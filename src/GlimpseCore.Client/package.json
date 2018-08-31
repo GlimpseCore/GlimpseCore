@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@types/hammerjs": "^2.0.35",
     "ansi-html": "^0.0.7",
     "applicationinsights-js": "^1.0.19",
     "babel-polyfill": "^6.26.0",

@@ -1,4 +1,4 @@
-import * as Glimpse from '@glimpse/glimpse-definitions';
+import * as Glimpse from '@_glimpse/glimpse-definitions';
 
 import { getValueAtKeyCaseInsensitive } from './ObjectUtilities';
 import { IMessage } from '@modules/messages/schemas/IMessage';
@@ -203,7 +203,7 @@ export function classifyRequest(
     response: IMessage<Glimpse.Messages.Payloads.Web.IResponse>
 ): IMediaTypeMetadata {
     // 1.  Use the content-type header on the response if available
-    let metadata: IMediaTypeMetadata = undefined;
+    let metadata: IMediaTypeMetadata | undefined = undefined;
     if (response && response.payload && response.payload.headers) {
         const contentType = response ? getContentType(response.payload.headers) : undefined;
         if (contentType) {
@@ -258,7 +258,7 @@ export function getMediaTypeMetadata(mediaType: string): IMediaTypeMetadata {
     return metadata;
 }
 
-function parseHeaderForMediaType(headerValue: string, separatorChar: string): string {
+function parseHeaderForMediaType(headerValue: string | undefined, separatorChar: string): string | undefined {
     if (headerValue) {
         let idx = headerValue.indexOf(separatorChar);
         if (idx < 0) {
@@ -267,17 +267,18 @@ function parseHeaderForMediaType(headerValue: string, separatorChar: string): st
             return headerValue.substring(0, idx).trim();
         }
     }
+    return;
 }
 
-export function getMediaTypeFromContentType(contentType: string): string {
+export function getMediaTypeFromContentType(contentType: string): string | undefined {
     return parseHeaderForMediaType(contentType, ';');
 }
 
-function getMediaTypeFromAcceptHeader(acceptHeader: string): IMediaTypeMetadata {
+function getMediaTypeFromAcceptHeader(acceptHeader: string): IMediaTypeMetadata | undefined {
     const parts = acceptHeader.split(',');
     for (let i = 0; i < parts.length; i++) {
         const mediaType = parseHeaderForMediaType(parts[i], ';');
-        const metadata = mediaTypeToMetadata[mediaType];
+        const metadata = mediaType ? mediaTypeToMetadata[mediaType] : undefined;
         if (metadata) {
             return metadata;
         }
@@ -285,22 +286,22 @@ function getMediaTypeFromAcceptHeader(acceptHeader: string): IMediaTypeMetadata 
     return;
 }
 
-export function getContentType(headers: { [key: string]: string | string[] }): string {
+export function getContentType(headers: { [key: string]: string | string[] }): string | undefined {
     return getHeaderValue('Content-Type', headers);
 }
 
-export function getContentEncoding(headers: { [key: string]: string | string[] }): string {
+export function getContentEncoding(headers: { [key: string]: string | string[] }): string | undefined {
     return getHeaderValue('Content-Encoding', headers);
 }
 
-function getAcceptHeader(headers: { [key: string]: string | string[] }): string {
+function getAcceptHeader(headers: { [key: string]: string | string[] }): string | undefined {
     return getHeaderValue('Accept', headers);
 }
 
 export function getHeaderValue(
     headerKey: string,
     headers: { [key: string]: string | string[] }
-): string {
+): string | undefined {
     if (headers) {
         const contentTypeHeader = getValueAtKeyCaseInsensitive(headers, headerKey);
 

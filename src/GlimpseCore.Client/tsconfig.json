@@ -25,6 +25,7 @@
       "@modules/*": ["src/modules/*"],
       "@routes/*": ["src/routes/*"],
       "@client/*": ["src/*"],
+      "@_glimpse/*": ["src/glimpse/*"],
     }
   },
   "exclude": [

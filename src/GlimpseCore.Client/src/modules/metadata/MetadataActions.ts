@@ -10,12 +10,12 @@ export const fetchReceivedPayloadAction = createActionCreator<{ metadata: IMetad
     'METADATA_RECEIVED_PAYLOAD'
 );
 
-let _metadata = undefined;
-const _callbacks = [];
+let _metadata;
+const _callbacks : Function[] = [];
 
 function flushListeners(metadata: IMetadataState) {
     while (_callbacks.length > 0) {
-        const callback = _callbacks.shift();
+        const callback = _callbacks.shift() as Function;
         callback(metadata);
     }
 }
@@ -51,7 +51,7 @@ export function fetch() {
     return dispatch => {
         dispatch(featchRequestedPayloadAction());
 
-        const metadataUri = getMetadataUri();
+        const metadataUri = getMetadataUri() || undefined;
         return window
             .fetch(metadataUri)
             .then<IMetadataState>(response => response.json())

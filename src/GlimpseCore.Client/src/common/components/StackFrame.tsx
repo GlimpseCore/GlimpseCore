@@ -2,7 +2,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import { connect } from 'react-redux';
-import * as Glimpse from '@glimpse/glimpse-definitions';
+import * as Glimpse from '@_glimpse/glimpse-definitions';
 
 import { isLocalhost } from '@common/util/UrlUtilities';
 import { stopPropagation } from '@common/util/CommonUtilities';
@@ -38,7 +38,7 @@ const stackFrame = (props: IStackFrameProps) => {
 
     if (frame) {
         const { fileName } = frame;
-        const isClientSide = isNetworkServed(fileName);
+        const isClientSide = isNetworkServed(fileName || '');
 
         if (fileName) {
             const file = getFileFromPath(fileName);

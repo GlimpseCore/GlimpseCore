@@ -18,7 +18,7 @@ export interface IContentDisposition {
     parameters: { [key: string]: string };
 }
 
-export function parseContentDisposition(header: string): IContentDisposition {
+export function parseContentDisposition(header: string): IContentDisposition | undefined {
     if (header) {
         const parsedHeader = contentDisposition.parse(header);
 
@@ -35,7 +35,7 @@ export function parseContentDisposition(header: string): IContentDisposition {
     return undefined;
 }
 
-export function getContentDisposition(headers: { [key: string]: string | string[] }): string {
+export function getContentDisposition(headers: { [key: string]: string | string[] }): string | undefined {
     const values = getValueAtKeyCaseInsensitive(headers, 'content-disposition');
 
     return Array.isArray(values) ? values[0] : values;

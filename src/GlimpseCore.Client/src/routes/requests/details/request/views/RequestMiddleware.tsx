@@ -59,7 +59,7 @@ export class MiddlewareView extends React.Component<IMiddlewareViewProps, {}> {
     public render() {
         const middleware = this.props.middleware;
 
-        let content = undefined;
+        let content;
         if (middleware.length === 0) {
             content = (
                 <tr>

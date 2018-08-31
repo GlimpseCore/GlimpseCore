@@ -43,7 +43,7 @@ export function toStringWithFixedPoints(value: number, fixedPoints: number): str
     return roundedValue.toFixed(fixedPoints);
 }
 
-export function toBoolean(value: string, defaultValue: boolean = undefined): boolean {
+export function toBoolean(value: string, defaultValue: boolean = false): boolean {
     if (value === 'false' || value === '0') {
         return false;
     } else if (value === 'true' || value === '1') {
@@ -124,7 +124,7 @@ export const truncateJSON = (obj: JSONType, len: number = 20): string => {
  */
 // tslint:disable-next-line:no-any
 export const trancateItemsInArray = (items): any[] => {
-    const result = [];
+    const result : any[] = [];
     const THRESHOLD = 50;
 
     for (let item of items) {

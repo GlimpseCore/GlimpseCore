@@ -12,15 +12,13 @@ export function measureTextWidth({
     style = DEFAULT_FONT_STYLE
 }) {
     if (process.env.NODE_ENV !== 'test') {
-        const ctx = canvas.getContext('2d');
+        const ctx = canvas.getContext('2d') as CanvasRenderingContext2D;
         ctx.font = `${weight} ${style} ${size} ${family}`;
         return ctx.measureText(text).width;
     }
 
     return 0;
 }
-
-
 
 // WEBPACK FOOTER //
 // ./src/client/common/util/TextUtilities.ts

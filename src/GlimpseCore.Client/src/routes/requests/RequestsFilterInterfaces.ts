@@ -3,4 +3,7 @@ export interface IRequestsFilterState {
     status: object
     contentTypeClass: number
 }
-export interface IRequestFilterDetails {}
+export interface IRequestFilterDetails {
+    indexedTotalCount: IRequestsFilterState
+    filteredCount: number;
+}

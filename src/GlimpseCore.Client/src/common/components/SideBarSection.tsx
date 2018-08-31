@@ -17,9 +17,9 @@ import { getFilters, isFilterReset } from '@client/routes/requests/RequestsFilte
 
 export interface IShellSideBarContainerProps {
     title: string;
-    isExpandable?: boolean;
-    isImportant?: boolean;
-    noChildText?: string;
+    isExpandable: boolean;
+    isImportant: boolean;
+    noChildText: string;
     requestFilterDetails: IRequestFilterDetails;
     filterMode: boolean;
 }
@@ -155,7 +155,6 @@ function mapDispatchToProps(
     };
 }
 
-// tslint:disable-next-line:variable-name
 const ConnectedSidebarSection: React.ComponentClass<IShellSideBarContainerProps> = connect(
     mapStateToProps,
     mapDispatchToProps
