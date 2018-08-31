@@ -19,4 +19,20 @@ export interface IResizeCallbacks {
 }
 export interface IResizeState {
     delta: number
+}
+export interface ISaveSizeAction { 
+    id: string;
+    size: number;
+}
+export interface ISaveOpenAction {
+    id: string;
+    isOpen: boolean;
+ }
+export interface IToggleOpenAction { 
+    id: string;
+}
+export interface IResizePanelsState { }
+export interface IResizePersistedState {
+    size: number;
+    isOpen: boolean;
  }
