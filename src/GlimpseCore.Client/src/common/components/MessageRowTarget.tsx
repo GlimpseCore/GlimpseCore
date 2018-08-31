@@ -26,7 +26,7 @@ export interface IMessageRowTarget {
  */
 // tslint:disable-next-line:variable-name
 export class MessageRowTarget extends React.Component<IMessageRowTarget, {}> {
-    private attachNode = (node: Element) => {
+    private attachNode = (node: Element | null) => {
         const { isSelected } = this.props;
 
         if (node && isSelected && process.env.NODE_ENV !== 'test') {

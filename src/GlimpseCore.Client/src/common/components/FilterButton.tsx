@@ -3,6 +3,7 @@ import classNames from 'classnames';
 
 import styles from './FilterButton.scss';
 import { Icon } from './Icon';
+import { IconShapeType } from '@common/components/AgentTypeIcon';
 
 export interface IFilterButtonProps {
     count: number;

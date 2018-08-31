@@ -30,7 +30,7 @@ export class FilterBar extends React.Component<IFilterBarCombinedProps, {}> {
 
     public render() {
         const { groups, onToggle, onDropdownChange } = this.props;
-        const items = [];
+        const items = [] as (JSX.Element | null)[];
         let isFilterApplied = false;
 
         for (let i = 0; i < groups.length; i++) {
@@ -41,7 +41,7 @@ export class FilterBar extends React.Component<IFilterBarCombinedProps, {}> {
             }
 
             if (group.type !== 'dropdown') {
-                const groupItems = [];
+                const groupItems = [] as (JSX.Element | null)[];
 
                 for (let j = 0; j < group.filters.length; j++) {
                     const filter = group.filters[j];
@@ -97,7 +97,7 @@ export class FilterBar extends React.Component<IFilterBarCombinedProps, {}> {
         return <div key={key} className={styles.filterGroupSeparator} />;
     }
 
-    private renderResetFilter(isFilterApplied: boolean): Array<JSX.Element> {
+    private renderResetFilter(isFilterApplied: boolean): Array<JSX.Element> | null {
         if (!isFilterApplied) {
             return null; // tslint:disable-line:no-null-keyword
         }

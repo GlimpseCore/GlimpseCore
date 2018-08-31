@@ -85,7 +85,7 @@ export class RouteButton extends React.Component<IRouteButtonComponentProps, {}>
             return router.isActive(to);
         }
 
-        return isActive;
+        return isActive || false;
     };
 
     public render() {

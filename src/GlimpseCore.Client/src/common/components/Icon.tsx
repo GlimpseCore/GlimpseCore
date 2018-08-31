@@ -2,6 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 
 import styles from './Icon.scss';
+import { IconShapeType } from '@common/components/AgentTypeIcon';
 
 interface IIconProps {
     shape: IconShapeType;

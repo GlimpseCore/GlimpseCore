@@ -36,7 +36,7 @@ export interface IColumnInfo {
      *
      *  - This function will be used to determine the overall width of this column.
      */
-    measureFunc?: (param: Object) => number;
+    measureFunc: (param?: Object) => number;
 
     /**
      * (Optional) If valueFunc() returns a React element that's simply styled text, this function returns the raw text.
@@ -69,11 +69,11 @@ export interface ITableProps {
 }
 
 export interface ITableState {
-    tableDimensions?: {
+    tableDimensions: {
         width: number;
         height: number;
     };
-    columnWidths?: number[];
+    columnWidths: number[];
 }
 
 export const nameValueColumns: IColumnInfo[] = [
@@ -85,13 +85,15 @@ export const nameValueColumns: IColumnInfo[] = [
         titleFunc: (o: { name: string; value: string }) => {
             return o.name;
         },
-        maxWidth: 200
+        maxWidth: 200,
+        measureFunc: () => 0
     },
     {
         header: 'Value',
         valueFunc: (o: { name: string; value: string }) => {
             return o.value;
-        }
+        },
+        measureFunc: () => 0
     }
 ];
 
@@ -128,8 +130,7 @@ export class FixedWidthLeftColumnTable extends React.Component<ITableProps, ITab
     public render() {
         const { params, className, columns } = this.props;
         const { tableDimensions: { width, height }, columnWidths } = this.state;
-
-        let content: JSX.Element;
+        let content: JSX.Element | null = null;
         if (width > 0) {
             content = (
                 <Table
@@ -184,7 +185,7 @@ export class FixedWidthLeftColumnTable extends React.Component<ITableProps, ITab
             <Measure onMeasure={this.onTableMeasure}>
                 <div
                     className={classNames(styles.fixedWidthLeftColumnTableContainer, className)}
-                    ref={e => (this.tableContainer = e)}>
+                    ref={e => ((this.tableContainer as HTMLDivElement) = e as HTMLDivElement)}>
                     {content}
                 </div>
             </Measure>
@@ -192,11 +193,11 @@ export class FixedWidthLeftColumnTable extends React.Component<ITableProps, ITab
     }
 
     private setColumnWidths(columns: IColumnInfo[], params: Object[]) {
-        const columnWidths = [];
+        const columnWidths = [] as number[];
 
         let totalColumnWidth = 0;
         for (let columnIndex = 0; columnIndex < columns.length; columnIndex++) {
-            const column = columns[columnIndex];
+            const column = columns[columnIndex] as IColumnInfo;
 
             let widestColumnCell: number;
 

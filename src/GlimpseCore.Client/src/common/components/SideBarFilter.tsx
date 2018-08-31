@@ -20,6 +20,7 @@ import { ContentTypeClass } from '@common/util/ContentTypes';
 import Hammer from 'hammerjs';
 
 import styles from './SideBarFilter.scss';
+import { IconShapeType } from '@common/components/AgentTypeIcon';
 
 interface ISideBarFilterProps {
     requestFilterDetails: IRequestFilterDetails;
@@ -45,7 +46,7 @@ interface IFilterGroupConfig<NameType> {
     getTotalCount: (filterName: NameType) => number;
     showAllNames?: boolean;
     title: string;
-    isActiveFilterName?: (filterName: NameType) => boolean;
+    isActiveFilterName: (filterName: NameType) => boolean;
     onToggleFilter: (filterName: NameType) => void;
     icon?: (filterName: NameType) => IconShapeType;
     iconClassName?: (filterName: NameType) => string;
