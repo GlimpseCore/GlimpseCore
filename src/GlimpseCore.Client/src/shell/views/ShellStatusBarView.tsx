@@ -3,7 +3,6 @@ import React from 'react';
 import styles from './ShellStatusBarView.scss';
 import { ThemeBar } from '../themes/views/ThemeBar';
 import SmileyButton from '../feedback/views/SmileyButton';
-import DebugButton from '../debug/views/DebugButton';
 import MessageInputButton from '../input/views/MessageInputButton';
 import UpdateBlock from '../update/views/UpdateBlock';
 import VersionInfo from '../version/views/VersionInfo';
@@ -20,7 +19,7 @@ export class ShellStatusBarView extends React.Component<IShellStatusBarViewProps
                 <div className={styles.statusBarGroup}><SmileyButton /></div>
                 {DEBUG
                     ? <div className={styles.statusBarGroup}>
-                          <DebugButton /><MessageInputButton />
+                          <MessageInputButton />
                       </div>
                     : undefined}
                 {<div className={styles.statusBarGroup}><ThemeBar /></div>}

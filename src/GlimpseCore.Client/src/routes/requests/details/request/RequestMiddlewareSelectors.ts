@@ -1,4 +1,4 @@
-import * as Glimpse from '@glimpse/glimpse-definitions';
+import * as Glimpse from '@_glimpse/glimpse-definitions';
 import includes from 'lodash/includes';
 import keyBy from 'lodash/keyBy';
 import forEach from 'lodash/forEach';

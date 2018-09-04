@@ -1,4 +1,4 @@
-import * as Glimpse from '@glimpse/glimpse-definitions';
+import * as Glimpse from '@_glimpse/glimpse-definitions';
 
 import { IMessage } from '@modules/messages/schemas/IMessage';
 import { ITimelineComponentSpan } from '@common/components/timeline/TimelineCommonInterfaces';

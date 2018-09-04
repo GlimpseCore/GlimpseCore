@@ -1,4 +1,4 @@
-import * as Glimpse from '@glimpse/glimpse-definitions';
+import * as Glimpse from '@_glimpse/glimpse-definitions';
 import mapValues from 'lodash/mapValues';
 import groupBy from 'lodash/groupBy';
 import flatten from 'lodash/flatten';

@@ -1,4 +1,4 @@
-import * as Glimpse from '@glimpse/glimpse-definitions';
+import * as Glimpse from '@_glimpse/glimpse-definitions';
 import { createSelector } from 'reselect';
 
 import { ILoggingMessage, LoggingMessageLevel } from '../logging/LoggingInterfaces';

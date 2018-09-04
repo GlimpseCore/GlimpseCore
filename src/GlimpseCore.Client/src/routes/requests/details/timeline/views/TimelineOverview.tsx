@@ -1,4 +1,4 @@
-import * as Glimpse from '@glimpse/glimpse-definitions';
+import * as Glimpse from '@_glimpse/glimpse-definitions';
 import range from 'lodash/range';
 import classNames from 'classnames';
 import React from 'react';

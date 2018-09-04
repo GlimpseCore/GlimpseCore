@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import * as Glimpse from '@glimpse/glimpse-definitions';
+import * as Glimpse from '@_glimpse/glimpse-definitions';
 import React from 'react';
 import { connect } from 'react-redux';
 import { messageTargetId } from '@client/common/util/CommonUtilities';
