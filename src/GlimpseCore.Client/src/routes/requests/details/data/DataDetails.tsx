@@ -85,7 +85,7 @@ export class DataDetails extends React.Component<IDataDetailsProps & IDataDetail
                     rightDetailPanelTitle="Result"
                 />
             </Resize>
-        );
+        ) as JSX.Element;
     }
 
     private renderPanel(config, axis: string) {
@@ -154,7 +154,7 @@ function mapDispatchToProps(dispatch): IDataDetailsCallbacks {
     };
 }
 
-export default connect(undefined, mapDispatchToProps)(DataDetails);
+export default connect(null, mapDispatchToProps)(DataDetails);
 
 
 

@@ -77,7 +77,7 @@ function mapDispatchToProps(
     };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(ExpandCollapseAllBarView); // tslint:disable-line:variable-name
+export default connect(mapStateToProps, mapDispatchToProps)(ExpandCollapseAllBarView);
 
 
 

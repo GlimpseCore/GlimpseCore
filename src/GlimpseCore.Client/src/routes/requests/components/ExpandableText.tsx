@@ -126,7 +126,7 @@ function mapStateToProps(state: IStoreState, ownProps: IExpandableTextProps): IE
     };
 }
 
-const ExpandableText = connect(mapStateToProps)(ExpandableTextView); // tslint:disable-line:variable-name
+const ExpandableText = connect(mapStateToProps)(ExpandableTextView);
 
 export default ExpandableText;
 

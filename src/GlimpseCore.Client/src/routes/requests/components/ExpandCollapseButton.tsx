@@ -77,7 +77,7 @@ function mapDispatchToProps(
     };
 }
 
-const ExpandCollapseButton = connect(mapStateToProps, mapDispatchToProps)(ExpandCollapseButtonView); // tslint:disable-line:variable-name
+const ExpandCollapseButton = connect(mapStateToProps, mapDispatchToProps)(ExpandCollapseButtonView);
 
 export default ExpandCollapseButton;
 

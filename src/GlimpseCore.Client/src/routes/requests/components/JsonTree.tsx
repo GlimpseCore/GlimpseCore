@@ -229,7 +229,7 @@ function mapDispatchToProps(dispatch, ownProps: IJsonTreeProps) {
     };
 }
 
-const JsonTree = connect(mapStateToProps, mapDispatchToProps)(JSONTree); // tslint:disable-line:variable-name
+const JsonTree = connect(mapStateToProps, mapDispatchToProps)(JSONTree);
 
 export default JsonTree;
 

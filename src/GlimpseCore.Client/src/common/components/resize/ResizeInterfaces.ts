@@ -1,17 +1,17 @@
 export interface IResizeProps {
     id: string,
-    size: number,
-    isOpen: boolean,
-    initialSize: string,
-    initialIsOpen: string,
+    size?: number,
+    isOpen?: boolean,
+    initialSize: number,
+    initialIsOpen: boolean,
     direction: string,
     minSize: number,
     maxSize: number,
     threshold: number,
-    isPadding: boolean,
+    isPadding?: boolean,
     className: string,
-    bodyClassName: string,
-    gripClassName: string
+    bodyClassName?: string,
+    gripClassName?: string
 }
 export interface IResizeCallbacks {
     saveSize: Function,

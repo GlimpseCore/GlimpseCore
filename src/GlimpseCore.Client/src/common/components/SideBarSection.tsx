@@ -155,7 +155,7 @@ function mapDispatchToProps(
     };
 }
 
-const ConnectedSidebarSection: React.ComponentClass<IShellSideBarContainerProps> = connect(
+const ConnectedSidebarSection = connect(
     mapStateToProps,
     mapDispatchToProps
 )(SideBarSection);

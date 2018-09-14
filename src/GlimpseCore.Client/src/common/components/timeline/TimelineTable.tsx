@@ -16,12 +16,12 @@ export interface ITimelineTableColumn<T> {
     /**
      * (Optional) Name of the column.
      */
-    name: string;
+    name?: string;
 
     /**
      * (Optional) The CSS class name applied to the column's <th> element.
      */
-    headerClassName: string;
+    headerClassName?: string;
 
     /**
      * A function that generates the content for the column's header.

@@ -1,4 +1,3 @@
-import React from 'react';
 import Hammer from 'hammerjs';
 import { connect } from 'react-redux';
 import classNames from 'classnames';
@@ -8,6 +7,7 @@ import { saveSize, saveOpenState, toggleOpenState } from './ResizeActions';
 import { getResizePanelsState } from './ResizeSelectors';
 import { IStoreState } from '@client/IStoreState';
 import { clamp } from '@common/util/CommonUtilities';
+import React from 'react';
 
 // enable DOM events so `preventDefault()` could be called on events
 Hammer.defaults.domEvents = true;
@@ -157,8 +157,8 @@ class Resize extends React.Component<IResizeProps & IResizeCallbacks, IResizeSta
         const {
             threshold,
             minSize,
-            isOpen,
-            size: currentSize,
+            isOpen = false,
+            size: currentSize = 0,
             direction
         } = this.props;
         const directionCoef = (direction === 'y') ? -1 : 1;

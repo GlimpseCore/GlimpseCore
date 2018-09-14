@@ -95,7 +95,7 @@
   "devDependencies": {
     "@types/jest": "^23.3.1",
     "@types/node": "^10.9.2",
-    "@types/react": "^15.6.19",
+    "@types/react": "15.6.19",
     "@types/react-addons-perf": "^0.14.18",
     "@types/react-dom": "^15.5.8",
     "@types/react-modal": "2.x",
@@ -107,5 +107,8 @@
     "react-hot-loader": "^4.3.5",
     "redux-immutable-state-invariant": "^2.1.0",
     "typescript": "^3.0.1"
+  },
+  "resolutions": {
+    "**/@types/react": "15.6.19"
   }
 }

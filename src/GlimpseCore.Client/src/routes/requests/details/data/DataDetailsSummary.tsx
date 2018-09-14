@@ -6,7 +6,7 @@ import commonStyles from '@common/components/Common.scss';
 import { TimelineTable, ITimelineTableProps } from '@common/components/timeline/TimelineTable';
 import { ITimelineComponentSpan } from '@common/components/timeline/TimelineCommonInterfaces';
 import { getSelectedOperationSelector } from '@routes/requests/details/data/DataSelectors';
-import { DataOperationType, DataDatabaseType } from '@routes/requests/details/data/DataInterfaces';
+import { DataOperationType, DataDatabaseType, IDataOperation } from '@routes/requests/details/data/DataInterfaces';
 import { getSelectedContextId } from '@routes/requests/RequestsSelector';
 import { IStoreState } from '@client/IStoreState';
 import { isArray } from '@common/util/CommonUtilities';
@@ -62,7 +62,7 @@ interface ISpanRecord extends ITimelineComponentSpan {
 }
 
 function mapStateToProps(state: IStoreState, props): Partial<ITimelineTableProps<{}>> {
-    const activity = getSelectedOperationSelector(state);
+    const activity = getSelectedOperationSelector(state) as IDataOperation;
     const requestId = getSelectedContextId(state);
     const { operation, operationType, eventId, recordCount, insertedIds } = activity;
 

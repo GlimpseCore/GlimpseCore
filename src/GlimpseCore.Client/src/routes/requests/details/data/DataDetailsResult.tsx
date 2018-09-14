@@ -8,9 +8,10 @@ import {
     DataDetailsCodeJsonTree,
     IDataDetailsCodeJsonTree
 } from '@client/routes/requests/details/data/DataDetailsCodeJsonTree.tsx';
+import { IDataOperation } from '@routes/requests/details/data/DataInterfaces';
 
 function mapStateToProps(state: IStoreState, ownProps): IDataDetailsCodeJsonTree {
-    const operation = getSelectedOperationSelector(state);
+    const operation = getSelectedOperationSelector(state) as IDataOperation;
 
     return {
         code: operation.result,

@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 
 import { getSelectedOperationSelector } from './DataSelectors';
 import { IStoreState } from '@client/IStoreState';
-import { DataDatabaseType } from '@client/routes/requests/details/data/DataInterfaces';
+import { DataDatabaseType, IDataOperation } from '@client/routes/requests/details/data/DataInterfaces';
 
 import {
     FixedWidthLeftColumnTable,
@@ -13,7 +13,7 @@ import {
 import styles from './DataDetailsConnection.scss';
 
 function mapStateToProps(state: IStoreState): ITableProps {
-    const operation = getSelectedOperationSelector(state);
+    const operation = getSelectedOperationSelector(state) as IDataOperation;
 
     const params = [
         {

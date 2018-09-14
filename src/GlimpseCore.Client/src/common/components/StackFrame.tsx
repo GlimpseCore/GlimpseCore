@@ -142,7 +142,7 @@ function mapStateToProps(state: IStoreState, props) {
     };
 }
 
-export default connect(mapStateToProps)(stackFrame);
+export default connect(mapStateToProps)(stackFrame as any);
 
 export { stackFrame as StackFrame };
 

@@ -9,7 +9,8 @@ import { getSelectedContextId } from '@routes/requests/RequestsSelector';
 import { IStoreState } from '@client/IStoreState';
 import { isArray, isObject } from '@common/util/CommonUtilities';
 import JsonTree from '@client/routes/requests/components/JsonTree';
-import { DataDatabaseType } from './DataInterfaces';
+import { DataDatabaseType, IDataOperation } from './DataInterfaces';
+import { ITimelineComponentSpan } from '@common/components/timeline/TimelineCommonInterfaces';
 
 const nameColumn = {
     headerFunc: () => {
@@ -77,11 +78,11 @@ const getColumns = (database: DataDatabaseType) => {
 };
 
 function mapStateToProps(state: IStoreState, props): Partial<ITimelineTableProps<{}>> {
-    const operation = getSelectedOperationSelector(state);
+    const operation = getSelectedOperationSelector(state) as IDataOperation;
     const { options, databaseType, eventId } = operation;
     const requestId = getSelectedContextId(state);
 
-    const spans = [];
+    const spans: ITimelineComponentSpan[] = [];
     let index = 0;
     for (let name of Object.keys(options)) {
         const value = options[name];

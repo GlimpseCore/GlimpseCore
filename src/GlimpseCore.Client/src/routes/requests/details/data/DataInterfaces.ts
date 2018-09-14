@@ -31,7 +31,7 @@ export interface IDataOperation extends ITimelineComponentSpan {
     operationType: DataOperationType;
     serverName: string;
     connectionPort: number | string;
-    collection?: string;
+    collection: string;
     // string[] is needed for `redis`
     options: { [key: string]: string | number } | string[];
     insertedIds?: string[];

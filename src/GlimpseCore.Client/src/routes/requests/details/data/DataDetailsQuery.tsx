@@ -8,6 +8,7 @@ import { IStoreState } from '@client/IStoreState';
 import styles from './DataDetailsQuery.scss';
 import { trancateItemsInArray } from '@common/util/StringUtilities';
 import { RedisCommandDocs } from './RedisCommandDocs';
+import { IDataOperation } from '@routes/requests/details/data/DataInterfaces';
 
 interface IDataDetailsQuery extends ICodeViewProps {
     method: string;
@@ -28,7 +29,7 @@ const DataDetailsQueryComponent = (props: IDataDetailsQuery): JSX.Element => {
 };
 
 function mapStateToProps(state: IStoreState, ownProps): IDataDetailsQuery {
-    const operation = getSelectedOperationSelector(state);
+    const operation = getSelectedOperationSelector(state) as IDataOperation;
 
     return {
         method: operation.method,

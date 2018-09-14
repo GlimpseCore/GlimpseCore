@@ -29,7 +29,7 @@ function getCodeforDatabase(operation: IDataOperation, tabName: string) {
 }
 
 function mapStateToProps(state: IStoreState, ownProps): IDataDetailsCodeJsonTree {
-    const operation = getSelectedOperationSelector(state);
+    const operation = getSelectedOperationSelector(state) as IDataOperation;
 
     return {
         code: getCodeforDatabase(operation, ownProps.tabName),
