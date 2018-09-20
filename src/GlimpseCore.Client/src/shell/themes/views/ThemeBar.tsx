@@ -105,7 +105,8 @@ class ThemeBarComponent extends React.Component<
             return;
         }
 
-        const theme = require(`common/themes/${selectedThemeName}.tcss`);
+        const selectedTheme = `common/themes/${selectedThemeName}.tcss`;
+        const theme = require(selectedTheme);
 
         this.themeStyle.innerText = theme;
         // save the theme name that already has styles in the DOM

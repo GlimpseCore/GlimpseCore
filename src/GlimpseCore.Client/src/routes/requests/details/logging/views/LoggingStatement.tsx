@@ -11,7 +11,7 @@ const ansiHTML = require('ansi-html');
 const emojione = require('emojione');
 const autolinker = require('autolinker');
 const escapeHtml = require('escape-html');
-const store = require('client/store').default;
+const store = require('@client/store').default;
 /* tslint:enable:no-var-requires */
 
 export interface ILoggingStatementProps {
