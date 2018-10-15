@@ -1,9 +1,21 @@
-// removed by extract-text-webpack-plugin
-module.exports = {"expandCollapseButton":"ExpandCollapseButton__expandCollapseButton___3yM51","expandCollapseButtonIcon":"ExpandCollapseButton__expandCollapseButtonIcon___t7z6u"};
+.expandCollapseButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.expandCollapseButton:focus {
+  outline: none; }
+
+.expandCollapseButtonIcon {
+  color: #f7f7f7;
+  color: var(--primaryForegroundColor);
+  height: 1.5rem;
+  width: 1.5rem;
+  /* Safari and Firefox ignore width for empty <div>'s. */
+  min-height: 1.5rem;
+  min-width: 1.5rem; }
 
 
-//////////////////
-// WEBPACK FOOTER
-// ./src/client/routes/requests/components/ExpandCollapseButton.scss
-// module id = 579
-// module chunks = 0
+
+// WEBPACK FOOTER //
+// src/client/routes/requests/components/ExpandCollapseButton.scss

@@ -1,9 +1,172 @@
-// removed by extract-text-webpack-plugin
-module.exports = {"timelineTable":"TimelineTable__timelineTable___35gY9","timelineTableEventsContainer":"TimelineTable__timelineTableEventsContainer___raH08","timelineTableHeaderContainer":"TimelineTable__timelineTableHeaderContainer___1M5Ip","timelineTableHeaderTable":"TimelineTable__timelineTableHeaderTable___G1faQ","timelineTableTableContainer":"TimelineTable__timelineTableTableContainer___1uIWX","timelineTableScrollContainer":"TimelineTable__timelineTableScrollContainer___1zuX7","timelineTableScrollGutter":"TimelineTable__timelineTableScrollGutter___1_7Rp","timelineTableTable":"TimelineTable__timelineTableTable___3iU6t Common__table___3VuJF","timelineTableEvents":"TimelineTable__timelineTableEvents___3PP-O","timelineTableActivityHeader":"TimelineTable__timelineTableActivityHeader___32zGJ","timelineTableActivityHeaderIntervals":"TimelineTable__timelineTableActivityHeaderIntervals___16z_C","timelineTableIntervalCell":"TimelineTable__timelineTableIntervalCell___3xAy1","timelineTableActivityBarCell":"TimelineTable__timelineTableActivityBarCell___2sYiS","timelineTableActivityBarCellActivityLayer":"TimelineTable__timelineTableActivityBarCellActivityLayer___3wcyU","timelineTableIntervalContainer":"TimelineTable__timelineTableIntervalContainer___35FQM","timelineTableInterval":"TimelineTable__timelineTableInterval___1WteW"};
+.timelineTable {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden; }
+
+.timelineTableEventsContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  position: relative; }
+
+.timelineTableHeaderContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row; }
+
+.timelineTableHeaderTable {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1; }
+
+.timelineTableTableContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overflow-y: overlay;
+  -ms-overflow-style: -ms-autohiding-scrollbar; }
+
+.timelineTableScrollContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row; }
+
+.timelineTableScrollGutter {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  width: 16px; }
+
+.timelineTableTable {
+  composes: table from "../Common.scss"; }
+
+.timelineTableTable > thead > tr > th {
+  border-left-color: transparent;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 0.75rem; }
+
+.timelineTableEvents {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 3; }
+
+.timelineTableActivityHeader {
+  border-left: none !important;
+  padding: 0 !important; }
+
+.timelineTableActivityHeaderIntervals {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row; }
+
+.timelineTableIntervalCell {
+  border-right: 1px solid #2b2b2b;
+  border-right: 1px solid var(--timelineDetailsIntervalBorderColor);
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-preferred-size: 0;
+      flex-basis: 0;
+  overflow: hidden;
+  padding: 0.4rem 0.75rem;
+  text-align: right !important; }
+  .timelineTableIntervalCell:first-of-type {
+    border-left: 1px solid #46464A;
+    border-left: 1px solid var(--tableHeaderBorderColor); }
+  .timelineTableIntervalCell:last-of-type {
+    border-right: 0 solid #2b2b2b;
+    border-right: 0 solid var(--timelineDetailsIntervalBorderColor); }
+
+.timelineTableActivityBarCell {
+  border-right: 1px solid #2b2b2b;
+  border-right: 1px solid var(--timelineDetailsIntervalBorderColor);
+  padding: 0 !important;
+  vertical-align: middle; }
+
+.timelineTableActivityBarCellActivityLayer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  z-index: 2; }
+
+.timelineTableIntervalContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1; }
+
+.timelineTableInterval {
+  border-right: 1px solid #2b2b2b;
+  border-right: 1px solid var(--timelineDetailsIntervalBorderColor);
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1; }
+  .timelineTableInterval:last-of-type {
+    border-right: 0 solid #2b2b2b;
+    border-right: 0 solid var(--timelineDetailsIntervalBorderColor); }
+  .timelineTableInterval:first-of-type {
+    border-left: 1px solid #2b2b2b;
+    border-left: 1px solid var(--timelineDetailsIntervalBorderColor); }
 
 
-//////////////////
-// WEBPACK FOOTER
-// ./src/client/common/components/timeline/TimelineTable.scss
-// module id = 360
-// module chunks = 0
+
+// WEBPACK FOOTER //
+// src/client/common/components/timeline/TimelineTable.scss

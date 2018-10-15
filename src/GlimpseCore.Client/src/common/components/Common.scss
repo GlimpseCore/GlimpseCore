@@ -1,9 +1,216 @@
-// removed by extract-text-webpack-plugin
-module.exports = {"table":"Common__table___3VuJF","tableSelectableRow":"Common__tableSelectableRow___1M8AJ","tableSelectedRow":"Common__tableSelectedRow___2_thp","tableNoPadding":"Common__tableNoPadding___1qbZU","tableNoData":"Common__tableNoData___1Ybo-","tableHeadSpacer":"Common__tableHeadSpacer___3blY1","tableHeadSpacerNoLine":"Common__tableHeadSpacerNoLine___2U--z","noData":"Common__noData___24Ofu","paramName":"Common__paramName___2AdZT","paramValue":"Common__paramValue___hBbfe","paramOverwritten":"Common__paramOverwritten___3hFN0","detailTitle":"Common__detailTitle___NvF1H","trimText":"Common__trimText___3taHb","noWrapText":"Common__noWrapText___1FafM","contextSection":"Common__contextSection___3EHB5","contextSectionEnd":"Common__contextSectionEnd___NZlgf","modal":"Common__modal___d4R-Y","modalEnter":"Common__modalEnter___1UWLO","modalOverlay":"Common__modalOverlay___18I25","modalInner":"Common__modalInner___34bsi","modalTitle":"Common__modalTitle___15sDN","modalClose":"Common__modalClose___3OSi_","modalCloseIcon":"Common__modalCloseIcon___19nYg","tabViewHeader":"Common__tabViewHeader___bFD8L","tabViewFilterHeader":"Common__tabViewFilterHeader___1Wrbh","link":"Common__link___3uvVm"};
+th {
+    color: var(--headerForegroundColor);
+}
+
+td {
+    color: var(--tertiaryForegroundColor);
+}
+
+.table {
+    width: 100%;
+    border-spacing: 0px;
+    border-collapse: separate;
+    table-layout: fixed;
+}
+
+.table > thead > tr > th {
+    text-align: left;
+    font-weight: bold;
+    padding: 0.4rem 0.75rem;
+    white-space: nowrap;
+}
+
+.table > thead > tr > th + th {
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-left-color: var(--tableHeaderBorderColor);
+    overflow: hidden;
+}
+
+.table > tbody > tr {
+    vertical-align: top;
+}
+
+.table > tbody > tr > td {
+    padding: 0.4rem 0.75rem;
+}
+
+.table > tbody > tr:nth-child(even) {
+    background-color: var(--tableRowEvenBackgroundColor);
+}
+
+.table > tbody > tr.tableSelectableRow {
+    cursor: default;
+}
+
+.table > tbody > tr.tableSelectableRow:hover {
+    background-color: var(--expansionBarHoverBackgroundColor);
+}
+
+.table > tbody > tr.tableSelectedRow.tableSelectableRow {
+    background-color: var(--tableRowSelectedBackgroundColor);
+}
+
+.table > tbody > tr > td.tableNoPadding {
+    padding: 0px;
+}
+
+.table > tbody > tr > td.tableNoData {
+    color: var(--softTextColor);
+    padding-left: 0.75rem;
+}
+
+.table .tableHeadSpacer {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: var(--tableHeaderBorderColor);
+    height: 0.25rem;
+}
+
+.table .tableHeadSpacer.tableHeadSpacerNoLine {
+    border-bottom-color: transparent;
+}
+
+.noData {
+    color: var(--softTextColor);
+    padding-left: 0.5rem;
+}
+
+.paramName {
+    font-weight: bold;
+}
+
+.paramValue {
+    color: var(--primaryForegroundColor);
+}
+
+.paramOverwritten {
+    color: var(--secondaryForegroundColor);
+    text-decoration: line-through;
+    text-decoration-color: var(--errorColor);
+}
 
 
-//////////////////
-// WEBPACK FOOTER
-// ./src/client/common/components/Common.scss
-// module id = 4
-// module chunks = 0
+.detailTitle {
+    font-size: 1.75rem;
+    margin-bottom: 1.25rem;
+    margin-top: 1rem;
+    font-weight: bold;
+    color: var(--headerForegroundColor);
+}
+
+.trimText {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+}
+
+.noWrapText {
+    white-space: nowrap;
+}
+td.noWrapText {
+    overflow: hidden;
+}
+
+.contextSection {
+    margin-top: 3rem;
+}
+
+.contextSection:first-child {
+    margin-top: 1rem;
+}
+
+.contextSection .detailTitle {
+    margin-top: 0;
+}
+
+.contextSectionEnd {
+    margin-bottom: 3rem;
+}
+
+.modal {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    right: 40px;
+    bottom: 40px;
+    border: 1px solid var(--accentColor);
+    background: var(--primaryBackgroundColor);
+    color: var(--primaryForegroundColor);
+    overflow: auto;
+    outline: none;
+    padding: 20px;
+    animation: modalEnter 0.5s cubic-bezier(0, 0.5, 0, 1);
+}
+
+@keyframes modalEnter {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    z-index: 100;
+}
+
+.modalInner {
+    position: relative;
+}
+
+.modalTitle {
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 1.25rem;
+    margin-top: 1rem;
+}
+
+.modalClose {
+    position: absolute;
+    right: 0;
+    margin-right: 0.25rem;
+}
+
+.modalCloseIcon {
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.tabViewHeader {
+    flex: none;
+}
+
+.tabViewFilterHeader {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+}
+
+.link {
+    color: var(--linkColor);
+    text-decoration: none;
+    cursor: pointer;
+    border-bottom: 1px solid transparent;
+    display: inline-block;
+    max-width: 100%;
+
+    &:hover {
+        border-bottom-color: currentColor;
+    }
+}
+
+
+
+// WEBPACK FOOTER //
+// src/client/common/components/Common.scss

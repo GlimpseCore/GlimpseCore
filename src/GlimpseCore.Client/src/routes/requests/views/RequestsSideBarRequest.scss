@@ -1,9 +1,91 @@
-// removed by extract-text-webpack-plugin
-module.exports = {"requestButton":"RequestsSideBarRequest__requestButton___22H-N","requestButtonActive":"RequestsSideBarRequest__requestButtonActive___1yLM7","requestContainer":"RequestsSideBarRequest__requestContainer___1YG90","requestSummaryLine":"RequestsSideBarRequest__requestSummaryLine___1uiiv","requestDetailLine":"RequestsSideBarRequest__requestDetailLine___2DlnK","requestStatusContainer":"RequestsSideBarRequest__requestStatusContainer___3bHV6","requestClientIcon":"RequestsSideBarRequest__requestClientIcon___-NVYp","statusLabel":"RequestsSideBarRequest__statusLabel___2MSJE","duration":"RequestsSideBarRequest__duration___mLuwr"};
+.requestButton {
+  background: transparent;
+  border: none;
+  color: inherit;
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  margin: 0;
+  padding: 0.75rem 1rem 0.75rem 1rem; }
+
+.requestButton:hover {
+  background-color: #3f3f46;
+  background-color: var(--hoverRecordColor); }
+
+.requestButton.requestButtonActive {
+  background-color: #0e6198;
+  background-color: var(--accentColor);
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: -1px; }
+
+.requestContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.requestSummaryLine, .requestDetailLine {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.requestSummaryLine {
+  color: #f7f7f7;
+  color: var(--primaryForegroundColor);
+  font-size: 1rem; }
+
+.requestDetailLine {
+  color: #999999;
+  color: var(--secondaryForegroundColor);
+  font-size: 0.75rem;
+  margin-top: 0.3rem; }
+
+.requestStatusContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 70%; }
+
+.requestStatusContainer > span {
+  margin-right: 2px; }
+
+svg.requestClientIcon {
+  height: 0.85rem;
+  margin-right: 0.25rem;
+  color: #999999;
+  color: var(--secondaryForegroundColor); }
+
+.requestButton.requestButtonActive .requestSummaryLine,
+.requestButton.requestButtonActive .requestDetailLine,
+.requestButton.requestButtonActive svg.requestClientIcon {
+  color: #ffffff;
+  color: var(--activeRequestTextColor); }
+
+.statusLabel {
+  max-width: 85%; }
+
+.duration {
+  margin-top: .045rem; }
 
 
-//////////////////
-// WEBPACK FOOTER
-// ./src/client/routes/requests/views/RequestsSideBarRequest.scss
-// module id = 539
-// module chunks = 0
+
+// WEBPACK FOOTER //
+// src/client/routes/requests/views/RequestsSideBarRequest.scss

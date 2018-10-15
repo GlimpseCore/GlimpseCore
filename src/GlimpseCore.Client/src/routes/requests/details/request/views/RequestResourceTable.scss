@@ -1,9 +1,74 @@
-// removed by extract-text-webpack-plugin
-module.exports = {"requestResourceTableValueColumn":"RequestResourceTable__requestResourceTableValueColumn___Awlzn","requestResourceTableType":"RequestResourceTable__requestResourceTableType___3Kruk","requestResourceTableTypeName":"RequestResourceTable__requestResourceTableTypeName___1O2Rp","requestResourceTableTypeIndicator":"RequestResourceTable__requestResourceTableTypeIndicator___3UlW8","requestResourceTablePercentage":"RequestResourceTable__requestResourceTablePercentage___18e3W","requestResourceTableTotalCell":"RequestResourceTable__requestResourceTableTotalCell___3vsUm","requestResourceTableColor1":"RequestResourceTable__requestResourceTableColor1___pgfd8","requestResourceTableColor2":"RequestResourceTable__requestResourceTableColor2___2EjnU","requestResourceTableColor3":"RequestResourceTable__requestResourceTableColor3___2_5Qt","requestResourceTableColor4":"RequestResourceTable__requestResourceTableColor4___eBo2n","requestResourceTableColor5":"RequestResourceTable__requestResourceTableColor5___3WWFb","requestResourceTableColor6":"RequestResourceTable__requestResourceTableColor6___ABqc1","requestResourceTableColor7":"RequestResourceTable__requestResourceTableColor7___1zEV8"};
+.requestResourceTableValueColumn {
+  text-align: right;
+  color: #cecece;
+  color: var(--tertiaryForegroundColor); }
+
+.requestResourceTableType {
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  white-space: nowrap; }
+
+.requestResourceTableTypeName {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #cecece;
+  color: var(--tertiaryForegroundColor); }
+
+.requestResourceTableTypeIndicator {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  height: 0.5rem;
+  margin-right: 0.4rem;
+  width: 0.5rem; }
+
+.requestResourceTablePercentage {
+  color: #999999;
+  color: var(--secondaryForegroundColor); }
+
+.requestResourceTableTotalCell {
+  border-top-color: #46464A;
+  border-top-color: var(--tableHeaderBorderColor);
+  border-top-style: solid;
+  border-top-width: 2px; }
+
+.requestResourceTableColor1 {
+  background-color: #71B252;
+  background-color: var(--chartColor1); }
+
+.requestResourceTableColor2 {
+  background-color: #BF3F00;
+  background-color: var(--chartColor2); }
+
+.requestResourceTableColor3 {
+  background-color: #FCB714;
+  background-color: var(--chartColor3); }
+
+.requestResourceTableColor4 {
+  background-color: #903F8B;
+  background-color: var(--chartColor4); }
+
+.requestResourceTableColor5 {
+  background-color: #117AD1;
+  background-color: var(--chartColor5); }
+
+.requestResourceTableColor6 {
+  background-color: #79D7F2;
+  background-color: var(--chartColor6); }
+
+.requestResourceTableColor7 {
+  background-color: #B5B5B5;
+  background-color: var(--chartColor7); }
 
 
-//////////////////
-// WEBPACK FOOTER
-// ./src/client/routes/requests/details/request/views/RequestResourceTable.scss
-// module id = 562
-// module chunks = 0
+
+// WEBPACK FOOTER //
+// src/client/routes/requests/details/request/views/RequestResourceTable.scss

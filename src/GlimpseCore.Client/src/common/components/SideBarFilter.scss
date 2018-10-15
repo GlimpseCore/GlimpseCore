@@ -1,9 +1,175 @@
-// removed by extract-text-webpack-plugin
-module.exports = {"sideBarFilterContainer":"SideBarFilter__sideBarFilterContainer___1APYB","filterButton":"SideBarFilter__filterButton___26EdW","sideBarFilterContent":"SideBarFilter__sideBarFilterContent___3RPgb","filterContentEnter":"SideBarFilter__filterContentEnter___1b1HL","sideBarFilterGroups":"SideBarFilter__sideBarFilterGroups___1alRw","sideBarFilterActions":"SideBarFilter__sideBarFilterActions___1dhtO","sideBarFilterGrip":"SideBarFilter__sideBarFilterGrip___2AGqM","sideBarFilterActionsHeading":"SideBarFilter__sideBarFilterActionsHeading___2nOAN","sideBarFilterActionsButton":"SideBarFilter__sideBarFilterActionsButton___2lNkS","sideBarFilterActionsIcon":"SideBarFilter__sideBarFilterActionsIcon___1EcZE","filterGroupHeading":"SideBarFilter__filterGroupHeading___2n4K3","filterGroupShowAll":"SideBarFilter__filterGroupShowAll___3xAwP","optionalFilter":"SideBarFilter__optionalFilter___NXyOC","showMoreContainer":"SideBarFilter__showMoreContainer___3erGf","showMoreIcon":"SideBarFilter__showMoreIcon___2AF0o","sideBarFilterEnter":"SideBarFilter__sideBarFilterEnter___2bdn5"};
+@-webkit-keyframes sideBarFilterEnter {
+  from {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%); }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
+
+@keyframes sideBarFilterEnter {
+  from {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%); }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
+
+.sideBarFilterContainer {
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+  -webkit-box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+  overflow: hidden; }
+
+.filterButton {
+  display: inline-block; }
+
+.sideBarFilterContent {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: --primaryBackgroundColor;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  -webkit-animation: filterContentEnter 0.3s cubic-bezier(0, 0.2, 0.3, 1) both;
+          animation: filterContentEnter 0.3s cubic-bezier(0, 0.2, 0.3, 1) both; }
+  .sideBarFilterContent > .sideBarFilterGroups {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto; }
+  .sideBarFilterContent > .sideBarFilterActions {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto; }
+
+.sideBarFilterGrip {
+  position: relative;
+  height: .5rem;
+  width: 100%;
+  background-color: --accentColor;
+  cursor: ns-resize;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .sideBarFilterGrip:after {
+    content: '';
+    display: block;
+    height: .25rem;
+    width: .25rem;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: -0.4rem 0 0 rgba(0, 0, 0, 0.4), 0.4rem 0 0 rgba(0, 0, 0, 0.4);
+            box-shadow: -0.4rem 0 0 rgba(0, 0, 0, 0.4), 0.4rem 0 0 rgba(0, 0, 0, 0.4); }
+
+@-webkit-keyframes filterContentEnter {
+  from {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%); }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
+
+@keyframes filterContentEnter {
+  from {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%); }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
+
+.sideBarFilterGroups {
+  overflow-y: auto;
+  padding: .5rem .5rem .25rem 1rem;
+  z-index: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+.sideBarFilterActions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: .75rem;
+  padding-left: 1rem;
+  z-index: 1;
+  border-top: 2px solid --activityBarBackgroundColor;
+  opacity: 1; }
+
+.sideBarFilterActionsHeading {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1; }
+
+.sideBarFilterActionsButton {
+  color: --linkColor;
+  cursor: pointer; }
+
+.sideBarFilterActionsIcon {
+  padding: 0.25rem;
+  margin-left: 0.25rem; }
+
+.filterGroupHeading {
+  margin: .5rem 0;
+  color: --softTextColor; }
+  .filterGroupHeading ~ .filterGroupHeading {
+    margin: 1rem 0 .5rem 0; }
+
+.filterGroupShowAll {
+  display: block; }
+  .filterGroupShowAll > .optionalFilter {
+    display: inline-block; }
+
+.optionalFilter {
+  display: none; }
+
+.showMoreContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  padding-bottom: .5rem; }
+
+.showMoreIcon {
+  margin-right: .5rem; }
 
 
-//////////////////
-// WEBPACK FOOTER
-// ./src/client/common/components/SideBarFilter.scss
-// module id = 537
-// module chunks = 0
+
+// WEBPACK FOOTER //
+// src/client/common/components/SideBarFilter.scss

@@ -1,9 +1,36 @@
-// removed by extract-text-webpack-plugin
-module.exports = {"statusCodeIcon":"ServiceCommon__statusCodeIcon___1PGS-","statusCodeClientErrorColor":"ServiceCommon__statusCodeClientErrorColor___3wGbG","statusCodeInformationalColor":"ServiceCommon__statusCodeInformationalColor___1JeE0","statusCodeOtherColor":"ServiceCommon__statusCodeOtherColor___1UEuX","statusCodeRedirectionColor":"ServiceCommon__statusCodeRedirectionColor___2kUs0","statusCodeServerErrorColor":"ServiceCommon__statusCodeServerErrorColor___1bdjX","statusCodeSuccessColor":"ServiceCommon__statusCodeSuccessColor___-4QAt"};
+.statusCodeIcon {
+  width: 1.3rem;
+  height: 1.3rem;
+  margin-right: 0; }
+
+/*
+ * Colors
+ */
+.statusCodeClientErrorColor {
+  fill: #b03b00;
+  fill: var(--statusCodeErrorColor); }
+
+.statusCodeInformationalColor {
+  fill: #1ba1e2;
+  fill: var(--statusCodeInformationalColor); }
+
+.statusCodeOtherColor {
+  fill: #b5b5b5;
+  fill: var(--statusCodeOtherColor); }
+
+.statusCodeRedirectionColor {
+  fill: #f8a800;
+  fill: var(--statusCodeRedirectionColor); }
+
+.statusCodeServerErrorColor {
+  fill: #b03b00;
+  fill: var(--statusCodeErrorColor); }
+
+.statusCodeSuccessColor {
+  fill: #78b24c;
+  fill: var(--statusCodeSuccessColor); }
 
 
-//////////////////
-// WEBPACK FOOTER
-// ./src/client/routes/requests/details/service/views/ServiceCommon.scss
-// module id = 121
-// module chunks = 0
+
+// WEBPACK FOOTER //
+// src/client/routes/requests/details/service/views/ServiceCommon.scss

@@ -1,9 +1,25 @@
-// removed by extract-text-webpack-plugin
-module.exports = {"icon":"Icon__icon___2d_0j","iconInline":"Icon__iconInline___2x2aP"};
+.icon {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  fill: currentColor; }
+  .icon svg {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0; }
+  .icon svg,
+  .icon use {
+    fill: inherit; }
+
+.iconInline {
+  position: absolute;
+  left: 0px;
+  top: 0px; }
 
 
-//////////////////
-// WEBPACK FOOTER
-// ./src/client/common/components/Icon.scss
-// module id = 349
-// module chunks = 0
+
+// WEBPACK FOOTER //
+// src/client/common/components/Icon.scss

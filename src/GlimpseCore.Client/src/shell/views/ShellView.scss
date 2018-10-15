@@ -1,9 +1,117 @@
-// removed by extract-text-webpack-plugin
-module.exports = {"shell":"ShellView__shell___1od10","shellContent":"ShellView__shellContent___vo90n","shellContentActivityBar":"ShellView__shellContentActivityBar___hrU73","shellContentDetail":"ShellView__shellContentDetail___1Pr3l","shellStatusBar":"ShellView__shellStatusBar___3dpma"};
+@import url(normalize.css);
+@font-face {
+  font-family: 'Selawik';
+  src: url("assets/selawk.woff2") format("woff2"), url("assets/selawk.woff") format("woff"); }
+
+@font-face {
+  font-family: 'Selawik Light';
+  src: url("assets/selawkl.woff2") format("woff2"), url("assets/selawkl.woff") format("woff"); }
+
+html {
+  font-size: small;
+  line-height: normal; }
+
+body {
+  font-family: 'Segoe UI', 'Selawik', Tahoma, Geneva, Verdana, sans-serif;
+  height: 100%;
+  margin: 0;
+  width: 100%;
+  overflow: hidden;
+  /* prevent touchpads from dragging the window around */ }
+
+pre {
+  margin: 0; }
+
+[type="button"] {
+  cursor: pointer; }
+
+[type="button"]::-moz-focus-inner {
+  border: 0px; }
+
+[type="button"]:focus {
+  outline: none; }
+
+button {
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  color: #f7f7f7;
+  color: var(--primaryForegroundColor); }
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 0.5rem; }
+
+::-webkit-scrollbar * {
+  background: transparent; }
+
+::-webkit-scrollbar-thumb {
+  background: rgba(70, 70, 70, 0.5);
+  background: var(--scrollbarColor); }
+
+::-webkit-scrollbar-corner {
+  background: transparent; }
+
+.shell {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+  width: 100vw; }
+
+.shellContent {
+  background-color: #1b1b1c;
+  background-color: var(--primaryBackgroundColor);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+  color: #f7f7f7;
+  color: var(--primaryForegroundColor);
+  overflow: hidden; }
+
+.shellContentActivityBar {
+  background-color: #2d2d30;
+  background-color: var(--activityBarBackgroundColor);
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none; }
+
+.shellContentDetail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-width: 0;
+  overflow: hidden; }
+
+.shellStatusBar {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  position: relative;
+  z-index: 100; }
 
 
-//////////////////
-// WEBPACK FOOTER
-// ./src/client/shell/views/ShellView.scss
-// module id = 486
-// module chunks = 0
+
+// WEBPACK FOOTER //
+// src/client/shell/views/ShellView.scss

@@ -1,9 +1,85 @@
-// removed by extract-text-webpack-plugin
-module.exports = {"container":"NotificationPanel__container___3DhJY","statusDisconnected":"NotificationPanel__statusDisconnected___x_dRq","containerCollapsed":"NotificationPanel__containerCollapsed___AIWAA","statusConnected":"NotificationPanel__statusConnected___38vIC","heading":"NotificationPanel__heading___2r4is","subheading":"NotificationPanel__subheading___1k1Fs","paragraph":"NotificationPanel__paragraph___1ktBH","button":"NotificationPanel__button___1nwM_","octopus":"NotificationPanel__octopus___3GnJJ","octopusConnected":"NotificationPanel__octopusConnected___23inF"};
+.container {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  height: 15rem;
+  background-color: #1b1b1c;
+  background-color: var(--primaryBackgroundColor);
+  padding: 2rem 1rem 1rem;
+  border-top: 0.5rem solid transparent;
+  -webkit-transition: border-color 0.3s ease, margin-top 0.6s ease, -webkit-transform 0.6s ease;
+  transition: border-color 0.3s ease, margin-top 0.6s ease, -webkit-transform 0.6s ease;
+  transition: transform 0.6s ease, border-color 0.3s ease, margin-top 0.6s ease;
+  transition: transform 0.6s ease, border-color 0.3s ease, margin-top 0.6s ease, -webkit-transform 0.6s ease;
+  z-index: 1; }
+
+.container.statusDisconnected.containerCollapsed {
+  -webkit-transition: border-color 0s, margin-top 0.6s ease, -webkit-transform 0.6s ease;
+  transition: border-color 0s, margin-top 0.6s ease, -webkit-transform 0.6s ease;
+  transition: transform 0.6s ease, border-color 0s, margin-top 0.6s ease;
+  transition: transform 0.6s ease, border-color 0s, margin-top 0.6s ease, -webkit-transform 0.6s ease;
+  -webkit-transform: translateY(calc(100% - 0.5rem + 1px));
+          transform: translateY(calc(100% - 0.5rem + 1px)); }
+
+.container.statusConnected.containerCollapsed {
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%); }
+
+.container.containerCollapsed {
+  margin-top: -15rem;
+  -webkit-box-shadow: none;
+          box-shadow: none; }
+
+.container.statusDisconnected {
+  border-top-color: #b03b00;
+  border-top-color: var(--errorColor); }
+
+.container.statusConnected {
+  border-top-color: #008A00; }
+
+.heading {
+  font-size: 2rem;
+  font-weight: bold; }
+
+.subheading {
+  font-size: 1rem;
+  line-height: 1.5; }
+
+.paragraph {
+  color: #999999;
+  color: var(--softTextColor);
+  line-height: 1.5; }
+
+.button {
+  padding: 0.5rem 1rem;
+  background-color: #0e6198;
+  background-color: var(--accentColor);
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease; }
+
+.container.statusConnected > .button {
+  background-color: #008A00; }
+
+.octopus {
+  height: 8rem;
+  width: 8rem;
+  position: absolute;
+  top: -4.25rem;
+  right: 1rem;
+  background-repeat: no-repeat;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease; }
+
+.container.containerCollapsed > .octopusConnected {
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%); }
 
 
-//////////////////
-// WEBPACK FOOTER
-// ./src/client/routes/requests/components/NotificationPanel.scss
-// module id = 546
-// module chunks = 0
+
+// WEBPACK FOOTER //
+// src/client/routes/requests/components/NotificationPanel.scss

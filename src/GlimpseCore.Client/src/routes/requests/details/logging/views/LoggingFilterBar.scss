@@ -1,9 +1,34 @@
-// removed by extract-text-webpack-plugin
-module.exports = {"agentBrowserIcon":"LoggingFilterBar__agentBrowserIcon___32h-c","agentServerIcon":"LoggingFilterBar__agentServerIcon___3TNK2","levelWarningIcon":"LoggingFilterBar__levelWarningIcon___psOeX","levelErrorIcon":"LoggingFilterBar__levelErrorIcon___3ovyu","levelInfoIcon":"LoggingFilterBar__levelInfoIcon___371-x","levelGroup":"LoggingFilterBar__levelGroup___r25WN"};
+.agentBrowserIcon {
+  fill: #EE89A2;
+  fill: var(--agentBrowserColor); }
+
+.agentServerIcon {
+  fill: #86d7f4;
+  fill: var(--agentServerColor); }
+
+.levelWarningIcon {
+  fill: #f8a800;
+  fill: var(--warningColor); }
+
+.levelErrorIcon {
+  fill: #b03b00;
+  fill: var(--errorColor); }
+
+.levelInfoIcon {
+  fill: #1ba1e2;
+  fill: var(--statusCodeInformationalColor); }
+
+.levelGroup {
+  margin-right: 1.5rem; }
+  .levelGroup + div {
+    display: none; }
+
+.levelGroup {
+  margin-right: 1.5rem; }
+  .levelGroup + div {
+    display: none; }
 
 
-//////////////////
-// WEBPACK FOOTER
-// ./src/client/routes/requests/details/logging/views/LoggingFilterBar.scss
-// module id = 120
-// module chunks = 0
+
+// WEBPACK FOOTER //
+// src/client/routes/requests/details/logging/views/LoggingFilterBar.scss

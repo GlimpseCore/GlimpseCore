@@ -1,9 +1,51 @@
-// removed by extract-text-webpack-plugin
-module.exports = {"statusBar":"ShellStatusBarView__statusBar___d0l8w","statusBarGroup":"ShellStatusBarView__statusBarGroup___1NZt1","statusBarButton":"ShellStatusBarView__statusBarButton___36JYf","isStatic":"ShellStatusBarView__isStatic___3R_AR","statusBarButtonActive":"ShellStatusBarView__statusBarButtonActive___2e5wz ShellStatusBarView__statusBarButton___36JYf","statusBarButtonIcon":"ShellStatusBarView__statusBarButtonIcon___2rzrL","statusBarText":"ShellStatusBarView__statusBarText___3kK2r"};
+.statusBar {
+  background-color: #007acc;
+  background-color: var(--statusBarBackgroundColor);
+  color: #f1f1f1;
+  color: var(--statusBarForegroundColor);
+  min-height: 1.5rem;
+  padding: 0 1rem;
+  overflow: hidden; }
+
+.statusBarGroup {
+  padding: 0 0.25rem;
+  float: right; }
+
+.statusBarButton {
+  padding: 0.30769rem;
+  line-height: 0;
+  vertical-align: top;
+  float: right; }
+
+.statusBarButton:hover {
+  background-color: #278bcf;
+  background-color: var(--statusBarHoverColor); }
+
+.statusBarButton.isStatic:hover {
+  background-color: transparent;
+  background-color: var(--transparent);
+  cursor: default; }
+
+.statusBarButtonActive {
+  composes: statusBarButton; }
+
+.statusBarButtonIcon {
+  height: 1.25rem;
+  width: 1.25rem;
+  color: #888888;
+  float: left; }
+
+.statusBarButton:hover .statusBarButtonIcon, .statusBarButtonActive .statusBarButtonIcon {
+  color: #ffffff; }
+
+.statusBarText {
+  display: inline-block;
+  padding: 0 0.46154rem;
+  margin-top: 0.88462rem;
+  vertical-align: top;
+  line-height: 0; }
 
 
-//////////////////
-// WEBPACK FOOTER
-// ./src/client/shell/views/ShellStatusBarView.scss
-// module id = 32
-// module chunks = 0
+
+// WEBPACK FOOTER //
+// src/client/shell/views/ShellStatusBarView.scss

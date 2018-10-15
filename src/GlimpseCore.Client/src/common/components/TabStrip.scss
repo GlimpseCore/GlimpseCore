@@ -1,9 +1,133 @@
-// removed by extract-text-webpack-plugin
-module.exports = {"strip":"TabStrip__strip___hUCK0","stripButtonHolder":"TabStrip__stripButtonHolder___2Kb4q","stripPlain":"TabStrip__stripPlain___3JjMv","stripButton":"TabStrip__stripButton___2pizC","stripButtonActive":"TabStrip__stripButtonActive___1O88B","stripTabs":"TabStrip__stripTabs___16pyx","stripDetail":"TabStrip__stripDetail___18B5q","stripContainerModal":"TabStrip__stripContainerModal___2Apw-","stripContainerSection":"TabStrip__stripContainerSection___1bUaO"};
+.strip {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+  overflow: hidden;
+  width: 100%; }
+
+.stripButtonHolder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row; }
+
+.stripButtonHolder.stripPlain {
+  padding: 0 2rem;
+  margin-left: 1rem; }
+
+.stripButton {
+  background: transparent;
+  border: none;
+  color: inherit;
+  margin: 0;
+  padding: 0.25rem 0;
+  position: relative; }
+  .stripButton::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    outline: 1px solid #0e6198;
+    outline: 1px solid var(--accentColor);
+    opacity: 0; }
+  .stripButton:focus {
+    outline: none; }
+    .stripButton:focus::after {
+      opacity: 1; }
+
+.stripButton:hover {
+  color: #3399ff;
+  color: var(--linkColor); }
+
+.stripButtonActive {
+  color: #3399ff;
+  color: var(--tabStripButtonActiveColor); }
+  .stripButtonActive:after {
+    display: none; }
+
+.stripPlain .stripButton {
+  margin: 0 1.5rem; }
+  .stripPlain .stripButton::after {
+    height: 90%;
+    top: 2%;
+    width: 140%;
+    left: -20%; }
+
+.stripPlain .stripButtonActive {
+  border-bottom-width: 0.2rem;
+  border-bottom-style: solid;
+  border-bottom-color: #3399ff;
+  border-bottom-color: var(--tabStripButtonActiveColor); }
+
+.stripTabs {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #46464A;
+  border-bottom-color: var(--tabStripButtonBorderColor); }
+
+.stripTabs .stripButton {
+  border: 1px solid transparent;
+  margin: 0 0.25rem;
+  padding: 0.25rem 0.5rem 0.5rem 0.5rem;
+  margin-bottom: -1px; }
+
+.stripTabs .stripButtonActive {
+  background-color: #1b1b1c;
+  background-color: var(--primaryBackgroundColor);
+  border-width: 1px;
+  border-style: solid;
+  border-top-color: #46464A;
+  border-top-color: var(--tabStripButtonBorderColor);
+  border-right-color: #46464A;
+  border-right-color: var(--tabStripButtonBorderColor);
+  border-bottom-color: transparent;
+  border-left-color: #46464A;
+  border-left-color: var(--tabStripButtonBorderColor); }
+
+.stripPlain .stripButton:first-child,
+.stripTabs .stripButton:first-child {
+  margin-left: 0; }
+
+.stripPlain .stripButton:last-child,
+.stripTabs .stripButton:last-child {
+  margin-right: 0; }
+
+.stripDetail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+  overflow: hidden; }
+
+.stripContainerModal .stripDetail > div {
+  overflow-y: auto;
+  height: calc(100vh - 17rem);
+  width: 100%; }
+
+.stripContainerSection .stripDetail > div {
+  overflow-y: hidden;
+  height: 35vh;
+  width: 100%;
+  margin-bottom: 0.5rem; }
 
 
-//////////////////
-// WEBPACK FOOTER
-// ./src/client/common/components/TabStrip.scss
-// module id = 126
-// module chunks = 0
+
+// WEBPACK FOOTER //
+// src/client/common/components/TabStrip.scss

@@ -1,9 +1,43 @@
-// removed by extract-text-webpack-plugin
-module.exports = {"statusLabelContainer":"StatusLabel__statusLabelContainer___HL8YZ","statusLabelUnavailableDescription":"StatusLabel__statusLabelUnavailableDescription___2rFyB","statusLabelBlueIcon":"StatusLabel__statusLabelBlueIcon___3MafR","statusLabelGreenIcon":"StatusLabel__statusLabelGreenIcon___1UTQJ","statusLabelYellowIcon":"StatusLabel__statusLabelYellowIcon___1mw3d","statusLabelRedIcon":"StatusLabel__statusLabelRedIcon___ClZQ1"};
+.statusLabelContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.statusLabelUnavailableDescription {
+  color: #999999;
+  color: var(--softTextColor); }
+
+.statusLabelBlueIcon,
+.statusLabelGreenIcon,
+.statusLabelYellowIcon,
+.statusLabelRedIcon {
+  width: 1rem;
+  height: 1rem;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin-right: 2px;
+  margin-top: 1px; }
+
+.statusLabelBlueIcon {
+  fill: #1ba1e2;
+  fill: var(--statusCodeInformationalColor); }
+
+.statusLabelGreenIcon {
+  fill: #78b24c;
+  fill: var(--statusCodeSuccessColor); }
+
+.statusLabelYellowIcon {
+  fill: #f8a800;
+  fill: var(--statusCodeRedirectionColor); }
+
+.statusLabelRedIcon {
+  fill: #b03b00;
+  fill: var(--statusCodeErrorColor); }
 
 
-//////////////////
-// WEBPACK FOOTER
-// ./src/client/common/components/StatusLabel.scss
-// module id = 182
-// module chunks = 0
+
+// WEBPACK FOOTER //
+// src/client/common/components/StatusLabel.scss

@@ -1,9 +1,8 @@
-// removed by extract-text-webpack-plugin
-module.exports = {"loggingLabelUnnamed":"LoggingLabel__loggingLabelUnnamed___1gjW8"};
+.loggingLabelUnnamed {
+  color: #999999;
+  color: var(--secondaryForegroundColor); }
 
 
-//////////////////
-// WEBPACK FOOTER
-// ./src/client/routes/requests/details/logging/views/LoggingLabel.scss
-// module id = 590
-// module chunks = 0
+
+// WEBPACK FOOTER //
+// src/client/routes/requests/details/logging/views/LoggingLabel.scss

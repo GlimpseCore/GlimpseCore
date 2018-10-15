@@ -1,9 +1,70 @@
-// removed by extract-text-webpack-plugin
-module.exports = {"body":"BodyView__body___3gwfM","metadata":"BodyView__metadata___F6gZG","metadataSpacer":"BodyView__metadataSpacer___nRl5T","content":"BodyView__content___3AYdp","contentTable":"BodyView__contentTable___3noTh","contentMessage":"BodyView__contentMessage___3ucJy","message":"BodyView__message___1x8Be"};
+.body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0;
+          flex: 1 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0.5rem 0 0 0;
+  overflow: hidden; }
+
+.metadata {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  padding-left: 0.5rem;
+  padding-bottom: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 0.5rem;
+  color: #f7f7f7;
+  color: var(--primaryForegroundColor); }
+
+.metadataSpacer {
+  border-left: 1px solid #46464a;
+  border-left: 1px solid var(--borderColor);
+  margin-left: 1rem;
+  padding-right: 1rem;
+  height: 2rem; }
+
+.content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  overflow-y: auto;
+  overflow-y: overlay; }
+
+.contentTable {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  overflow-y: auto;
+  overflow-y: overlay; }
+
+.contentMessage {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none; }
+
+.message {
+  padding-left: 0.5rem; }
 
 
-//////////////////
-// WEBPACK FOOTER
-// ./src/client/routes/requests/details/components/request-response-tab-strip/body/BodyView.scss
-// module id = 383
-// module chunks = 0
+
+// WEBPACK FOOTER //
+// src/client/routes/requests/details/components/request-response-tab-strip/body/BodyView.scss

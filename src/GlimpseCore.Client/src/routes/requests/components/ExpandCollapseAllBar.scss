@@ -1,9 +1,28 @@
-// removed by extract-text-webpack-plugin
-module.exports = {"expandCollapseAll":"ExpandCollapseAllBar__expandCollapseAll___OGpyT","expandCollapseAllButton":"ExpandCollapseAllBar__expandCollapseAllButton___2CHAD","expandCollapseAllIcon":"ExpandCollapseAllBar__expandCollapseAllIcon___2oS4e","expandCollapseAllIconPath":"ExpandCollapseAllBar__expandCollapseAllIconPath___31Be8"};
+.expandCollapseAll {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 0.25rem 0; }
+
+.expandCollapseAllButton {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none; }
+
+.expandCollapseAllIcon {
+  height: 1.25rem;
+  margin-left: 0.75rem;
+  width: 1.25rem; }
+
+.expandCollapseAllIconPath {
+  fill: #f7f7f7;
+  fill: var(--primaryForegroundColor); }
 
 
-//////////////////
-// WEBPACK FOOTER
-// ./src/client/routes/requests/components/ExpandCollapseAllBar.scss
-// module id = 587
-// module chunks = 0
+
+// WEBPACK FOOTER //
+// src/client/routes/requests/components/ExpandCollapseAllBar.scss

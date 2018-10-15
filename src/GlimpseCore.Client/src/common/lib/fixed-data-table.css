@@ -1,5 +1,9 @@
+/*
+This is a forked version of FixedDataTable styling to match Glimpse's styling
+*/
+
 /**
- * FixedDataTable v0.8.14 
+ * FixedDataTable v0.7.11
  *
  * Copyright Schrodinger, LLC
  * All rights reserved.
@@ -33,7 +37,7 @@
 .fixedDataTableCellGroupLayout_cellGroup > .public_fixedDataTableCell_main {
   display: inline-block;
   vertical-align: top;
-  white-space: normal;
+  white-space: nowrap;
 }
 
 .fixedDataTableCellGroupLayout_cellGroupWrapper {
@@ -54,6 +58,7 @@
 .fixedDataTableCellLayout_main {
   border-right-style: solid;
   border-right-width: 1px;
+  border-right-color: transparent;
   border-width: 0 1px 0 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -85,7 +90,7 @@
 
 .fixedDataTableCellLayout_wrap3 {
   display: table-cell;
-  vertical-align: middle;
+  vertical-align: top;
 }
 
 .fixedDataTableCellLayout_columnResizerContainer {
@@ -170,7 +175,7 @@ body[dir="rtl"] .fixedDataTableColumnResizerLineLayout_main {
 .fixedDataTableLayout_header,
 .fixedDataTableLayout_hasBottomBorder {
   border-bottom-style: solid;
-  border-bottom-width: 1px;
+  border-bottom-width: 0;
 }
 
 .fixedDataTableLayout_footer .public_fixedDataTableCell_main {
@@ -225,13 +230,6 @@ body[dir="rtl"] .fixedDataTableColumnResizerLineLayout_main {
   top: 0;
 }
 
-.fixedDataTableRowLayout_rowExpanded {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  left: 0;
-  position: absolute;
-}
-
 .fixedDataTableRowLayout_fixedColumnsDivider {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
@@ -255,6 +253,13 @@ body[dir="rtl"] .fixedDataTableColumnResizerLineLayout_main {
 .fixedDataTableRowLayout_rowWrapper {
   position: absolute;
   top: 0;
+  color: #cecece;
+  color: var(--tertiaryForegroundColor);
+}
+
+.fixedDataTableRowLayout_rowWrapper:hover {
+  background-color: #3f3f46;
+  background-color: var(--expansionBarHoverBackgroundColor);
 }
 /**
  * Copyright Schrodinger, LLC
@@ -273,6 +278,10 @@ body[dir="rtl"] .fixedDataTableColumnResizerLineLayout_main {
   outline: none;
   overflow: hidden;
   position: absolute;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -283,21 +292,17 @@ body[dir="rtl"] .fixedDataTableColumnResizerLineLayout_main {
   bottom: 0;
   right: 0;
   top: 0;
-  width: 15px;
+  -webkit-transition-property: background-color width;
+          transition-property: background-color width;
+  width: 10px;
 }
 
 .ScrollbarLayout_mainHorizontal {
   bottom: 0;
-  height: 15px;
+  height: 10px;
   left: 0;
   -webkit-transition-property: background-color height;
-  transition-property: background-color height;
-}
-
-/* Touching the scroll-track directly makes the scroll-track bolder */
-.ScrollbarLayout_mainHorizontal.public_Scrollbar_mainActive,
-.ScrollbarLayout_mainHorizontal:hover {
-  height: 17px;
+          transition-property: background-color height;
 }
 
 .ScrollbarLayout_face {
@@ -305,12 +310,6 @@ body[dir="rtl"] .fixedDataTableColumnResizerLineLayout_main {
   overflow: hidden;
   position: absolute;
   z-index: 1;
-  -webkit-transition-duration: 250ms;
-          transition-duration: 250ms;
-  -webkit-transition-timing-function: ease;
-          transition-timing-function: ease;
-  -webkit-transition-property: background-color width position;
-  transition-property: background-color width position;
 }
 
 /**
@@ -320,12 +319,11 @@ body[dir="rtl"] .fixedDataTableColumnResizerLineLayout_main {
  * scrollface element while dragging it.
  */
 .ScrollbarLayout_face:after {
-  border-radius: 6px;
   content: '';
   display: block;
   position: absolute;
   -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
+          transition: background-color 250ms ease;
 }
 
 .ScrollbarLayout_faceHorizontal {
@@ -335,15 +333,10 @@ body[dir="rtl"] .fixedDataTableColumnResizerLineLayout_main {
 }
 
 .ScrollbarLayout_faceHorizontal:after {
-  bottom: 4px;
+  bottom: 0px;
   left: 0;
   top: 4px;
   width: 100%;
-}
-
-.ScrollbarLayout_faceHorizontal.public_Scrollbar_faceActive:after,
-.ScrollbarLayout_main:hover .ScrollbarLayout_faceHorizontal:after {
-  bottom: calc(4px/2);
 }
 
 .ScrollbarLayout_faceVertical {
@@ -355,14 +348,8 @@ body[dir="rtl"] .fixedDataTableColumnResizerLineLayout_main {
 .ScrollbarLayout_faceVertical:after {
   height: 100%;
   left: 4px;
-  right: 4px;
+  right: 0px;
   top: 0;
-}
-
-.ScrollbarLayout_main:hover .ScrollbarLayout_faceVertical:after,
-.ScrollbarLayout_faceVertical.public_Scrollbar_faceActive:after {
-  left: calc(4px/2);
-  right: calc(4px/2);
 }
 /**
  * Copyright Schrodinger, LLC
@@ -380,34 +367,42 @@ body[dir="rtl"] .fixedDataTableColumnResizerLineLayout_main {
  * Table.
  */
 .public_fixedDataTable_main {
-  border-color: #d3d3d3;
+  border-color: transparent;
+}
+
+.public_fixedDataTable_header {
+  border-bottom-width: 1px;
 }
 
 .public_fixedDataTable_header,
 .public_fixedDataTable_hasBottomBorder {
-  border-color: #d3d3d3;
+  border-color: #46464A;
+  border-color: var(--tableHeaderBorderColor);
+  background-color: #1b1b1c !important;
+  background-color: var(--tableRowOddBackgroundColor) !important;
+}
+
+.public_fixedDataTable_header div {
+  background-color: #1b1b1c !important;
+  background-color: var(--tableRowOddBackgroundColor) !important;
 }
 
 .public_fixedDataTable_header .public_fixedDataTableCell_main {
   font-weight: bold;
+  color: #f7f7f7;
+  color: var(--headerForegroundColor);
+  border-color: #46464A;
+  border-color: var(--tableHeaderBorderColor);
 }
 
 .public_fixedDataTable_header,
-.public_fixedDataTable_scrollbarSpacer,
 .public_fixedDataTable_header .public_fixedDataTableCell_main {
-  background-color: #f6f7f8;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#efefef));
-  background-image: linear-gradient(#fff, #efefef);
-}
-
-.public_fixedDataTable_scrollbarSpacer {
-  position: absolute;
-  z-index: 99;
+  background-color: #1b1b1c;
+  background-color: var(--tableRowOddBackgroundColor);
 }
 
 .public_fixedDataTable_footer .public_fixedDataTableCell_main {
-  background-color: #f6f7f8;
-  border-color: #d3d3d3;
+  border-color: transparent;
 }
 
 .public_fixedDataTable_topShadow {
@@ -419,7 +414,7 @@ body[dir="rtl"] .fixedDataTableColumnResizerLineLayout_main {
 }
 
 .public_fixedDataTable_horizontalScrollbar .public_Scrollbar_mainHorizontal {
-  background-color: #fff;
+  background-color: transparent;
 }
 /**
  * Copyright Schrodinger, LLC
@@ -435,17 +430,17 @@ body[dir="rtl"] .fixedDataTableColumnResizerLineLayout_main {
 /**
  * Table cell.
  */
+
+.public_fixed
 .public_fixedDataTableCell_main {
-  background-color: #fff;
-  border-color: #d3d3d3;
+  border-color: transparent;
 }
 
 .public_fixedDataTableCell_highlighted {
-  background-color: #f4f4f4;
 }
 
 .public_fixedDataTableCell_cellContent {
-  padding: 8px;
+  padding: 0.4rem 0.75rem;
 }
 
 .public_fixedDataTableCell_columnResizerKnob {
@@ -505,17 +500,29 @@ body[dir="rtl"] .fixedDataTableColumnResizerLineLayout_main {
 /**
  * Table row.
  */
-.public_fixedDataTableRow_main {
-  background-color: #fff;
+
+.fixedDataTableRowLayout_rowWrapper:nth-child(even) .fixedDataTableCellLayout_main {
+  background-color: #212123;
+  background-color: var(--tableRowEvenBackgroundColor);
+}
+
+.fixedDataTableRowLayout_rowWrapper:nth-child(odd) .fixedDataTableCellLayout_main {
+  background-color: #1b1b1c;
+  background-color: var(--tableRowOddBackgroundColor);
+}
+
+.fixedDataTableRowLayout_rowWrapper:hover .fixedDataTableCellLayout_main {
+    background-color: #3f3f46;
+    background-color: var(--expansionBarHoverBackgroundColor);
 }
 
 .public_fixedDataTableRow_highlighted,
 .public_fixedDataTableRow_highlighted .public_fixedDataTableCell_main {
-  background-color: #f6f7f8;
 }
 
 .public_fixedDataTableRow_fixedColumnsDivider {
-  border-color: #d3d3d3;
+  border-color: #1b1b1c;
+  border-color: var(--primaryBackgroundColor);
 }
 
 .public_fixedDataTableRow_columnsShadow {
@@ -542,25 +549,16 @@ body[dir="rtl"] .fixedDataTableColumnResizerLineLayout_main {
  * Scrollbars.
  */
 
-/* Touching the scroll-track directly makes the scroll-track bolder */
-.public_Scrollbar_main.public_Scrollbar_mainActive,
-.public_Scrollbar_main {
-  background-color: #fff;
-  border-left: 1px solid #d3d3d3;
-}
-
 .public_Scrollbar_mainOpaque,
 .public_Scrollbar_mainOpaque.public_Scrollbar_mainActive,
 .public_Scrollbar_mainOpaque:hover {
-  background-color: #fff;
+  background-color: transparent;
 }
 
 .public_Scrollbar_face:after {
-  background-color: #c2c2c2;
+  background-color: rgba(70, 70, 70, 0.5);
+  background-color: var(--scrollbarColor);
 }
 
-.public_Scrollbar_main:hover .public_Scrollbar_face:after,
-.public_Scrollbar_mainActive .public_Scrollbar_face:after,
-.public_Scrollbar_faceActive:after {
-  background-color: #7d7d7d;
-}
+
+

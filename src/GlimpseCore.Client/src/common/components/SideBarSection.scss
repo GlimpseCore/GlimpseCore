@@ -1,9 +1,123 @@
-// removed by extract-text-webpack-plugin
-module.exports = {"sideBar":"SideBarSection__sideBar___rWGSx","sideBarTitleHolder":"SideBarSection__sideBarTitleHolder___2Tbjp","sideBarTitle":"SideBarSection__sideBarTitle___pJVSt","sideBarIsExpandable":"SideBarSection__sideBarIsExpandable___19Ap-","sideBarTitleIsImportant":"SideBarSection__sideBarTitleIsImportant___w_-zs","sideBarContent":"SideBarSection__sideBarContent___1ZiRR","sideBarNoRecords":"SideBarSection__sideBarNoRecords___8BDPu","sideBarActions":"SideBarSection__sideBarActions___zSVJZ","sideBarAction":"SideBarSection__sideBarAction___2qOi9","sideBarActionActive":"SideBarSection__sideBarActionActive___GREf8"};
+.sideBar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.sideBarTitleHolder {
+  background-color: #2d2d30;
+  background-color: var(--sideBarHeaderColor);
+  border-top: 1px solid #46464a;
+  border-top: 1px solid var(--sideBarBorderColor);
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0.25rem .5rem .25rem 1rem;
+  z-index: 2; }
+
+.sideBarTitle {
+  color: #f7f7f7;
+  color: var(--headerForegroundColor);
+  margin-top: -.25rem; }
+
+.sideBarIsExpandable {
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto; }
+
+.sideBarTitleIsImportant .sideBarTitle {
+  padding-left: 0.75rem;
+  border-left-width: 0.25rem;
+  border-left-style: solid;
+  border-left-color: #0e6198;
+  border-left-color: var(--accentColor); }
+
+.sideBarContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.sideBarNoRecords {
+  padding: 1rem 1rem 1.5rem;
+  color: #999999;
+  color: var(--secondaryForegroundColor); }
+
+.sideBarActions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row; }
+
+.sideBarActions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row; }
+
+.sideBarAction {
+  height: 1.25rem;
+  width: 1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #f7f7f7;
+  color: var(--primaryForegroundColor);
+  fill: #f7f7f7;
+  fill: var(--primaryForegroundColor);
+  position: relative;
+  z-index: 1;
+  padding: .25rem; }
+  .sideBarAction + .sideBarAction {
+    margin-left: 0.5rem; }
+
+.sideBarAction:hover {
+  cursor: pointer;
+  background: #3F3F46;
+  background: var(--sideBarActionHoverBackgroundColor); }
+
+.sideBarActionActive {
+  outline: 1px solid #3399ff;
+  outline: 1px solid var(--linkColor); }
 
 
-//////////////////
-// WEBPACK FOOTER
-// ./src/client/common/components/SideBarSection.scss
-// module id = 535
-// module chunks = 0
+
+// WEBPACK FOOTER //
+// src/client/common/components/SideBarSection.scss

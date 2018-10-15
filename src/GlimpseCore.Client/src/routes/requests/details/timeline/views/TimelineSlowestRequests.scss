@@ -1,9 +1,82 @@
-// removed by extract-text-webpack-plugin
-module.exports = {"timelineSlowestRequestsContainer":"TimelineSlowestRequests__timelineSlowestRequestsContainer___7Fd0A","timelineSlowestRequestsHeader":"TimelineSlowestRequests__timelineSlowestRequestsHeader___39D6G","timelineSlowRequestContainer":"TimelineSlowestRequests__timelineSlowRequestContainer___3JZnD","timelineSlowRequestNoDuration":"TimelineSlowestRequests__timelineSlowRequestNoDuration___32WBx","timelineSlowRequestDuration":"TimelineSlowestRequests__timelineSlowRequestDuration___BdsEK","timelineSlowRequestDurationUnits":"TimelineSlowestRequests__timelineSlowRequestDurationUnits___XM-UM","timelineSlowRequestRow":"TimelineSlowestRequests__timelineSlowRequestRow___2Zzzs","timelineSlowRequestRowIcon":"TimelineSlowestRequests__timelineSlowRequestRowIcon___vlAWU","timelineSlowRequestNoEvent":"TimelineSlowestRequests__timelineSlowRequestNoEvent___3Qgdw","timelineSlowRequestIconInformation":"TimelineSlowestRequests__timelineSlowRequestIconInformation___2BwB1","timelineSlowRequestEventNoLink":"TimelineSlowestRequests__timelineSlowRequestEventNoLink___1Odon"};
+.timelineSlowestRequestsContainer {
+  margin-bottom: 0; }
+
+.timelineSlowestRequestsHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #f7f7f7;
+  color: var(--primaryForegroundColor);
+  margin-top: 0.5rem; }
+
+.timelineSlowRequestContainer {
+  display: inline-block;
+  min-width: 13rem;
+  max-width: 14%;
+  border-right: 1px solid #46464a;
+  border-right: 1px solid var(--borderColor);
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem; }
+  .timelineSlowRequestContainer:first-child {
+    padding-left: 0; }
+
+.timelineSlowRequestNoDuration,
+.timelineSlowRequestDuration {
+  font-family: 'Segoe UI Light', 'Selawik Light', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 48pt;
+  color: #f7f7f7;
+  color: var(--headerForegroundColor); }
+
+.timelineSlowRequestNoDuration {
+  color: #6d6d6d;
+  color: var(--softerTextColor); }
+
+.timelineSlowRequestDurationUnits {
+  color: #999999;
+  color: var(--softTextColor); }
+
+.timelineSlowRequestRow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 3px; }
+
+.timelineSlowRequestRowIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin-right: 0.25rem; }
+
+.timelineSlowRequestNoEvent {
+  color: #6d6d6d;
+  color: var(--softerTextColor);
+  padding-left: 3px; }
+
+.timelineSlowRequestIconInformation {
+  color: #117AD1;
+  color: var(--chartColor5); }
+
+.timelineSlowRequestEventNoLink {
+  color: #999999;
+  color: var(--softTextColor); }
 
 
-//////////////////
-// WEBPACK FOOTER
-// ./src/client/routes/requests/details/timeline/views/TimelineSlowestRequests.scss
-// module id = 574
-// module chunks = 0
+
+// WEBPACK FOOTER //
+// src/client/routes/requests/details/timeline/views/TimelineSlowestRequests.scss

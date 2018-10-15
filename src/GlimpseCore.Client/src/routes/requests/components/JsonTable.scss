@@ -1,9 +1,75 @@
-// removed by extract-text-webpack-plugin
-module.exports = {"jsonTableContainer":"JsonTable__jsonTableContainer___20yAi","jsonTable":"JsonTable__jsonTable___1L15B","jsonTableFaderEven":"JsonTable__jsonTableFaderEven___3AZGW","jsonTableFaderOdd":"JsonTable__jsonTableFaderOdd___1ZR-K","jsonTableHeaderLabel":"JsonTable__jsonTableHeaderLabel___nXnJX","jsonTableHeaderCount":"JsonTable__jsonTableHeaderCount___2X2aQ","jsonTableHeadSpacer":"JsonTable__jsonTableHeadSpacer___1XGQe","jsonTableCell":"JsonTable__jsonTableCell___2IAIQ","jsonTableObjectCell":"JsonTable__jsonTableObjectCell___2ep3L"};
+.jsonTableContainer {
+  overflow-x: auto;
+  position: relative; }
+
+.jsonTable {
+  table-layout: auto; }
+
+.jsonTableFaderEven, .jsonTableFaderOdd {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1rem; }
+
+.jsonTableFaderEven {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(40%, #212123));
+  background-image: linear-gradient(to bottom, transparent, #212123 40%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(40%, var(--tableRowEvenBackgroundColor)));
+  background-image: linear-gradient(to bottom, transparent, var(--tableRowEvenBackgroundColor) 40%); }
+
+.jsonTableFaderOdd {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(40%, #1b1b1c));
+  background-image: linear-gradient(to bottom, transparent, #1b1b1c 40%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(40%, var(--tableRowOddBackgroundColor)));
+  background-image: linear-gradient(to bottom, transparent, var(--tableRowOddBackgroundColor) 40%); }
+
+.jsonTable tr:nth-child(even) {
+  background-color: transparent !important; }
+
+.jsonTable > thead > tr > th {
+  white-space: nowrap; }
+
+.jsonTable > thead {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #46464A;
+  border-bottom-color: var(--tableHeaderBorderColor);
+  padding-bottom: 0.25rem; }
+
+.jsonTableHeaderLabel {
+  padding: 0.3rem 0.75rem !important; }
+
+.jsonTableHeaderCount {
+  font-weight: normal;
+  color: #999999;
+  color: var(--secondaryForegroundColor); }
+
+.jsonTableHeadSpacer {
+  height: 0.125rem !important; }
+
+.jsonTableCell {
+  position: relative; }
+
+.jsonTableObjectCell > ul {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 !important;
+  background-color: transparent !important; }
+
+.jsonTableObjectCell > ul > li:first-child {
+  padding-top: 0 !important; }
+
+.jsonTableObjectCell > ul > li > div:first-child {
+  padding-right: 0.15em !important; }
+
+.jsonTableObjectCell > ul > li > label:first-of-type {
+  display: none !important; }
+
+.jsonTableObjectCell > ul > li > span:first-of-type {
+  padding-left: 0 !important; }
 
 
-//////////////////
-// WEBPACK FOOTER
-// ./src/client/routes/requests/components/JsonTable.scss
-// module id = 589
-// module chunks = 0
+
+// WEBPACK FOOTER //
+// src/client/routes/requests/components/JsonTable.scss

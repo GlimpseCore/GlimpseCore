@@ -1,9 +1,328 @@
-// removed by extract-text-webpack-plugin
-module.exports = {"smileyFeedback":"SmileyFeedback__smileyFeedback___1W5mL","leave":"SmileyFeedback__leave___1-tS5","feedbackLeave":"SmileyFeedback__feedbackLeave___2KXVf","enter":"SmileyFeedback__enter___2aebh","feedbackEnter":"SmileyFeedback__feedbackEnter___3zMRf","header":"SmileyFeedback__header___2Jmnk","closeIcon":"SmileyFeedback__closeIcon___2Z48X","smileyButton":"SmileyFeedback__smileyButton___3IrNy","isSelected":"SmileyFeedback__isSelected___kyUpY","smileyIcon":"SmileyFeedback__smileyIcon___37fgM","leftColumn":"SmileyFeedback__leftColumn___3zg5z","rightColumn":"SmileyFeedback__rightColumn___2SCc3","linkSection":"SmileyFeedback__linkSection___1mXWG","sendButton":"SmileyFeedback__sendButton___2L9ny","informationIcon":"SmileyFeedback__informationIcon___1Im-F","isThanks":"SmileyFeedback__isThanks___2Anq_","fadeIn":"SmileyFeedback__fadeIn___3lxSH","octopus":"SmileyFeedback__octopus___3_GIX","octopusTentacles":"SmileyFeedback__octopusTentacles___16tqB","octopusEnter":"SmileyFeedback__octopusEnter___2wR31","octopusLeave":"SmileyFeedback__octopusLeave___lZp9B","topTentacle":"SmileyFeedback__topTentacle___IGWA-","bottomTentacle":"SmileyFeedback__bottomTentacle___3Aam9","tentacleEnter":"SmileyFeedback__tentacleEnter___2xbNE","tentacleLeave":"SmileyFeedback__tentacleLeave___giTw4"};
+.smileyFeedback {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 50rem;
+  z-index: 100;
+  background-color: #0F0F0F;
+  background-color: var(--feedbackDialogBackgroundColor);
+  padding: 1.5rem 2rem;
+  padding-bottom: 2.5rem;
+  -webkit-box-shadow: 0 0 1rem rgba(15, 15, 15, 0.75);
+          box-shadow: 0 0 1rem rgba(15, 15, 15, 0.75);
+  letter-spacing: .025rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: -1.65rem;
+  will-change: transform; }
+  .smileyFeedback.leave {
+    -webkit-animation: feedbackLeave .5s ease-in-out both;
+            animation: feedbackLeave .5s ease-in-out both; }
+  .smileyFeedback.enter {
+    -webkit-animation: feedbackEnter .35s ease-in-out both;
+            animation: feedbackEnter .35s ease-in-out both; }
+  .smileyFeedback:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #0F0F0F;
+    background-color: var(--feedbackDialogBackgroundColor);
+    border: 1px solid #0e6198;
+    border: 1px solid var(--accentColor);
+    z-index: -1; }
+
+@-webkit-keyframes feedbackEnter {
+  from {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%); }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
+
+@keyframes feedbackEnter {
+  from {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%); }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
+
+@-webkit-keyframes feedbackLeave {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+  to {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%); } }
+
+@keyframes feedbackLeave {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+  to {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%); } }
+
+.header {
+  color: #f7f7f7;
+  color: var(--primaryForegroundColor);
+  font-weight: bold;
+  font-size: 1.15rem;
+  border-bottom: 1px solid #46464a;
+  border-bottom: 1px solid var(--borderColor);
+  padding-bottom: 1rem;
+  position: relative;
+  margin-bottom: 2rem; }
+
+.closeIcon {
+  position: absolute;
+  right: 0;
+  top: .25rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  cursor: pointer; }
+  .closeIcon:hover {
+    opacity: .85; }
+
+.smileyButton {
+  margin-right: .5rem;
+  padding: .15rem;
+  opacity: .6; }
+  .smileyButton:hover {
+    opacity: .9; }
+  .smileyButton:focus {
+    outline: 1px solid #FFCC00;
+    outline: 1px solid var(--feedbackDialogBackgroundYellowColor); }
+  .smileyButton:active {
+    outline: 1px solid #0e6198;
+    outline: 1px solid var(--accentColor); }
+  .smileyButton.isSelected {
+    outline: 1px solid #0e6198;
+    outline: 1px solid var(--accentColor);
+    opacity: 1; }
+    .smileyButton.isSelected:hover {
+      opacity: 1;
+      cursor: default; }
+
+.smileyIcon {
+  fill: #FFCC00;
+  fill: var(--feedbackDialogBackgroundYellowColor);
+  position: relative;
+  z-index: 5;
+  width: 2rem;
+  height: 2rem;
+  float: left; }
+
+.leftColumn,
+.rightColumn {
+  padding: 0 2rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #999999;
+  color: var(--softTextColor); }
+
+.leftColumn {
+  margin-right: 15rem;
+  padding-left: 0;
+  border-right: 1px solid #46464a;
+  border-right: 1px solid var(--borderColor);
+  height: 26rem; }
+
+.rightColumn {
+  width: 15rem;
+  float: right;
+  padding-right: 0; }
+
+.linkSection {
+  margin-top: -.25rem; }
+  .linkSection + .linkSection {
+    margin-top: .35rem; }
+
+.sendButton {
+  background: #0e6198;
+  background: var(--accentColor);
+  padding: .75rem 1.5rem .7rem;
+  margin-top: 2rem;
+  font-size: 1rem;
+  float: right; }
+  .sendButton:hover {
+    opacity: .9;
+    cursor: pointer; }
+  .sendButton:active {
+    opacity: 1; }
+  .sendButton:focus {
+    outline: 1px solid #FFCC00;
+    outline: 1px solid var(--feedbackDialogBackgroundYellowColor); }
+  .sendButton[disabled] {
+    opacity: .5;
+    cursor: default; }
+    .sendButton[disabled]:hover, .sendButton[disabled]:active {
+      opacity: .5;
+      cursor: default; }
+    .sendButton[disabled]:focus {
+      outline: none; }
+
+.informationIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+  fill: #0e6198;
+  fill: var(--accentColor);
+  margin-bottom: -.3rem;
+  margin-left: .25rem; }
+
+.smileyFeedback form {
+  padding-top: 1.5rem; }
+
+.smileyFeedback label {
+  display: inline-block;
+  margin-bottom: 1rem;
+  margin-top: 1rem; }
+  .smileyFeedback label:first-child {
+    margin-top: 0; }
+  .smileyFeedback label.isThanks {
+    -webkit-animation: fadeIn .5s ease-out;
+            animation: fadeIn .5s ease-out; }
+
+.smileyFeedback a {
+  color: #3399ff;
+  color: var(--linkColor); }
+
+.smileyFeedback textarea,
+.smileyFeedback input {
+  background: #2d2d30;
+  background: var(--activityBarBackgroundColor);
+  border: none;
+  padding: 0 .75rem;
+  color: white;
+  letter-spacing: .025rem;
+  width: 100%;
+  max-width: calc(100% - 1.5rem); }
+  .smileyFeedback textarea:focus,
+  .smileyFeedback input:focus {
+    outline: 1px solid #FFCC00;
+    outline: 1px solid var(--feedbackDialogBackgroundYellowColor); }
+
+.smileyFeedback textarea {
+  min-height: 6rem;
+  max-height: 6rem;
+  resize: none;
+  padding-top: .5rem; }
+
+.smileyFeedback input {
+  height: 2.5rem; }
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+.octopus,
+.octopusTentacles {
+  position: absolute;
+  height: 10rem;
+  width: 10rem;
+  top: -1.5rem;
+  left: -3.5rem;
+  -webkit-animation: octopusEnter .8s .1s ease both;
+          animation: octopusEnter .8s .1s ease both; }
+  .smileyFeedback.leave .octopus, .smileyFeedback.leave
+  .octopusTentacles {
+    -webkit-animation: octopusLeave .5s .1s ease-in both;
+            animation: octopusLeave .5s .1s ease-in both; }
+
+@-webkit-keyframes octopusEnter {
+  from {
+    -webkit-transform: translate(100%, 100%);
+            transform: translate(100%, 100%); }
+  50% {
+    -webkit-transform: translate(-2%, -2%);
+            transform: translate(-2%, -2%); }
+  to {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0); } }
+
+@keyframes octopusEnter {
+  from {
+    -webkit-transform: translate(100%, 100%);
+            transform: translate(100%, 100%); }
+  50% {
+    -webkit-transform: translate(-2%, -2%);
+            transform: translate(-2%, -2%); }
+  to {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0); } }
+
+@-webkit-keyframes octopusLeave {
+  to {
+    -webkit-transform: translate(100%, 100%);
+            transform: translate(100%, 100%); } }
+
+@keyframes octopusLeave {
+  to {
+    -webkit-transform: translate(100%, 100%);
+            transform: translate(100%, 100%); } }
+
+.topTentacle {
+  stroke-dasharray: 26px;
+  stroke-dashoffset: 26px; }
+
+.bottomTentacle {
+  stroke-dasharray: 32px;
+  stroke-dashoffset: 32px; }
+
+.topTentacle,
+.bottomTentacle {
+  fill: transparent;
+  -webkit-animation: tentacleEnter .6s .4s ease-out forwards;
+          animation: tentacleEnter .6s .4s ease-out forwards; }
+  .smileyFeedback.leave .topTentacle, .smileyFeedback.leave
+  .bottomTentacle {
+    -webkit-animation: tentacleLeave .2s ease-in backwards;
+            animation: tentacleLeave .2s ease-in backwards;
+    -webkit-animation-delay: 0;
+            animation-delay: 0; }
+
+@-webkit-keyframes tentacleEnter {
+  to {
+    stroke-dashoffset: 0; } }
+
+@keyframes tentacleEnter {
+  to {
+    stroke-dashoffset: 0; } }
+
+@-webkit-keyframes tentacleLeave {
+  from {
+    stroke-dashoffset: 0; } }
+
+@keyframes tentacleLeave {
+  from {
+    stroke-dashoffset: 0; } }
+
+.octopus {
+  z-index: -2; }
+
+@supports (-ms-ime-align: auto) {
+  .topTentacle,
+  .bottomTentacle {
+    stroke-dashoffset: 0 !important;
+    -webkit-animation: none !important;
+            animation: none !important; }
+  .octopus,
+  .octopusTentacles {
+    -webkit-animation: none !important;
+            animation: none !important; } }
 
 
-//////////////////
-// WEBPACK FOOTER
-// ./src/client/shell/feedback/views/SmileyFeedback.scss
-// module id = 519
-// module chunks = 0
+
+// WEBPACK FOOTER //
+// src/client/shell/feedback/views/SmileyFeedback.scss

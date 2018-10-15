@@ -1,9 +1,84 @@
-// removed by extract-text-webpack-plugin
-module.exports = {"resize":"Resize__resize___2wbqd","grip":"Resize__grip____0FtK","isY":"Resize__isY___1b_Ly","isPadding":"Resize__isPadding___2-11o","isX":"Resize__isX___hM5MR","body":"Resize__body___3cqcb"};
+.resize {
+  position: relative;
+  z-index: 2; }
+  .resize .grip {
+    position: absolute;
+    z-index: 1; }
+  .resize.isY.isPadding {
+    padding-top: 0.75rem; }
+    .resize.isY.isPadding .grip {
+      top: 0; }
+  .resize.isY .grip {
+    top: -0.75rem;
+    width: 100%;
+    height: 0.75rem;
+    cursor: ns-resize; }
+    .resize.isY .grip::after {
+      height: 100rem;
+      width: 100%;
+      margin-top: -50rem; }
+    .resize.isY .grip::before {
+      -webkit-box-shadow: 0.4rem 0 0 #1b1b1c, 0.8rem 0 0 #1b1b1c;
+              box-shadow: 0.4rem 0 0 #1b1b1c, 0.8rem 0 0 #1b1b1c;
+      -webkit-box-shadow: 0.4rem 0 0 var(--gripDotsColor), 0.8rem 0 0 var(--gripDotsColor);
+              box-shadow: 0.4rem 0 0 var(--gripDotsColor), 0.8rem 0 0 var(--gripDotsColor); }
+  .resize.isX.isPadding {
+    padding-right: 0.75rem; }
+    .resize.isX.isPadding .grip {
+      right: 0; }
+  .resize.isX .body {
+    width: inherit;
+    display: inherit; }
+  .resize.isX .grip {
+    right: -0.75rem;
+    width: 0.75rem;
+    height: 100%;
+    cursor: e-resize; }
+    .resize.isX .grip::after {
+      width: 100rem;
+      height: 100%;
+      margin-left: -50rem; }
+    .resize.isX .grip::before {
+      -webkit-box-shadow: 0 0.4rem 0 #1b1b1c, 0 0.8rem 0 #1b1b1c;
+              box-shadow: 0 0.4rem 0 #1b1b1c, 0 0.8rem 0 #1b1b1c;
+      -webkit-box-shadow: 0 0.4rem 0 var(--gripDotsColor), 0 0.8rem 0 var(--gripDotsColor);
+              box-shadow: 0 0.4rem 0 var(--gripDotsColor), 0 0.8rem 0 var(--gripDotsColor); }
+
+.body {
+  height: 100%;
+  width: 100%; }
+
+.grip {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background: #272728;
+  background: var(--gripColor);
+  opacity: 0; }
+  .grip::after {
+    content: '';
+    position: absolute;
+    display: none; }
+  .grip:hover, .grip:active {
+    opacity: 1; }
+  .grip:active:after {
+    display: block; }
+  .grip:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: .25rem;
+    height: .25rem;
+    margin-left: -.1rem;
+    margin-top: -.1rem;
+    border-radius: 50%;
+    background: #1b1b1c;
+    background: var(--gripDotsColor);
+    z-index: 1; }
 
 
-//////////////////
-// WEBPACK FOOTER
-// ./src/client/common/components/resize/Resize.scss
-// module id = 402
-// module chunks = 0
+
+// WEBPACK FOOTER //
+// src/client/common/components/resize/Resize.scss

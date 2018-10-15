@@ -22,3 +22,6 @@ yarn-error.log*
 
 # overrides
 !debug
+
+# scss
+*.css

@@ -1,9 +1,21 @@
-// removed by extract-text-webpack-plugin
-module.exports = {"icon":"CookiesView__icon___5ogyy","isIconCookieTrue":"CookiesView__isIconCookieTrue___3AwhP","isIconCookieFalse":"CookiesView__isIconCookieFalse___jOItQ","contentMessage":"CookiesView__contentMessage___33Jsz"};
+.icon {
+  width: 1rem;
+  margin-right: 0.25rem; }
+
+.isIconCookieTrue {
+  fill: #71b252;
+  fill: var(--trueCheckMark); }
+
+.isIconCookieFalse {
+  fill: #b03b00;
+  fill: var(--falseBigX); }
+
+.contentMessage {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none; }
 
 
-//////////////////
-// WEBPACK FOOTER
-// ./src/client/routes/requests/details/components/request-response-tab-strip/cookies/CookiesView.scss
-// module id = 381
-// module chunks = 0
+
+// WEBPACK FOOTER //
+// src/client/routes/requests/details/components/request-response-tab-strip/cookies/CookiesView.scss

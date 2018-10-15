@@ -1,9 +1,54 @@
-// removed by extract-text-webpack-plugin
-module.exports = {"strip":"RequestResponseTabStrip__strip___12nUS","stripContainer":"RequestResponseTabStrip__stripContainer___1yjz4","stripItem":"RequestResponseTabStrip__stripItem___1zNJp","stripItemModal":"RequestResponseTabStrip__stripItemModal___2AQth","stripItemLeft":"RequestResponseTabStrip__stripItemLeft___bkEF4","stripItemRight":"RequestResponseTabStrip__stripItemRight___Kj7xF","stripItemContent":"RequestResponseTabStrip__stripItemContent___1nDKI"};
+.strip {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.stripContainer {
+  width: 100%;
+  border-spacing: 0px;
+  border-collapse: separate;
+  table-layout: fixed;
+  border-bottom: 1px solid #515152;
+  border-bottom: 1px solid var(--strongBorderColor); }
+
+.stripItem {
+  width: 50%;
+  overflow-x: hidden;
+  vertical-align: top;
+  position: relative; }
+
+.stripItemModal {
+  display: none; }
+
+.stripItemModal button {
+  position: absolute;
+  right: 0.25rem;
+  top: 0.75rem; }
+
+.stripItemLeft .stripItemModal button {
+  right: 1.5rem; }
+
+.stripItem:hover .stripItemModal {
+  display: block; }
+
+.stripItemLeft {
+  padding-right: 1.5rem;
+  border-right: 1px solid #515152;
+  border-right: 1px solid var(--strongBorderColor); }
+
+.stripItemRight {
+  padding-left: 1.5rem; }
+
+.stripItemContent {
+  overflow-x: hidden;
+  padding-left: 0;
+  padding-right: 0; }
+
+.stripItemContent:hover {
+  overflow-x: auto;
+  overflow-x: overlay; }
 
 
-//////////////////
-// WEBPACK FOOTER
-// ./src/client/routes/requests/details/components/request-response-tab-strip/views/RequestResponseTabStrip.scss
-// module id = 564
-// module chunks = 0
+
+// WEBPACK FOOTER //
+// src/client/routes/requests/details/components/request-response-tab-strip/views/RequestResponseTabStrip.scss

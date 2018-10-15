@@ -1,9 +1,131 @@
-// removed by extract-text-webpack-plugin
-module.exports = {"octopus":"Octopus__octopus___jIDwI","octopusFront":"Octopus__octopusFront___2B6JO","octopusBack":"Octopus__octopusBack___3ca3-","octopusFloat":"Octopus__octopusFloat___3NcMx","connected":"Octopus__connected___1Ie8L","octopusPlug":"Octopus__octopusPlug___is8rN","eye":"Octopus__eye___1VJa-","blink":"Octopus__blink___3_tVj","feedbackEye":"Octopus__feedbackEye___1ZpGS","feedbackBlink":"Octopus__feedbackBlink___1DMyG","feedbackPupil":"Octopus__feedbackPupil___2_1D3","feedbackPupilBlink":"Octopus__feedbackPupilBlink___30uud"};
+svg.octopus:not(:root) {
+  overflow: visible; }
+
+.octopusFront,
+.octopusBack {
+  -webkit-animation: octopusFloat 1.5s ease-in-out forwards alternate infinite;
+          animation: octopusFloat 1.5s ease-in-out forwards alternate infinite; }
+
+.octopusBack {
+  -webkit-animation-delay: -100ms;
+          animation-delay: -100ms; }
+
+.connected > .octopusFront,
+.connected > .octopusBack {
+  -webkit-animation: octopusPlug 0.3s 2s ease-in-out forwards;
+          animation: octopusPlug 0.3s 2s ease-in-out forwards; }
+
+.eye {
+  -webkit-animation: blink 5s step-start infinite;
+          animation: blink 5s step-start infinite; }
+
+.feedbackEye {
+  -webkit-animation: feedbackBlink 8.5s step-start infinite;
+          animation: feedbackBlink 8.5s step-start infinite; }
+
+.feedbackPupil {
+  -webkit-animation: feedbackPupilBlink 8.5s step-start infinite;
+          animation: feedbackPupilBlink 8.5s step-start infinite; }
+
+@-webkit-keyframes octopusPlug {
+  to {
+    -webkit-transform: translateX(-13px);
+            transform: translateX(-13px); } }
+
+@keyframes octopusPlug {
+  to {
+    -webkit-transform: translateX(-13px);
+            transform: translateX(-13px); } }
+
+@-webkit-keyframes octopusFloat {
+  from {
+    -webkit-transform: translateY(-5%);
+            transform: translateY(-5%); }
+  to {
+    -webkit-transform: translateY(5%);
+            transform: translateY(5%); } }
+
+@keyframes octopusFloat {
+  from {
+    -webkit-transform: translateY(-5%);
+            transform: translateY(-5%); }
+  to {
+    -webkit-transform: translateY(5%);
+            transform: translateY(5%); } }
+
+@-webkit-keyframes blink {
+  from, to, 8%, 78%, 88% {
+    opacity: 1; }
+  10%, 80%, 90% {
+    opacity: 0; } }
+
+@keyframes blink {
+  from, to, 8%, 78%, 88% {
+    opacity: 1; }
+  10%, 80%, 90% {
+    opacity: 0; } }
+
+@-webkit-keyframes feedbackBlink {
+  0% {
+    opacity: 1; }
+  5% {
+    opacity: 1; }
+  6% {
+    opacity: 0; }
+  7.25% {
+    opacity: 1; }
+  8.5% {
+    opacity: 0; }
+  8.6% {
+    opacity: 1; }
+  100% {
+    opacity: 1; } }
+
+@keyframes feedbackBlink {
+  0% {
+    opacity: 1; }
+  5% {
+    opacity: 1; }
+  6% {
+    opacity: 0; }
+  7.25% {
+    opacity: 1; }
+  8.5% {
+    opacity: 0; }
+  8.6% {
+    opacity: 1; }
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes feedbackPupilBlink {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0); }
+  20% {
+    -webkit-transform: translate(-0.5px, -0.5px);
+            transform: translate(-0.5px, -0.5px); }
+  28% {
+    -webkit-transform: translate(-0.5px, -0.5px);
+            transform: translate(-0.5px, -0.5px); }
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0); } }
+
+@keyframes feedbackPupilBlink {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0); }
+  20% {
+    -webkit-transform: translate(-0.5px, -0.5px);
+            transform: translate(-0.5px, -0.5px); }
+  28% {
+    -webkit-transform: translate(-0.5px, -0.5px);
+            transform: translate(-0.5px, -0.5px); }
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0); } }
 
 
-//////////////////
-// WEBPACK FOOTER
-// ./src/client/common/components/Octopus.scss
-// module id = 518
-// module chunks = 0
+
+// WEBPACK FOOTER //
+// src/client/common/components/Octopus.scss

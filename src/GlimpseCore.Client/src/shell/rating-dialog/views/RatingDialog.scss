@@ -1,9 +1,292 @@
-// removed by extract-text-webpack-plugin
-module.exports = {"overlay":"RatingDialog__overlay___3euBc","content":"RatingDialog__content___1gNK8","fadeDialogIn":"RatingDialog__fadeDialogIn___25xWJ","closeIcon":"RatingDialog__closeIcon___lWXfl","dialog":"RatingDialog__dialog___29a_D","isThanks":"RatingDialog__isThanks___9o0cZ","section":"RatingDialog__section___1mYMY","label":"RatingDialog__label___1Awit","isBold":"RatingDialog__isBold___RSFmO","isLeftGap":"RatingDialog__isLeftGap___1VkgV","rating":"RatingDialog__rating___1AEdB","ratingLabelFadeIn":"RatingDialog__ratingLabelFadeIn___3IRsu","button":"RatingDialog__button___2huEC","isDisabled":"RatingDialog__isDisabled___1HQIV","isGrayButton":"RatingDialog__isGrayButton___31alB","isBackButton":"RatingDialog__isBackButton___38teP","submitIcon":"RatingDialog__submitIcon___vbjnY","count":"RatingDialog__count___371xI","isExeed":"RatingDialog__isExeed___2Tm18","tick":"RatingDialog__tick___3roiE","octopus":"RatingDialog__octopus___q4tPe","octopusTentacles":"RatingDialog__octopusTentacles___1TCBY","octopusEnter":"RatingDialog__octopusEnter___1sPYx","smileyFeedback":"RatingDialog__smileyFeedback___aQqGr","leave":"RatingDialog__leave___2catr","octopusLeave":"RatingDialog__octopusLeave___1eATi","topTentacle":"RatingDialog__topTentacle___PF3Os","bottomTentacle":"RatingDialog__bottomTentacle___2MZiD","tentacleEnter":"RatingDialog__tentacleEnter____EiE7","tentacleLeave":"RatingDialog__tentacleLeave___1kCjx"};
+.overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(20, 20, 20, 0.85);
+  z-index: 100; }
+
+.content {
+  background: transparent;
+  position: absolute;
+  width: 475px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  outline: none;
+  -webkit-animation: fadeDialogIn .55s ease-out;
+          animation: fadeDialogIn .55s ease-out; }
+
+.closeIcon {
+  position: absolute;
+  fill: #cbcbcb;
+  fill: var(--gray4);
+  width: 15px;
+  height: 15px;
+  right: 15px;
+  top: 15px; }
+  .closeIcon:hover {
+    fill: #f7f7f7;
+    fill: var(--primaryForegroundColor);
+    cursor: pointer; }
+
+@-webkit-keyframes fadeDialogIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes fadeDialogIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+.dialog {
+  background: #1b1b1c;
+  background: var(--primaryBackgroundColor);
+  -webkit-box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.5);
+          box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.5);
+  padding: 20px 40px;
+  padding-top: 30px;
+  color: #cbcbcb;
+  color: var(--gray4);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid rgba(255, 255, 255, 0.1); }
+  .dialog.isThanks {
+    padding-bottom: 40px; }
+
+.section {
+  position: relative; }
+  .section + .section {
+    margin-top: 20px; }
+  .section textarea,
+  .section input {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    border: none;
+    resize: none; }
+    .section textarea:focus,
+    .section input:focus {
+      outline: none;
+      -webkit-box-shadow: 4px 4px 0 rgba(255, 255, 255, 0.4);
+              box-shadow: 4px 4px 0 rgba(255, 255, 255, 0.4); }
+  .section textarea {
+    height: 75px;
+    padding: 5px 10px; }
+  .section input {
+    height: 30px;
+    padding: 0 10px;
+    line-height: 0; }
+
+.label {
+  font-size: 12px;
+  letter-spacing: .5px; }
+  .label.isBold {
+    font-weight: bold;
+    letter-spacing: .75px; }
+  .label.isLeftGap {
+    padding-left: 47px; }
+  .label + textarea,
+  .label + input {
+    margin-top: 10px; }
+
+.rating {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border: 2px solid white;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  top: -8px;
+  -webkit-animation: ratingLabelFadeIn 0.7s cubic-bezier(0, 0.855, 0.41, 0.995) both;
+          animation: ratingLabelFadeIn 0.7s cubic-bezier(0, 0.855, 0.41, 0.995) both; }
+
+.button {
+  background: #059FF5;
+  padding: 7px 20px 9px;
+  text-decoration: none;
+  color: white;
+  display: inline-block; }
+  .button:hover {
+    opacity: .95; }
+  .button.isDisabled {
+    opacity: .25;
+    cursor: default; }
+    .button.isDisabled:hover {
+      opacity: .25; }
+    .button.isDisabled:focus {
+      outline: none;
+      -webkit-box-shadow: none;
+              box-shadow: none; }
+  .button.isGrayButton {
+    background: #999999;
+    background: var(--softTextColor);
+    background: #555;
+    margin-left: 15px; }
+    .button.isGrayButton:focus {
+      -webkit-box-shadow: 4px 4px 0 rgba(85, 85, 85, 0.4);
+              box-shadow: 4px 4px 0 rgba(85, 85, 85, 0.4); }
+  .button.isBackButton {
+    background: transparent;
+    float: right; }
+    .button.isBackButton:hover, .button.isBackButton:focus {
+      text-decoration: underline; }
+    .button.isBackButton:focus {
+      -webkit-box-shadow: none;
+              box-shadow: none; }
+  .button:focus {
+    outline: none;
+    -webkit-box-shadow: 4px 4px 0 rgba(5, 159, 245, 0.4);
+            box-shadow: 4px 4px 0 rgba(5, 159, 245, 0.4); }
+
+.submitIcon {
+  width: 17px;
+  height: 17px;
+  float: left;
+  margin-right: 10px;
+  margin-left: -5px;
+  position: relative;
+  top: 1px; }
+
+.count {
+  margin-top: 5px;
+  text-align: right; }
+  .count.isExeed {
+    color: #b03b00;
+    color: var(--errorColor); }
+
+.tick {
+  font-size: 18px;
+  color: #71B252;
+  color: var(--httpsProtocolColor);
+  padding-right: 7.5px; }
+
+@-webkit-keyframes ratingLabelFadeIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5); }
+  to {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+
+@keyframes ratingLabelFadeIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5); }
+  to {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+
+.octopus,
+.octopusTentacles {
+  position: absolute;
+  height: 10rem;
+  width: 10rem;
+  top: -1.5rem;
+  left: -3.5rem;
+  -webkit-animation: octopusEnter .8s .1s ease both;
+          animation: octopusEnter .8s .1s ease both; }
+  .smileyFeedback.leave .octopus, .smileyFeedback.leave
+  .octopusTentacles {
+    -webkit-animation: octopusLeave .5s .1s ease-in both;
+            animation: octopusLeave .5s .1s ease-in both; }
+
+@-webkit-keyframes octopusEnter {
+  from {
+    -webkit-transform: translate(25%, 25%);
+            transform: translate(25%, 25%); }
+  50% {
+    -webkit-transform: translate(-2%, -2%);
+            transform: translate(-2%, -2%); }
+  to {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0); } }
+
+@keyframes octopusEnter {
+  from {
+    -webkit-transform: translate(25%, 25%);
+            transform: translate(25%, 25%); }
+  50% {
+    -webkit-transform: translate(-2%, -2%);
+            transform: translate(-2%, -2%); }
+  to {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0); } }
+
+@-webkit-keyframes octopusLeave {
+  to {
+    -webkit-transform: translate(25%, 25%);
+            transform: translate(25%, 25%); } }
+
+@keyframes octopusLeave {
+  to {
+    -webkit-transform: translate(25%, 25%);
+            transform: translate(25%, 25%); } }
+
+.topTentacle {
+  stroke-dasharray: 26px;
+  stroke-dashoffset: 26px; }
+
+.bottomTentacle {
+  stroke-dasharray: 32px;
+  stroke-dashoffset: 32px; }
+
+.topTentacle,
+.bottomTentacle {
+  fill: transparent;
+  -webkit-animation: tentacleEnter .6s .4s ease-out forwards;
+          animation: tentacleEnter .6s .4s ease-out forwards; }
+  .smileyFeedback.leave .topTentacle, .smileyFeedback.leave
+  .bottomTentacle {
+    -webkit-animation: tentacleLeave .2s ease-in backwards;
+            animation: tentacleLeave .2s ease-in backwards;
+    -webkit-animation-delay: 0;
+            animation-delay: 0; }
+
+@-webkit-keyframes tentacleEnter {
+  to {
+    stroke-dashoffset: 0; } }
+
+@keyframes tentacleEnter {
+  to {
+    stroke-dashoffset: 0; } }
+
+@-webkit-keyframes tentacleLeave {
+  from {
+    stroke-dashoffset: 0; } }
+
+@keyframes tentacleLeave {
+  from {
+    stroke-dashoffset: 0; } }
+
+.octopus {
+  z-index: -2; }
+
+@supports (-ms-ime-align: auto) {
+  .topTentacle,
+  .bottomTentacle {
+    stroke-dashoffset: 0 !important;
+    -webkit-animation: none !important;
+            animation: none !important; }
+  .octopus,
+  .octopusTentacles {
+    -webkit-animation: none !important;
+            animation: none !important; } }
 
 
-//////////////////
-// WEBPACK FOOTER
-// ./src/client/shell/rating-dialog/views/RatingDialog.scss
-// module id = 58
-// module chunks = 0
+
+// WEBPACK FOOTER //
+// src/client/shell/rating-dialog/views/RatingDialog.scss

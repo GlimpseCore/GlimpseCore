@@ -1,9 +1,106 @@
-// removed by extract-text-webpack-plugin
-module.exports = {"errorScreen":"ErrorScreen__errorScreen___2MLaJ","fadeIn":"ErrorScreen__fadeIn___28R1H","imageWithText":"ErrorScreen__imageWithText___gWQQT","image":"ErrorScreen__image___15iaQ","zoomIn":"ErrorScreen__zoomIn___1aHeN","description":"ErrorScreen__description___3EAqb","buttons":"ErrorScreen__buttons___3Di0F","button":"ErrorScreen__button___1Gxma","isResetButton":"ErrorScreen__isResetButton___1ZQeT"};
+.errorScreen {
+  background: #1b1b1c;
+  background: var(--primaryBackgroundColor);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 101;
+  letter-spacing: .025rem;
+  -webkit-animation: fadeIn .35s ease-out;
+          animation: fadeIn .35s ease-out; }
+
+.imageWithText {
+  width: 30rem;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 12px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #999999;
+  color: var(--softTextColor); }
+
+.image {
+  width: 14rem;
+  height: 10rem;
+  margin: 0 auto;
+  background-image: url("assets/images/error/error-octopus.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% auto;
+  -webkit-animation: zoomIn 0.7s cubic-bezier(0, 0.305, 0, 1.005);
+          animation: zoomIn 0.7s cubic-bezier(0, 0.305, 0, 1.005); }
+
+.description {
+  margin-top: 1.5rem; }
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@-webkit-keyframes zoomIn {
+  from {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95); }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+
+@keyframes zoomIn {
+  from {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95); }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+
+.buttons {
+  margin-top: 28px; }
+
+.button {
+  background: #0CD324;
+  color: white;
+  font-weight: bold;
+  padding: 6px 8px;
+  padding-bottom: 9px;
+  letter-spacing: .5px;
+  margin-right: 10px;
+  font-size: 13px;
+  width: 80px;
+  cursor: pointer;
+  border-radius: 2px; }
+  .button:hover {
+    opacity: .9;
+    -webkit-box-shadow: 3px 3px 0 rgba(255, 255, 255, 0.35);
+            box-shadow: 3px 3px 0 rgba(255, 255, 255, 0.35); }
+  .button:focus {
+    -webkit-box-shadow: 3px 3px 0 rgba(255, 255, 255, 0.35);
+            box-shadow: 3px 3px 0 rgba(255, 255, 255, 0.35);
+    outline: none; }
+  .button:active {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    outline: none;
+    -webkit-transform: translate(3px, 3px);
+            transform: translate(3px, 3px); }
+  .button.isResetButton {
+    background: #E8191C;
+    margin: 0;
+    margin-left: 10px; }
 
 
-//////////////////
-// WEBPACK FOOTER
-// ./src/client/common/components/ErrorScreen.scss
-// module id = 611
-// module chunks = 0
+
+// WEBPACK FOOTER //
+// src/client/common/components/ErrorScreen.scss

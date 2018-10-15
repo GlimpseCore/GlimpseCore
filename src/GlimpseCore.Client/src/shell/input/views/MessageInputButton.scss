@@ -1,9 +1,9 @@
-// removed by extract-text-webpack-plugin
-module.exports = {"input":"MessageInputButton__input___2F_dv"};
+.input {
+  display: block;
+  width: 100%;
+  height: calc(100vh - 18rem); }
 
 
-//////////////////
-// WEBPACK FOOTER
-// ./src/client/shell/input/views/MessageInputButton.scss
-// module id = 503
-// module chunks = 0
+
+// WEBPACK FOOTER //
+// src/client/shell/input/views/MessageInputButton.scss

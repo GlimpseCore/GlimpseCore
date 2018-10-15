@@ -1,9 +1,24 @@
-// removed by extract-text-webpack-plugin
-module.exports = {"url":"UrlText__url___-G2gf","urlProtocolHttps":"UrlText__urlProtocolHttps___BT4-U","urlProtocolHttpsColor":"UrlText__urlProtocolHttpsColor___1iwZP"};
+.url {
+  white-space: nowrap;
+  letter-spacing: 0.25px; }
+
+.urlProtocolHttps {
+  height: 1rem;
+  width: 1rem;
+  vertical-align: baseline;
+  margin-bottom: -2px;
+  margin-left: -1px; }
+
+.urlProtocolHttpsColor {
+  color: #71B252;
+  color: var(--httpsProtocolColor);
+  fill: #71B252;
+  fill: var(--httpsProtocolColor); }
+
+.urlProtocolHttps {
+  margin-right: 2px; }
 
 
-//////////////////
-// WEBPACK FOOTER
-// ./src/client/common/components/UrlText.scss
-// module id = 361
-// module chunks = 0
+
+// WEBPACK FOOTER //
+// src/client/common/components/UrlText.scss

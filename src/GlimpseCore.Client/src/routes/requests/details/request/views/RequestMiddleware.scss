@@ -1,9 +1,113 @@
-// removed by extract-text-webpack-plugin
-module.exports = {"middleware":"RequestMiddleware__middleware___1g43P","middlewareTitle":"RequestMiddleware__middlewareTitle___2nkM-","middlewareLegend":"RequestMiddleware__middlewareLegend___2NSfi","middlewareLegendItem":"RequestMiddleware__middlewareLegendItem___I1Nwc","middlewareValueHeader":"RequestMiddleware__middlewareValueHeader___1PhUg","middlewareBody":"RequestMiddleware__middlewareBody___nwb5O","middlewareIndent":"RequestMiddleware__middlewareIndent___1Tzh1","middlewareList":"RequestMiddleware__middlewareList___2hbij","middlewareModifiedItem":"RequestMiddleware__middlewareModifiedItem___3r1LC","middlewareOperation":"RequestMiddleware__middlewareOperation___WNDow","middlewareIcon":"RequestMiddleware__middlewareIcon___zxsGk","middlewareStatusCode":"RequestMiddleware__middlewareStatusCode___sBygu","middlewareRequestIcon":"RequestMiddleware__middlewareRequestIcon___Fic3s RequestMiddleware__middlewareIcon___zxsGk","middlewareResponseIcon":"RequestMiddleware__middlewareResponseIcon___3kupI RequestMiddleware__middlewareIcon___zxsGk","middlewareOperationType":"RequestMiddleware__middlewareOperationType___Uza3O","middlewareDurationColumn":"RequestMiddleware__middlewareDurationColumn___3Ov3l","middlewareNameAnonymous":"RequestMiddleware__middlewareNameAnonymous___2zluq"};
+.middleware {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none; }
+
+.middlewareTitle {
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  color: #f7f7f7;
+  color: var(--headerForegroundColor); }
+
+.middlewareLegend {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-left: 1.5rem; }
+
+.middlewareLegendItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-right: 1rem; }
+
+.middlewareValueHeader {
+  overflow: hidden; }
+
+.middlewareBody {
+  vertical-align: top;
+  color: #cecece;
+  color: var(--tertiaryForegroundColor); }
+
+.middlewareIndent {
+  margin-left: 1.5rem; }
+
+.middlewareList {
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.middlewareModifiedItem, .middlewareOperation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%; }
+
+.middlewareOperation + .middlewareOperation,
+.middlewareModifiedItem + .middlewareModifiedItem {
+  margin-top: 0.75rem; }
+
+.middlewareIcon {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  height: 1.2rem;
+  margin-right: 0.2rem;
+  width: 1.2rem; }
+
+.middlewareStatusCode {
+  /* Account for icon margins in aligning StatusLabel with plain text. */
+  margin-left: -0.25rem; }
+
+.middlewareRequestIcon {
+  composes: middlewareIcon;
+  fill: #2379FF;
+  fill: var(--requestColor); }
+
+.middlewareResponseIcon {
+  composes: middlewareIcon;
+  fill: #64ADCC;
+  fill: var(--responseColor); }
+
+.middlewareOperationType {
+  color: #999999;
+  color: var(--secondaryForegroundColor); }
+
+.middlewareDurationColumn {
+  text-align: right; }
+
+.middlewareNameAnonymous {
+  color: #999999;
+  color: var(--secondaryForegroundColor); }
 
 
-//////////////////
-// WEBPACK FOOTER
-// ./src/client/routes/requests/details/request/views/RequestMiddleware.scss
-// module id = 210
-// module chunks = 0
+
+// WEBPACK FOOTER //
+// src/client/routes/requests/details/request/views/RequestMiddleware.scss
