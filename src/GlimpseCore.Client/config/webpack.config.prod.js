@@ -235,15 +235,11 @@ module.exports = {
           {
             test: /\.scss$/,
             use: extractSass.extract({
-              use: [{
-                loader: 'css-loader', 
-                options: {
-                  modules: true,
-                }
-              }, 
-              { loader: 'postcss-loader'}, 
-              { loader: 'resolve-url-loader'}, 
-              { loader: 'sass-loader', options: {sourceMap: true}}],
+              use: [
+                { loader: 'css-loader', options: { modules: true, sourceMap: true }}, 
+                'resolve-url-loader', 
+                { loader: 'sass-loader', options: { modules: true, sourceMap: true}}
+              ],
               fallback: 'style-loader'
             })
           },
@@ -340,6 +336,7 @@ module.exports = {
     new ExtractTextPlugin({
       filename: cssFilename,
     }),
+    extractSass,
     // Generate a manifest file which contains a mapping of all asset filenames
     // to their corresponding output file so that tools can pick it up without
     // having to parse `index.html`.
