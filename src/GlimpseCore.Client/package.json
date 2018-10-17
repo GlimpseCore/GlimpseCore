@@ -99,6 +99,7 @@
     "reselect": "^3.0.1",
     "resize-observer-polyfill": "^1.5.0",
     "resolve": "1.6.0",
+    "resolve-url-loader": "^2.0.0",
     "source-map-loader": "^0.2.1",
     "sourcemapped-stacktrace": "^1.1.8",
     "stackframe": "^1.0.4",

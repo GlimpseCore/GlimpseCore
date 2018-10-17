@@ -209,8 +209,10 @@ module.exports = {
                 loader: require.resolve('css-loader'),
                 options: {
                   sourceMap: true,
+                  modules: true,
                 }
               },
+              require.resolve('resolve-url-loader'),
               {
                 loader: require.resolve('sass-loader'),
                 options: {
