@@ -236,11 +236,11 @@ module.exports = {
             test: /\.scss$/,
             use: extractSass.extract({
               use: [
+                { loader: 'style-loader' },
                 { loader: 'css-loader', options: { modules: true, sourceMap: true }}, 
-                'resolve-url-loader', 
-                { loader: 'sass-loader', options: { modules: true, sourceMap: true}}
-              ],
-              fallback: 'style-loader'
+                { loader: 'resolve-url-loader' }, 
+                { loader: 'sass-loader', options: { sourceMap: true}}
+              ]
             })
           },
           // "file" loader makes sure assets end up in the `build` folder.
