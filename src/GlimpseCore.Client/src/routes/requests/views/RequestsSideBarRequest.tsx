@@ -30,7 +30,7 @@ export interface IRequestsSideBarRequestProps {
     startTime: string;
     id: string;
     to: string;
-    userAgent: string;
+    userAgent: any;
 }
 
 export interface IRequestsSideBarRequestCallbacks {
@@ -131,7 +131,7 @@ function mapStateToProps(
 
     const browserNavigationTimingMessage = getSingleMessageByType<
         Glimpse.Messages.Payloads.Browser.INavigationTiming
-    >(request.context.byType, Glimpse.Messages.Payloads.Browser.NavigationTimingType);
+    >(request.context.byType, "Glimpse.Messages.Payloads.Browser.NavigationTimingType");
     const browserNavigationTiming =
         browserNavigationTimingMessage && browserNavigationTimingMessage.payload;
 

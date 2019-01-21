@@ -213,11 +213,11 @@ export const getRequestsLookup: (state: IStoreState) => IRequestsLookup = (() =>
             // we only have the concept of a request once we have both messages
             const webRequest = getSingleMessageByType<Glimpse.Messages.Payloads.Web.IRequest>(
                 context.byType,
-                Glimpse.Messages.Payloads.Web.RequestType
+                "Glimpse.Messages.Payloads.Web.RequestType"
             );
             const webResponse = getSingleMessageByType<Glimpse.Messages.Payloads.Web.IResponse>(
                 context.byType,
-                Glimpse.Messages.Payloads.Web.ResponseType
+                "Glimpse.Messages.Payloads.Web.ResponseType"
             );
             if (webRequest && webResponse) {
                 const contentTypeClass = classifyRequest(webRequest, webResponse);
@@ -228,7 +228,7 @@ export const getRequestsLookup: (state: IStoreState) => IRequestsLookup = (() =>
                     context,
                     mediaType: contentTypeClass,
                     requestStartStamp: new Date(webRequest.payload.startTime).getTime()
-                };
+                } as any;
 
                 sortNeeded =
                     sortNeeded ||

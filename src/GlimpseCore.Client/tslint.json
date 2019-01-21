@@ -10,6 +10,32 @@
   "rules": {
     "no-console": false,
     "no-shadowed-variable": false,
-    "object-literal-sort-keys": false
+    "object-literal-sort-keys": false,
+    "object-literal-shorthand": false,
+    "no-angle-bracket-type-assertion": false,
+    "ordered-imports": false,
+    "one-variable-per-declaration": false,
+    "ban-types": false,
+    "jsx-no-lambda": false,
+    "member-ordering": false,
+    "array-type": false,
+    "no-empty-interface": false,
+    "variable-name": false,
+    "prefer-const": false,
+    "max-classes-per-file": false,
+    "prefer-for-of": false,
+    "forin": false,
+    "triple-equals": false,
+    "no-unnecessary-initializer": false,
+    "no-namespace": false,
+    "no-var-keyword": false,
+    "no-var-requires": false,
+    "only-arrow-functions": false,
+    "callable-types": false,
+    "comment-format": false,
+    "jsx-no-string-ref": false,
+    "no-string-literal": false,
+    "jsx-boolean-value": false,
+    "interface-name": false
   }
 }

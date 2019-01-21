@@ -18,7 +18,7 @@ export const getBrowserResources = createSelector(getSelectedContext, selectedCo
         return flatten(
             getMessageByType<Glimpse.Messages.Payloads.Browser.IResource>(
                 selectedContext.byType,
-                Glimpse.Messages.Payloads.Browser.ResourceType
+                "Glimpse.Messages.Payloads.Browser.ResourceType"
             ).map(message => message.payload.timings)
         );
     } else {

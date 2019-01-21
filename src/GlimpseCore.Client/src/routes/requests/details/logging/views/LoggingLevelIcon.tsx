@@ -5,6 +5,7 @@ import { LoggingMessageLevel } from '../LoggingInterfaces';
 
 import styles from './LoggingLevelIcon.scss';
 import { Icon } from '@common/components/Icon';
+import { IconShapeType } from '@common/components/AgentTypeIcon';
 
 export interface ILevelIconProps {
     level: LoggingMessageLevel;

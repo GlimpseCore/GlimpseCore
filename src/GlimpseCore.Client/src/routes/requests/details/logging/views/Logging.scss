@@ -20,7 +20,7 @@
   margin-top: 0.125rem; }
 
 .logViewTable {
-  composes: table from "common/components/Common.scss";
+  composes: table from "../../../../../common/components/Common.scss";
   position: absolute;
   top: 0;
   left: 0;
@@ -164,6 +164,7 @@ that the padding is the same, even if technically speaking it isn't.
     display: table-cell; }
 
 
-
+/*
 // WEBPACK FOOTER //
 // src/client/routes/requests/details/logging/views/Logging.scss
+*/

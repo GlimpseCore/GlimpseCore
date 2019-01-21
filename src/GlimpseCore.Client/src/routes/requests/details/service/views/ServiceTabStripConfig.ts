@@ -22,14 +22,14 @@ import {
 import { BodyView } from '@routes/requests/details/components/request-response-tab-strip/body/BodyView';
 import { HeadersView } from '@routes/requests/details/components/request-response-tab-strip/headers/HeadersView';
 
-const requestHeadersView = connect(getFilteredRequestHeadersSelector)(HeadersView);
-const responseHeadersView = connect(getFilteredResponseHeadersSelector)(HeadersView);
+const requestHeadersView = connect(getFilteredRequestHeadersSelector)(HeadersView as any);
+const responseHeadersView = connect(getFilteredResponseHeadersSelector)(HeadersView as any);
 
 const requestBodyView = connect(getRequestBodySelector)(BodyView);
 const responseBodyView = connect(getResponseBodySelector)(BodyView);
 
-const requestCookiesView = connect(getFilteredRequestHeadersSelector)(RequestCookiesView);
-const responseCookiesView = connect(getFilteredResponseCookiesSelector)(ResponseCookiesView);
+const requestCookiesView = connect(getFilteredRequestHeadersSelector)(RequestCookiesView as any);
+const responseCookiesView = connect(getFilteredResponseCookiesSelector)(ResponseCookiesView as any);
 
 const requestQueryView = connect(getRequestQuerySelector)(QueryView);
 

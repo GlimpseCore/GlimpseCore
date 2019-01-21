@@ -95,6 +95,7 @@ module.exports = {
     // `web` extension prefixes have been added for better support
     // for React Native Web.
     extensions: [
+      '.scss',
       '.mjs',
       '.web.ts',
       '.ts',
@@ -104,7 +105,7 @@ module.exports = {
       '.js',
       '.json',
       '.web.jsx',
-      '.jsx',
+      '.jsx'
     ],
     alias: {
       
@@ -118,7 +119,7 @@ module.exports = {
       // To fix this, we prevent you from importing files out of src/ -- if you'd like to,
       // please link the files into your node_modules/ and let module-resolution kick in.
       // Make sure your source files are compiled, as they will not be processed in any way.
-      new ModuleScopePlugin(paths.appSrc, [paths.appPackageJson]),
+      //new ModuleScopePlugin(paths.appSrc, [paths.appPackageJson]),
       new TsconfigPathsPlugin({ configFile: paths.appTsProdConfig }),
     ],
   },
@@ -236,10 +237,10 @@ module.exports = {
             test: /\.scss$/,
             use: extractSass.extract({
               use: [
-                { loader: 'style-loader' },
-                { loader: 'css-loader', options: { modules: true, sourceMap: true }}, 
-                { loader: 'resolve-url-loader' }, 
-                { loader: 'sass-loader', options: { sourceMap: true}}
+                // { fallback: 'style-loader' },
+                { loader: 'css-loader', options: { modules: true, sourceMap: true }},
+                { loader: 'resolve-url-loader' },
+                { loader: 'sass-loader', options: { sourceMap: true, sourceMapContents: false }}
               ]
             })
           },

@@ -72,12 +72,12 @@ export const getWebServiceExchanges: (state: IStoreState) => IExchangeModel[] = 
             ? getMessageByType<
                   Glimpse.Messages.Payloads.Data.Http.IRequest &
                       Glimpse.Messages.Payloads.Mixin.ICallStack
-              >(selectedContext.byType, Glimpse.Messages.Payloads.Data.Http.RequestType)
+              >(selectedContext.byType, "Glimpse.Messages.Payloads.Data.Http.RequestType")
             : [];
         const rawResponses = selectedContext
             ? getMessageByType<Glimpse.Messages.Payloads.Data.Http.IResponse>(
                   selectedContext.byType,
-                  Glimpse.Messages.Payloads.Data.Http.ResponseType
+                  "Glimpse.Messages.Payloads.Data.Http.ResponseType"
               )
             : [];
         return { rawRequests, rawResponses };
@@ -236,14 +236,14 @@ export const getSelectedExchangeResponse = createSelector(getSelectedExchange, s
  * Selector to get unfiltered request headers for the currently selected exchange
  */
 export const getRequestHeadersSelector = createGetRequestHeadersSelector(
-    getSelectedExchangeRequest
+    getSelectedExchangeRequest as any
 );
 
 /**
  * Selector to get unfiltered response headers for currently selected exchange
  */
 export const getResponseHeadersSelector = createGetResponseHeadersSelector(
-    getSelectedExchangeResponse
+    getSelectedExchangeResponse as any
 );
 
 /**
@@ -264,24 +264,24 @@ export const getFilteredResponseHeadersSelector = createGetFilteredResponseHeade
  * Selector to get filtered response cookies for currently selected exchange
  */
 export const getFilteredResponseCookiesSelector = createGetFilteredResponseCookiesSelector(
-    getSelectedExchangeResponse,
+    getSelectedExchangeResponse as any,
     getFilteredResponseHeadersSelector
 );
 
 /**
  * Selector to get request body for currently selected exchange
  */
-export const getRequestBodySelector = createGetBodySelector(getSelectedExchangeRequest);
+export const getRequestBodySelector = createGetBodySelector(getSelectedExchangeRequest as any);
 
 /**
  * Selector to get repsonse body for currently selected exchange
  */
-export const getResponseBodySelector = createGetBodySelector(getSelectedExchangeResponse);
+export const getResponseBodySelector = createGetBodySelector(getSelectedExchangeResponse as any);
 
 /**
  * Selector to get request query for currently selected exchange
  */
-export const getRequestQuerySelector = createGetQuerySelector(getSelectedExchangeRequest);
+export const getRequestQuerySelector = createGetQuerySelector(getSelectedExchangeRequest as any);
 
 //
 // COUNT RECORDS SELECTORS
@@ -366,7 +366,7 @@ export const getUnfilteredByStatusCodeClassCounts = createSelector(
     countByStatusCodeClass
 );
 
-export const getStatusCodeFilterSummaries = (function() {
+export const getStatusCodeFilterSummaries = (() => {
     const getFilteredByStatusCodeCounts = createSelector(
         getAgentFilteredtWebServiceExchanges,
         countByStatusCodeClass

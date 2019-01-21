@@ -6,7 +6,7 @@ interface IToken {
     type: string;
     value?: string;
     specifier?: string;
-    precision?: string;
+    precision?: number;
     substitutionIndex?: string;
 }
 export default function tokenizeFormatString(format, formatters) {

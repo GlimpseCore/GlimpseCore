@@ -70,7 +70,7 @@ function mapStateToProps(
 
     const browserNavigationTimingMessage = getSingleMessageByType<
         Glimpse.Messages.Payloads.Browser.INavigationTiming
-    >(request.context.byType, Glimpse.Messages.Payloads.Browser.NavigationTimingType);
+    >(request.context.byType, "Glimpse.Messages.Payloads.Browser.NavigationTimingType");
     const browserNavigationTiming =
         browserNavigationTimingMessage && browserNavigationTimingMessage.payload;
 

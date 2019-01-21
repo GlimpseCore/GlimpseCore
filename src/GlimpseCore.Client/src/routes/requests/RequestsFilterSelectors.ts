@@ -23,7 +23,7 @@ const OTHER_METHOD_NAME = 'Other';
 
 export const methodNames = ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS', OTHER_METHOD_NAME];
 
-export const getFilteredRequests: (state: IStoreState) => IRequestFilterDetails = (function() {
+export const getFilteredRequests: (state: IStoreState) => IRequestFilterDetails = (() => {
     function statusCodeGroup(status: number) {
         return (Math.round(status / 100) * 100).toString();
     }
@@ -133,7 +133,7 @@ export const getFilteredRequests: (state: IStoreState) => IRequestFilterDetails 
                 byId
             };
         }
-    );
+    ) as any;
 })();
 
 

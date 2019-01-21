@@ -47,6 +47,8 @@ export class HeadersView extends React.Component<IHeadersProps, {}> {
                 />
             );
         }
+
+        return {};
     }
 
     private renderTable(headers: { [key: string]: string[] }) {

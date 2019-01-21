@@ -170,7 +170,7 @@ export function requestsPersistedRequestReducer(
 ): IStorePersistedRequestsState {
     const result = rawRequestsPersistedRequestReducer(state, action);
 
-    return action.type === purgeOldRequestsAction.type ? purgeOldRecords(result) : result;
+    return action.type === purgeOldRequestsAction.type ? purgeOldRecords(result as any) : result;
 }
 
 

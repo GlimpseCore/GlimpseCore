@@ -38,10 +38,10 @@ export class DebugView extends React.Component<IDebugViewProps, {}> {
                 <table className={commonStyles.table}>
                     <thead>
                         <tr>
-                            <th width="50">Ordinal</th>
-                            <th width="10%">Type</th>
-                            <th width="80">ID</th>
-                            <th width="50%">Payload</th>
+                            <th style={{width: "50"}}>Ordinal</th>
+                            <th style={{width: "10%"}}>Type</th>
+                            <th style={{width: "80"}}>ID</th>
+                            <th style={{width: "50%"}}>Payload</th>
                         </tr>
                         <tr><td colSpan={4} className={commonStyles.tableHeadSpacer} /></tr>
                     </thead>

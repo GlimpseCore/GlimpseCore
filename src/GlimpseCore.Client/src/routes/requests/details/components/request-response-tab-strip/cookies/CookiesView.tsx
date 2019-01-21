@@ -9,6 +9,7 @@ import styles from '../headers/HeadersView.scss';
 import cookieStyles from './CookiesView.scss';
 import commonStyles from '@common/components/Common.scss';
 import { Icon } from '@common/components/Icon';
+import { IconShapeType } from '@common/components/AgentTypeIcon';
 import {
     FixedWidthLeftColumnTable,
     IColumnInfo

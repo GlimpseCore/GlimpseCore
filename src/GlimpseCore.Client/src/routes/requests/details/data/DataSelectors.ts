@@ -1,4 +1,4 @@
-import * as Glimpse from '@_glimpse/glimpse-definitions';
+// import * as Glimpse from '@_glimpse/glimpse-definitions';
 import { createSelector } from 'reselect';
 import { getNamesForEnum } from '@common/util/CommonUtilities';
 
@@ -52,7 +52,7 @@ export const getOperations = createSelector(
                         getDataOperations(
                             selectedContext,
                             offsetFactor,
-                            Glimpse.Messages.Payloads.Data.Store.Mongodb.InsertType,
+                            "InsertType", // Glimpse.Messages.Payloads.Data.Store.Mongodb.InsertType,
                             createMongoDbInsertOperation
                         )
                     )
@@ -61,7 +61,7 @@ export const getOperations = createSelector(
                         getDataOperations(
                             selectedContext,
                             offsetFactor,
-                            Glimpse.Messages.Payloads.Data.Store.Mongodb.UpdateType,
+                            "UpdateType", // Glimpse.Messages.Payloads.Data.Store.Mongodb.UpdateType,
                             createMongoDbUpdateOperation
                         )
                     )
@@ -69,7 +69,7 @@ export const getOperations = createSelector(
                         getDataOperations(
                             selectedContext,
                             offsetFactor,
-                            Glimpse.Messages.Payloads.Data.Store.Mongodb.DeleteType,
+                            "DeleteType", // Glimpse.Messages.Payloads.Data.Store.Mongodb.DeleteType,
                             createMongoDbDeleteOperation
                         )
                     )

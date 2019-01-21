@@ -17,9 +17,9 @@ import { getFilters, isFilterReset } from '@client/routes/requests/RequestsFilte
 
 export interface IShellSideBarContainerProps {
     title: string;
-    isExpandable: boolean;
-    isImportant: boolean;
-    noChildText: string;
+    isExpandable?: boolean;
+    isImportant?: boolean;
+    noChildText?: string;
     requestFilterDetails: IRequestFilterDetails;
     filterMode: boolean;
 }
@@ -77,7 +77,7 @@ class SideBarSection extends React.Component<
             onFilterChange,
             onFilterReset,
             filters,
-            filterMode
+            filterMode,
         } = this.props;
 
         return (

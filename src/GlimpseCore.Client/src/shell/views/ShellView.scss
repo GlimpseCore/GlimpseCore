@@ -1,11 +1,12 @@
-@import url(normalize.css);
+@import url('normalize.css');
+
 @font-face {
   font-family: 'Selawik';
-  src: url("assets/selawk.woff2") format("woff2"), url("assets/selawk.woff") format("woff"); }
+  src: url("../../assets/selawk.woff2") format("woff2"), url("../../assets/selawk.woff") format("woff"); }
 
 @font-face {
   font-family: 'Selawik Light';
-  src: url("assets/selawkl.woff2") format("woff2"), url("assets/selawkl.woff") format("woff"); }
+  src: url("../../assets/selawkl.woff2") format("woff2"), url("../../assets/selawkl.woff") format("woff"); }
 
 html {
   font-size: small;
@@ -112,6 +113,7 @@ button {
   z-index: 100; }
 
 
-
+/*
 // WEBPACK FOOTER //
 // src/client/shell/views/ShellView.scss
+*/

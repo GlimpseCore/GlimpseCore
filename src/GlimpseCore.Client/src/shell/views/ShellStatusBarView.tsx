@@ -23,8 +23,8 @@ export class ShellStatusBarView extends React.Component<IShellStatusBarViewProps
                       </div>
                     : undefined}
                 {<div className={styles.statusBarGroup}><ThemeBar /></div>}
-                <div className={styles.statusBarGroup}><VersionInfo /></div>
-                <div className={styles.statusBarGroup}><UpdateBlock /></div>
+                {/*<div className={styles.statusBarGroup}><VersionInfo /></div>
+                <div className={styles.statusBarGroup}><UpdateBlock /></div>*/}
             </div>
         );
     }

@@ -25,7 +25,7 @@ export const childConfigs = [
 // }
 
 if (DEBUG) {
-    childConfigs.push(debugConfig);
+    childConfigs.push(debugConfig as any);
 }
 
 export const tabData = processTabs(childConfigs);

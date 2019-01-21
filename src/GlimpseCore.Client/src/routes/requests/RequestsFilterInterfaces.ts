@@ -6,4 +6,7 @@ export interface IRequestsFilterState {
 export interface IRequestFilterDetails {
     indexedTotalCount: IRequestsFilterState
     filteredCount: number;
+    totalCount: number;
+    byId: any;
+    listing: any;
 }

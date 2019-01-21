@@ -33,8 +33,8 @@ import {
 export const getLoggingMessages = (function() {
     function isGroupMessage(message) {
         return (
-            message.types.indexOf(Glimpse.Messages.Payloads.Log.GroupBeginType) !== -1 ||
-            message.types.indexOf(Glimpse.Messages.Payloads.Log.GroupEndType) !== -1
+            message.types.indexOf("GroupBeginType") !== -1 || // Glimpse.Messages.Payloads.Log.GroupBeginType
+            message.types.indexOf("GroupEndType") !== -1 // Glimpse.Messages.Payloads.Log.GroupEndType
         );
     }
 
@@ -95,7 +95,7 @@ export const getLoggingMessages = (function() {
             message => message.ordinal
         ]).map((message, index) => {
             let ordinal;
-            if (message.types.indexOf(Glimpse.Messages.Payloads.Log.GroupEndType) === -1) {
+            if (message.types.indexOf("GroupEndType") === -1) { // Glimpse.Messages.Payloads.Log.GroupEndType
                 ordinal = currentOrdinal++;
             }
             const agent = isGroupMessage(message)
@@ -122,15 +122,15 @@ export const getLoggingMessages = (function() {
     function matchCorrelatedMessage(messages) {
         const correlationMessages = getMessagesByType(
             messages,
-            Glimpse.Messages.Payloads.Mixin.CorrelationType
+            "CorrelationType" // Glimpse.Messages.Payloads.Mixin.CorrelationType
         );
         const begins = getMessagesByType(
             correlationMessages,
-            Glimpse.Messages.Payloads.Mixin.CorrelationBeginType
+            "CorrelationBeginType" // Glimpse.Messages.Payloads.Mixin.CorrelationBeginType
         );
         const ends = getMessagesByType(
             correlationMessages,
-            Glimpse.Messages.Payloads.Mixin.CorrelationEndType
+            "CorrelationEndType" // Glimpse.Messages.Payloads.Mixin.CorrelationEndType
         );
 
         const beginsByContext = begins.reduce((result, message) => {
@@ -155,7 +155,7 @@ export const getLoggingMessages = (function() {
 
             if (allEnds && allEnds.length > 0) {
                 const end = allEnds[allEnds.length - 1];
-                const isGroup = end.types.indexOf(Glimpse.Messages.Payloads.Log.GroupEndType) > -1;
+                const isGroup = end.types.indexOf("GroupEndType") > -1; // Glimpse.Messages.Payloads.Log.GroupEndType
 
                 begin.correlations = {
                     end,
@@ -171,7 +171,7 @@ export const getLoggingMessages = (function() {
 
             if (begin) {
                 const isGroup =
-                    begin.types.indexOf(Glimpse.Messages.Payloads.Log.GroupBeginType) > -1;
+                    begin.types.indexOf("GroupBeginType") > -1; // Glimpse.Messages.Payloads.Log.GroupBeginType
 
                 end.correlations = { begin, isEnd: true, isGroup };
             }
@@ -297,7 +297,7 @@ export const getLoggingMessages = (function() {
 
     function calculateTableState(messages, collapsedState: (message: ILoggingMessage) => boolean) {
         for (const message of messages) {
-            if (message.types.indexOf(Glimpse.Messages.Payloads.Log.TableType) !== -1) {
+            if (message.types.indexOf("TableType") !== -1) { // Glimpse.Messages.Payloads.Log.TableType
                 message.isCollapsed = collapsedState(message);
             }
         }
@@ -311,7 +311,7 @@ export const getLoggingMessages = (function() {
             if (selectedContext) {
                 const rawMessages = getMessageByType<ILoggingMessagePayloads>(
                     selectedContext.byType,
-                    Glimpse.Messages.Payloads.Log.WriteType
+                    "WriteType" // Glimpse.Messages.Payloads.Log.WriteType
                 );
 
                 // TODO: this creates a new model every time, for stateless components to work this needs

@@ -36,7 +36,7 @@ export interface IColumnInfo {
      *
      *  - This function will be used to determine the overall width of this column.
      */
-    measureFunc: (param?: Object) => number;
+    measureFunc?: (param?: Object) => number;
 
     /**
      * (Optional) If valueFunc() returns a React element that's simply styled text, this function returns the raw text.
@@ -59,7 +59,7 @@ export interface IColumnInfo {
      *  - If this function returns a string, the length of that string will be used to determine the overall width of this column.
      *  - If this function returns a React element, specify measureFunc() or textFunc() to provide its width.
      */
-    valueFunc: (param: Object) => string | JSX.Element;
+    valueFunc: (param: Object) => string | JSX.Element | undefined;
 }
 
 export interface ITableProps {

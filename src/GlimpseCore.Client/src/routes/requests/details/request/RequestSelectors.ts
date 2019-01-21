@@ -29,14 +29,14 @@ function createSingleMessageSelector<T>(type: string) {
 // TODO: this should not be a selector, should use same method as getBrowserNavigationTiming.
 //       IContextByType provides index look up and does't need selector caching.
 export const getWebRequest = createSingleMessageSelector<Glimpse.Messages.Payloads.Web.IRequest>(
-    Glimpse.Messages.Payloads.Web.RequestType
+    "Glimpse.Messages.Payloads.Web.RequestType"
 );
 
 // TODO: should be refactored into `../request-selectors.ts'
 // TODO: this should not be a selector, should use same method as getBrowserNavigationTiming.
 //       IContextByType provides index look up and does't need selector caching.
 export const getWebResponse = createSingleMessageSelector<Glimpse.Messages.Payloads.Web.IResponse>(
-    Glimpse.Messages.Payloads.Web.ResponseType
+    "Glimpse.Messages.Payloads.Web.ResponseType"
 );
 
 /**
@@ -45,7 +45,7 @@ export const getWebResponse = createSingleMessageSelector<Glimpse.Messages.Paylo
 export function getBrowserNavigationTiming(context: IContext) {
     return getSingleMessageByType<Glimpse.Messages.Payloads.Browser.INavigationTiming>(
         context.byType,
-        Glimpse.Messages.Payloads.Browser.NavigationTimingType
+        "Glimpse.Messages.Payloads.Browser.NavigationTimingType"
     );
 }
 

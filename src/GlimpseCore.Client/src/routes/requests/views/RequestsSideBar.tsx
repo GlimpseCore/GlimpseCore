@@ -163,7 +163,7 @@ export class RequestsSideBar extends React.Component<
                             Glimpse.Messages.Payloads.Browser.INavigationTiming
                         >(
                             request.context.byType,
-                            Glimpse.Messages.Payloads.Browser.NavigationTimingType
+                            "Glimpse.Messages.Payloads.Browser.NavigationTimingType"
                         );
                         if (browserNavigationTiming) {
                             newSelectedRequestId = request.id;

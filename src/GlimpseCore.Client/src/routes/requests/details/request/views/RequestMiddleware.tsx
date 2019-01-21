@@ -80,12 +80,12 @@ export class MiddlewareView extends React.Component<IMiddlewareViewProps, {}> {
                 <table className={commonStyles.table}>
                     <thead>
                         <tr>
-                            <th width="20" title="#">#</th>
-                            <th width="20%" title="Name">Name</th>
-                            <th width="15%" title="Package">Package</th>
-                            <th width="20%" title="Modified">Modified</th>
+                            <th style={{width: "20"}} title="#">#</th>
+                            <th style={{width: "20%"}} title="Name">Name</th>
+                            <th style={{width: "15%"}} title="Package">Package</th>
+                            <th style={{width: "20%"}} title="Modified">Modified</th>
                             <th className={styles.middlewareValueHeader} title="Value">Value</th>
-                            <th width="12%" title="Registered at">Registered at</th>
+                            <th style={{width: "12%"}} title="Registered at">Registered at</th>
                         </tr>
                         <tr><td colSpan={6} className={commonStyles.tableHeadSpacer} /></tr>
                     </thead>
@@ -138,7 +138,7 @@ export class MiddlewareView extends React.Component<IMiddlewareViewProps, {}> {
 
         operations.forEach(operation => {
             switch (operation.operation.type) {
-                case Glimpse.Messages.Payloads.Middleware.End.Definitions.ResponseBodyOperationType:
+                case "Glimpse.Messages.Payloads.Middleware.End.Definitions.ResponseBodyOperationType":
                     modifiedItems.push({
                         operationTypeText: 'Body',
                         value: createValueText(operation, undefined),
@@ -177,8 +177,7 @@ export class MiddlewareView extends React.Component<IMiddlewareViewProps, {}> {
 
                     break;
 
-                case Glimpse.Messages.Payloads.Middleware.End.Definitions
-                    .ResponseStatusCodeOperationType:
+                case "Glimpse.Messages.Payloads.Middleware.End.Definitions.ResponseStatusCodeOperationType":
                     const responseStatusCodeOperation = operation.operation as Glimpse.Messages.Payloads.Middleware.End.Definitions.IResponseStatusCode;
 
                     modifiedItems.push({

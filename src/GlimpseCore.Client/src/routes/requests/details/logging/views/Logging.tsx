@@ -105,25 +105,25 @@ export class LoggingView extends React.Component<ILoggingProps & ILoggingCallbac
                     <table className={commonStyles.table}>
                         <thead>
                             <tr>
-                                <th width={ordinalWidth}>
+                                <th style={{width: ordinalWidth}}>
                                     <AgentTypeIcon className={styles.logAgentIcon} />#
                                 </th>
-                                <th width={levelWidth}>
+                                <th style={{width: levelWidth}}>
                                     <Icon shape={undefined} className={styles.logLevelIcon} />Level
                                 </th>
                                 <th
-                                    width={categoryWidth}
+                                    style={{width: categoryWidth}}
                                     className={classNames(styles.categoryColumn, categoryModifier)}>
                                     Category
                                 </th>
-                                <th width={messageWidth}>
+                                <th style={{width: messageWidth}}>
                                     <Icon
                                         shape={undefined}
                                         className={styles.logTimeSpanIcon}
                                     />Message
                                 </th>
-                                <th width={offsetWidth}>From start</th>
-                                <th width={locationWidth}>Location</th>
+                                <th style={{width: offsetWidth}}>From start</th>
+                                <th style={{width: locationWidth}}>Location</th>
                             </tr>
                             <tr>
                                 <td
@@ -138,15 +138,15 @@ export class LoggingView extends React.Component<ILoggingProps & ILoggingCallbac
                     <table className={styles.logViewTable}>
                         <thead>
                             <tr>
-                                <th width={ordinalWidth} />
-                                <th width={levelWidth} />
+                                <th style={{width: ordinalWidth}} />
+                                <th style={{width: levelWidth}} />
                                 <th
-                                    width={categoryWidth}
+                                    style={{width: categoryWidth}}
                                     className={classNames(styles.categoryColumn, categoryModifier)}
                                 />
-                                <th width={messageWidth} />
-                                <th width={offsetWidth} />
-                                <th width={locationWidth} />
+                                <th style={{width: messageWidth}} />
+                                <th style={{width: offsetWidth}} />
+                                <th style={{width: locationWidth}} />
                             </tr>
                         </thead>
                         <tbody>
@@ -182,16 +182,16 @@ export class LoggingView extends React.Component<ILoggingProps & ILoggingCallbac
     }
 
     private static typesOrder = [
-        Glimpse.Messages.Payloads.Log.CountType,
-        Glimpse.Messages.Payloads.Log.JsonType,
-        Glimpse.Messages.Payloads.Log.XmlType,
-        Glimpse.Messages.Payloads.Log.TableType,
-        Glimpse.Messages.Payloads.Log.TimespanBeginType,
-        Glimpse.Messages.Payloads.Log.TimespanEndType,
-        Glimpse.Messages.Payloads.Log.GroupBeginType,
-        Glimpse.Messages.Payloads.Log.GroupEndType,
-        Glimpse.Messages.Payloads.Log.TokenPrintfType,
-        Glimpse.Messages.Payloads.Log.WriteType
+        "Glimpse.Messages.Payloads.Log.CountType",
+        "Glimpse.Messages.Payloads.Log.JsonType",
+        "Glimpse.Messages.Payloads.Log.XmlType",
+        "Glimpse.Messages.Payloads.Log.TableType",
+        "Glimpse.Messages.Payloads.Log.TimespanBeginType",
+        "Glimpse.Messages.Payloads.Log.TimespanEndType",
+        "Glimpse.Messages.Payloads.Log.GroupBeginType",
+        "Glimpse.Messages.Payloads.Log.GroupEndType",
+        "Glimpse.Messages.Payloads.Log.TokenPrintfType",
+        "Glimpse.Messages.Payloads.Log.WriteType"
     ];
 
     private static layouts = {
@@ -202,7 +202,7 @@ export class LoggingView extends React.Component<ILoggingProps & ILoggingCallbac
             return (
                 <MessageRowTarget ordinal={model.ordinal} elementKey={model.messageId}>
                     <td>
-                        <a name={model.ordinal.toString()}>
+                        <a data-name={model.ordinal.toString()}>
                             {LoggingView.renderValueWithIcon(
                                 model.ordinal,
                                 <AgentTypeIcon
@@ -252,7 +252,7 @@ export class LoggingView extends React.Component<ILoggingProps & ILoggingCallbac
     private static groupTemplate(isStart, model, index, props) {
         return LoggingView.layouts.master(model, index, props, () => {
             const getLabel = message => {
-                return model.types.indexOf(Glimpse.Messages.Payloads.Log.TokenPrintfType) > -1
+                return model.types.indexOf("TokenPrintfType") > -1 // Glimpse.Messages.Payloads.Log.TokenPrintfType
                     ? <LoggingStatement
                           content={message}
                           contextId={props.contextId}
@@ -274,25 +274,25 @@ export class LoggingView extends React.Component<ILoggingProps & ILoggingCallbac
     }
 
     private static templates = {
-        [Glimpse.Messages.Payloads.Log.TimespanBeginType]: LoggingView.timespanTemplate.bind(
+        ["Glimpse.Messages.Payloads.Log.TimespanBeginType"]: LoggingView.timespanTemplate.bind(
             undefined,
             true
         ),
-        [Glimpse.Messages.Payloads.Log.TimespanEndType]: LoggingView.timespanTemplate.bind(
+        ["Glimpse.Messages.Payloads.Log.TimespanEndType"]: LoggingView.timespanTemplate.bind(
             undefined,
             false
         ),
-        [Glimpse.Messages.Payloads.Log.GroupBeginType]: LoggingView.groupTemplate.bind(
+        ["Glimpse.Messages.Payloads.Log.GroupBeginType"]: LoggingView.groupTemplate.bind(
             undefined,
             true
         ),
-        [Glimpse.Messages.Payloads.Log.GroupEndType]: LoggingView.groupTemplate.bind(
+        ["Glimpse.Messages.Payloads.Log.GroupEndType"]: LoggingView.groupTemplate.bind(
             undefined,
             false
         ),
-        [Glimpse.Messages.Payloads.Log.TableType]: function(model, index, props) {
+        ["Glimpse.Messages.Payloads.Log.TableType"]: function(model, index, props) {
             if (!JsonTable.canRenderMessage(model.payload.message)) {
-                return LoggingView.templates[Glimpse.Messages.Payloads.Log.JsonType](
+                return LoggingView.templates["JsonType"]( // Glimpse.Messages.Payloads.Log.JsonType
                     model,
                     index,
                     props
@@ -316,7 +316,7 @@ export class LoggingView extends React.Component<ILoggingProps & ILoggingCallbac
                 );
             });
         },
-        [Glimpse.Messages.Payloads.Log.CountType]: function(model: ILoggingMessage, index, props) {
+        ["Glimpse.Messages.Payloads.Log.CountType"]: function(model: ILoggingMessage, index, props) {
             return LoggingView.layouts.master(model, index, props, () => {
                 return LoggingView.renderValueWithIcon(
                     <span>
@@ -326,9 +326,9 @@ export class LoggingView extends React.Component<ILoggingProps & ILoggingCallbac
                 );
             });
         },
-        [Glimpse.Messages.Payloads.Log.JsonType]: function(model, index, props) {
+        ["Glimpse.Messages.Payloads.Log.JsonType"]: function(model, index, props) {
             let data = model.payload.message;
-            if (model.types.indexOf(Glimpse.Messages.Payloads.Log.JsonType) > -1) {
+            if (model.types.indexOf("JsonType") > -1) { // Glimpse.Messages.Payloads.Log.JsonType
                 data = data[0];
             }
 
@@ -344,7 +344,7 @@ export class LoggingView extends React.Component<ILoggingProps & ILoggingCallbac
                 );
             });
         },
-        [Glimpse.Messages.Payloads.Log.XmlType]: function(model, index, props) {
+        ["Glimpse.Messages.Payloads.Log.XmlType"]: function(model, index, props) {
             let content = model.payload.message;
             if (Array.isArray(content)) {
                 content = content[0];
@@ -354,7 +354,7 @@ export class LoggingView extends React.Component<ILoggingProps & ILoggingCallbac
                 return LoggingView.renderExpandableText(props.contextId, model.messageId, content);
             });
         },
-        [Glimpse.Messages.Payloads.Log.TokenPrintfType]: function(model, index, props) {
+        ["Glimpse.Messages.Payloads.Log.TokenPrintfType"]: function(model, index, props) {
             return LoggingView.layouts.master(model, index, props, () => {
                 let allowExpansion;
 
@@ -379,13 +379,13 @@ export class LoggingView extends React.Component<ILoggingProps & ILoggingCallbac
                 }
             });
         },
-        [Glimpse.Messages.Payloads.Log.WriteType]: function(model, index, props) {
+        ["Glimpse.Messages.Payloads.Log.WriteType"]: function(model, index, props) {
             const message = model.payload.message;
             const type = typeof message;
 
             // we are attempting to be nice to those who just send `log-write` messages
             if (type === 'object') {
-                return LoggingView.templates[Glimpse.Messages.Payloads.Log.JsonType](
+                return LoggingView.templates["JsonType"]( // Glimpse.Messages.Payloads.Log.JsonType
                     model,
                     index,
                     props
@@ -422,7 +422,7 @@ export class LoggingView extends React.Component<ILoggingProps & ILoggingCallbac
     }
 
     private static renderLocation(types: string[], message: ILoggingMessage) {
-        const callStack = includes(types, Glimpse.Messages.Payloads.Mixin.CallStackType)
+        const callStack = includes(types, "CallStackType") // Glimpse.Messages.Payloads.Mixin.CallStackType
             ? (message.payload as any) as Glimpse.Messages.Payloads.Mixin.ICallStack // tslint:disable-line:no-any
             : undefined;
         const topStackFrame = callStack && callStack.frames && callStack.frames.length

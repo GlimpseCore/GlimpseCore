@@ -469,7 +469,7 @@ export class TimelineTable<T> extends React.Component<
                     className={classNames(column.headerClassName)}
                     key={`column-${index}`}
                     // @ts-ignore width is fine for th
-                    width={`${column.width}%`}>
+                    style={{width: `${column.width}%`}}>
                     {column.headerFunc(this.props)}
                 </th>
             );
@@ -483,7 +483,7 @@ export class TimelineTable<T> extends React.Component<
                     className={column.headerClassName}
                     key={`column-${index}`}
                     // @ts-ignore width is fine for th
-                    width={`${column.width}%`}
+                    style={{width: `${column.width}%`}}
                 />
             );
         });

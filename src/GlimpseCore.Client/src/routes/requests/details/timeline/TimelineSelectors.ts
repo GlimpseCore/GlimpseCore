@@ -365,7 +365,7 @@ const getDebugTimestampMessages = createSelector(
     (selecteContext: IContext): IMessage<Glimpse.Messages.Payloads.Debug.ITimestamp>[] => {
         return getMessageByType<Glimpse.Messages.Payloads.Debug.ITimestamp>(
             selecteContext.byType,
-            Glimpse.Messages.Payloads.Debug.TimestampType
+            "Glimpse.Messages.Payloads.Debug.TimestampType"
         );
     }
 );
@@ -377,7 +377,7 @@ const getDebugTimestampMeasurementMessages = createSelector(
     ): IMessage<Glimpse.Messages.Payloads.Debug.ITimestampMeasurement>[] => {
         return getMessageByType<Glimpse.Messages.Payloads.Debug.ITimestampMeasurement>(
             selecteContext.byType,
-            Glimpse.Messages.Payloads.Debug.TimestampMeasurementType
+            "Glimpse.Messages.Payloads.Debug.TimestampMeasurementType"
         );
     }
 );

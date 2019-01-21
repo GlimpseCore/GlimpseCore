@@ -573,7 +573,7 @@ function mapStateToProps(state: IStoreState, props): ITimelineOverviewProps {
     const { context } = getSelectedRequest(state);
     const browserNavigationTiming = getSingleMessageByType<
         Glimpse.Messages.Payloads.Browser.INavigationTiming
-    >(context.byType, Glimpse.Messages.Payloads.Browser.NavigationTimingType);
+    >(context.byType, "Glimpse.Messages.Payloads.Browser.NavigationTimingType");
     const browserNavigationTimingOffsets = browserNavigationTiming &&
         browserNavigationTiming.payload
         ? getBrowserNavigationTimingOffsets(browserNavigationTiming.payload)

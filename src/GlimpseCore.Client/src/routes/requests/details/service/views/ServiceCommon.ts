@@ -1,4 +1,5 @@
 import { StatusCodeClass } from '../ServiceInterfaces';
+import { IconShapeType } from '@common/components/AgentTypeIcon';
 
 import styles from './ServiceCommon.scss';
 

@@ -127,7 +127,8 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom"
+    "test": "node scripts/test.js --env=jsdom",
+    "tslint": "tslint src/**/*.ts{,x}"
   },
   "devDependencies": {
     "@types/jest": "^23.3.1",
@@ -178,6 +179,7 @@
       "^react-native$": "react-native-web"
     },
     "moduleFileExtensions": [
+      "scss",
       "web.ts",
       "ts",
       "web.tsx",

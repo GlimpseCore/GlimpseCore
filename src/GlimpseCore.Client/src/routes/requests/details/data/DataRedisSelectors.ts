@@ -14,7 +14,9 @@ import {
     DataOperationStatus
 } from './DataInterfaces';
 
-export interface IDataRedisStartPayload extends Glimpse.Messages.Payloads.Mixin.ICorrelationBegin {}
+export interface IDataRedisStartPayload extends Glimpse.Messages.Payloads.Mixin.ICorrelationBegin {
+    correlationId: any;
+}
 
 export interface IDataRedisEndPayload extends Glimpse.Messages.Payloads.Mixin.ICorrelationEnd {
     access: string;
@@ -23,6 +25,7 @@ export interface IDataRedisEndPayload extends Glimpse.Messages.Payloads.Mixin.IC
     address: string;
     result;
     duration: number;
+    correlationId: any;
 }
 
 interface IUrlAttributes {

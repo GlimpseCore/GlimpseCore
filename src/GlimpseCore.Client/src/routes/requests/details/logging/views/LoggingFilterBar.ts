@@ -15,6 +15,7 @@ import styles from './LoggingFilterBar.scss';
 import { IFilterBarProps, IFilterBarCallbacks, FilterBar } from '@common/components/FilterBar';
 import { IStoreState } from '@client/IStoreState';
 import { IDropdownOption } from '@common/components/Dropdown';
+import { IconShapeType } from '@common/components/AgentTypeIcon';
 
 import {
     getCurrentExploredCategoriesCount,

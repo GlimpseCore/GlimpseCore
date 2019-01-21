@@ -1,3 +1,5 @@
 export interface IMetadataState {
-    resources: string;
+    resources: any;
+    hash: string;
+    versions: any;
 }

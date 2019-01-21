@@ -37,6 +37,7 @@ export interface IResponseHeaderOperation {
     op: 'set' | 'unset';
     type: 'responseHeader';
     values: string[];
+    statusCode: any;
 }
 
 export type IMiddlewareOperation =
@@ -160,10 +161,10 @@ export const getMiddlewareStartAndEndMessages = createSelector(
         if (selectedContext) {
             const middlewareStartMessages = getMessageByType<
                 Glimpse.Messages.Payloads.Middleware.IStart
-            >(selectedContext.byType, Glimpse.Messages.Payloads.Middleware.StartType);
+            >(selectedContext.byType, "Glimpse.Messages.Payloads.Middleware.StartType");
             const middlewareEndMessages = getMessageByType<
                 Glimpse.Messages.Payloads.Middleware.IEnd
-            >(selectedContext.byType, Glimpse.Messages.Payloads.Middleware.EndType);
+            >(selectedContext.byType, "Glimpse.Messages.Payloads.Middleware.EndType");
 
             return { middlewareStartMessages, middlewareEndMessages };
         } else {
@@ -265,16 +266,14 @@ function flattenMiddlewareRecursive(
                 .map(operation => {
                     if (
                         operation.type ===
-                        Glimpse.Messages.Payloads.Middleware.End.Definitions
-                            .ResponseStatusCodeOperationType
+                        "Glimpse.Messages.Payloads.Middleware.End.Definitions.ResponseStatusCodeOperationType"
                     ) {
                         lastStatusCodeOperation = operation;
                     }
 
                     if (
                         operation.type ===
-                            Glimpse.Messages.Payloads.Middleware.End.Definitions
-                                .ResponseBodyOperationType &&
+                            "Glimpse.Messages.Payloads.Middleware.End.Definitions.ResponseBodyOperationType" &&
                         firstBodyOperation === undefined
                     ) {
                         firstBodyOperation = operation;
@@ -290,16 +289,14 @@ function flattenMiddlewareRecursive(
                 .filter(
                     operation =>
                         operation.operation.type !==
-                            Glimpse.Messages.Payloads.Middleware.End.Definitions
-                                .ResponseBodyOperationType ||
+                            "Glimpse.Messages.Payloads.Middleware.End.Definitions.ResponseBodyOperationType" ||
                         operation.operation === firstBodyOperation
                 )
                 // Filter out all but the last response status code operation (note: relies on map/filter being eager)...
                 .filter(
                     operation =>
                         operation.operation.type !==
-                            Glimpse.Messages.Payloads.Middleware.End.Definitions
-                                .ResponseStatusCodeOperationType ||
+                            "Glimpse.Messages.Payloads.Middleware.End.Definitions.ResponseStatusCodeOperationType" ||
                         operation.operation === lastStatusCodeOperation
                 ),
             offset: middlewareItem.offset
@@ -307,7 +304,7 @@ function flattenMiddlewareRecursive(
 
         const callStack = middlewareItem.callStack;
         if (
-            includes(middlewareItem.types, Glimpse.Messages.Payloads.Mixin.CallStackType) &&
+            includes(middlewareItem.types, "Glimpse.Messages.Payloads.Mixin.CallStackType") &&
             callStack &&
             callStack.length
         ) {
@@ -339,7 +336,7 @@ function flattenMiddleware(
     //       "Trackers" specific to each operation type perform that tracking.
 
     const operationTrackers: { [key: string]: IOperationTracker } = {
-        [Glimpse.Messages.Payloads.Middleware.End.Definitions.ResponseBodyOperationType]: {
+        ["Glimpse.Messages.Payloads.Middleware.End.Definitions.ResponseBodyOperationType"]: {
             trackOperation: (operation: IMiddlewareOperation) => {
                 // Response body operations are always "current".
                 return { operation, isCurrent: true };
@@ -369,7 +366,7 @@ function flattenMiddleware(
                 });
             }
         },
-        [Glimpse.Messages.Payloads.Middleware.End.Definitions.ResponseStatusCodeOperationType]: {
+        ["Glimpse.Messages.Payloads.Middleware.End.Definitions.ResponseStatusCodeOperationType"]: {
             trackOperation: (operation: IMiddlewareOperation) => {
                 const flattenedOperation = { operation, isCurrent: false };
 

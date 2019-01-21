@@ -7,6 +7,7 @@ import { isExperimentalMode } from '@common/util/ConfigurationUtilities';
 
 import shellStatusBarStyles from '@shell/views/ShellStatusBarView.scss';
 import { Icon } from '@common/components/Icon';
+import { IconShapeType } from '@common/components/AgentTypeIcon';
 import { IStoreState } from '@client/IStoreState';
 import { ThemeType } from '@shell/themes/IThemesState';
 
@@ -63,7 +64,7 @@ class ThemeBarComponent extends React.Component<
 
     public render() {
         if (this.state.isTheming === false) {
-            this.ensureThemeApplied('dark');
+            this.ensureThemeApplied(ThemeType.dark);
             return null; /* tslint:disable-line:no-null-keyword */
         } else {
             return (

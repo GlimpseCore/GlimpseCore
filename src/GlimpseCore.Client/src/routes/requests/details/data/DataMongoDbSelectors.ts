@@ -156,11 +156,11 @@ export function getMongoDbReadOperations(
 ): IDataOperation[] {
     const startMessages = getMessageByType<Glimpse.Messages.Payloads.Data.Store.Mongodb.IReadStart>(
         request.byType,
-        Glimpse.Messages.Payloads.Data.Store.Mongodb.ReadStartType
+        "ReadStartType" // Glimpse.Messages.Payloads.Data.Store.Mongodb.ReadStartType
     );
     const endMessages = getMessageByType<Glimpse.Messages.Payloads.Data.Store.Mongodb.IReadEnd>(
         request.byType,
-        Glimpse.Messages.Payloads.Data.Store.Mongodb.ReadEndType
+        "ReadEndType" // Glimpse.Messages.Payloads.Data.Store.Mongodb.ReadEndType
     );
     const correlatedMessages = correlateMongoDbReadMessages(startMessages, endMessages);
     return correlatedMessages.map(msg => {

@@ -28,7 +28,7 @@ export class ShellView extends React.Component<IShellViewProps, {}> {
                         <ShellActivityBarView children={null} />
                     </div>
                     <div className={styles.shellContentDetail}>
-                        <SmileyFeedback />
+                        {/*<SmileyFeedback />*/}
                         {children && React.cloneElement(children, { messages })}
                     </div>
                 </div>

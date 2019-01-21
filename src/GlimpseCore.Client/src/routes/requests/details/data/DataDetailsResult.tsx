@@ -1,4 +1,4 @@
-import React from 'react'; // tslint:disable-line:no-unused-variable
+// import React from 'react'; // tslint:disable-line:no-unused-variable
 import { connect } from 'react-redux';
 
 import { getSelectedOperationSelector } from './DataSelectors';

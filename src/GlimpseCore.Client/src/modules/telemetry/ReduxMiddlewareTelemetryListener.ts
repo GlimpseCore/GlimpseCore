@@ -37,10 +37,10 @@ interface IRequestDetailSelectedProperties extends IProperties {
     nextTabName: string;
 
     /** HTTP method of the request being viewed. */
-    method: string;
+    method?: string;
 
     /** protocol scheme of the request being viewed. */
-    protocol: string;
+    protocol?: string;
 }
 
 /**

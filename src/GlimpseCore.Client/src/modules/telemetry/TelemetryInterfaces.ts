@@ -1,6 +1,6 @@
 
 export interface IProperties {
-    [key: string ]: string
+    [key: string ]: string | undefined
 }
 
 export interface IMeasurements {}

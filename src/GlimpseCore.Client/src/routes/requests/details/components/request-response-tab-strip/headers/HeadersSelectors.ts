@@ -27,10 +27,10 @@ export interface IRequestHeaders {
 }
 
 export interface IRequestHeadersResult {
-    headers?: {
+    headers: {
         [key: string]: string[];
     };
-    cookies?: IRequestCookie[];
+    cookies: IRequestCookie[];
     isSecurityRestricted?: boolean;
 }
 
@@ -43,18 +43,18 @@ export interface IResponseHeaders {
 }
 
 export interface IResponseHeadersResult {
-    headers?: {
+    headers: {
         [key: string]: string[];
     };
-    cookies?: IResponseCookie[];
+    cookies: IResponseCookie[];
     isSecurityRestricted?: boolean;
 }
 
 export interface IResponseCookiesResult {
-    headers?: {
+    headers: {
         [key: string]: string[];
     };
-    cookies?: IResponseCookie[];
+    cookies: IResponseCookie[];
     isSecurityRestricted?: boolean;
     url: string;
 }
