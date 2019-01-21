@@ -14,6 +14,7 @@ import { cleanupPersistedGlobal } from './common/util/CleanupObjectKeys';
 // hook up middleware for telemetry reporting
 const analyticsMiddleware = telemetryClient.createTelemetryMiddleware();
 const telemetryMiddleware = reduxMiddlewareTelemetryListener.createTelemetryMiddleware();
+const reduxImmutableStateInvariant = require('redux-immutable-state-invariant');
 
 // redux middleware that will report any exceptions occuring when selectors are run
 const crashReporter = store => next => action => {
@@ -29,7 +30,7 @@ const crashReporter = store => next => action => {
 const middleware = DEBUG
     ? applyMiddleware(
           crashReporter,
-          require('redux-immutable-state-invariant')(), // tslint:disable-line:no-var-requires
+          reduxImmutableStateInvariant.default(), // tslint:disable-line:no-var-requires
           routerMiddleware(browserHistory),
           thunk,
           analyticsMiddleware,
