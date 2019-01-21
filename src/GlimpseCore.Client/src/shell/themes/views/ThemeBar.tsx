@@ -10,6 +10,7 @@ import { Icon } from '@common/components/Icon';
 import { IconShapeType } from '@common/components/AgentTypeIcon';
 import { IStoreState } from '@client/IStoreState';
 import { ThemeType } from '@shell/themes/IThemesState';
+const darkTheme = require('@common/themes/dark.tcss')
 
 interface IThemeBarComponentState {
     isTheming: boolean;
@@ -82,7 +83,7 @@ class ThemeBarComponent extends React.Component<
             ? shellStatusBarStyles.statusBarButtonActive
             : shellStatusBarStyles.statusBarButton;
 
-        this.ensureThemeApplied(selectedThemeName);
+        this.ensureThemeApplied(ThemeType.dark); // TODO: use selectedThemeName instead of just dark
 
         return (
             <button
@@ -106,10 +107,10 @@ class ThemeBarComponent extends React.Component<
             return;
         }
 
-        const selectedTheme = `common/themes/${selectedThemeName}.tcss`;
-        const theme = require(selectedTheme);
+        //const selectedTheme = `common/themes/${selectedThemeName}.tcss`;
+        //const theme = require(selectedTheme);
 
-        this.themeStyle.innerText = theme;
+        this.themeStyle.innerText = darkTheme; // TODO: use theme
         // save the theme name that already has styles in the DOM
         this.currentTheme = selectedThemeName;
     }
