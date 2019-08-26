@@ -1,7 +1,6 @@
 import React from 'react';
 
-//import styles from './SideBar.scss';
-import './SideBar.scss';
+import styles from './SideBar.scss';
 
 export interface IShellSideBarProps {
     title: string;
@@ -30,11 +29,10 @@ export class SideBar extends React.Component<IShellSideBarProps & IShellSideBarC
         const { title, children } = this.props;
 
         return (
-            <div className="sideBar">
-                <div className="title">
-                    <div className="titleRequests"> {title} </div>
+            <div className={styles.sideBar}>
+                <div className={styles.title}>
+                    <div className={styles.titleRequests}> {title} </div>
                     {this.renderRightButton()}
-                    <label className="calis">A ver si pinta</label>
                 </div>
                 {children}
             </div>
