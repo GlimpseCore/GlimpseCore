@@ -142,7 +142,7 @@
     "@types/react-router-redux": "^4",
     "@types/react-transition-group": "^2.0.13",
     "@types/redux-thunk": "^2.1.0",
-    "node-sass": "^4.5.3",
+    "node-sass": "^4.13.1",
     "react-hot-loader": "^4.3.5",
     "redux-immutable-state-invariant": "^2.1.0",
     "sass-loader": "^6.0.6",
