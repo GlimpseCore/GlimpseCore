@@ -20,7 +20,7 @@ export class SideBar extends React.Component<IShellSideBarProps & IShellSideBarC
         }
 
         return (
-            <div className={styles.rightButton} onClick={rightButtonOnClick}>
+            <div className={"rightButton"} onClick={rightButtonOnClick}>
                 {rightButtonTitle}
             </div>
         );

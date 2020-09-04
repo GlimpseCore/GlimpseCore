@@ -172,15 +172,15 @@ module.exports = {
           {
             test: /\.css$/,
             use: [
-              require.resolve('style-loader'),
+              'style-loader',
               {
-                loader: require.resolve('css-loader'),
+                loader: 'css-loader',
                 options: {
                   importLoaders: 1,
                 },
               },
               {
-                loader: require.resolve('postcss-loader'),
+                loader: 'postcss-loader',
                 options: {
                   // Necessary for external CSS imports to work
                   // https://github.com/facebookincubator/create-react-app/issues/2677
@@ -202,19 +202,18 @@ module.exports = {
             ],
           },
           {
-            test: /.\scss$/,
+            test: /\.s[ac]ss$/i,
             use: [
-              require.resolve('style-loader'),
+              'style-loader',
               {
-                loader: require.resolve('css-loader'),
+                loader: 'css-loader',
                 options: {
                   sourceMap: true,
                   modules: true,
                 }
               },
-              require.resolve('resolve-url-loader'),
               {
-                loader: require.resolve('sass-loader'),
+                loader: 'sass-loader',
                 options: {
                   sourceMap: true,
                 }
