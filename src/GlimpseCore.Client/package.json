@@ -54,7 +54,7 @@
     "isarray": "^2.0.4",
     "jest": "20.0.4",
     "js-beautify": "^1.7.5",
-    "lodash": "^4.17.10",
+    "lodash": "^4.17.19",
     "lodash-es": "^4.17.10",
     "lodash.assign": "^4.2.0",
     "lodash.curry": "^4.1.1",
