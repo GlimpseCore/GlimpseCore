@@ -78,7 +78,7 @@
     "react-a11y": "^1.0.0",
     "react-addons-perf": "^15.4.2",
     "react-base16-styling": "^0.6.0",
-    "react-dev-utils": "^5.0.2",
+    "react-dev-utils": "^11.0.4",
     "react-dom": "^15.6.2",
     "react-highlight": "0.10.x",
     "react-json-tree": "0.10.x",
